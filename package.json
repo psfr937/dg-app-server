@@ -5,23 +5,36 @@
   "engines": {
     "node": "14.x"
   },
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/index.js",
-    "test": "node test.js"
+    "start-prod": "npm run build && node ./build/index.js",
+    "start": "node ./index.js",
+    "test": "node test.js",
+    "knex": "knex migrate:latest"
   },
   "dependencies": {
-    "babel-preset-env": "^1.7.0",
     "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.21.17",
+    "knex-migrate": "^1.7.4",
+    "knexnest": "^1.0.0",
+    "pg": "^8.5.1",
+    "url": "^0.11.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.12.13",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/register": "^7.12.13",
     "got": "^11.3.0",
+    "regenerator-runtime": "^0.13.7",
     "tape": "^4.7.0"
   },
   "repository": {
