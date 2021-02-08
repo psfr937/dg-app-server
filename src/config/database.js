@@ -7,22 +7,12 @@ const getDatabaseConfig = (environment) => {
         host: process.env.DEV_DB_HOST,
         port: process.env.DEV_DB_PORT,
         database: process.env.DEV_DB_DATABASE,
-        url: process.env.DATABASE_URL
-      }
-    },
-    'production': {
-      db: {
-        user: process.env.PROD_DB_USER,
-        password: process.env.PROD_DB_USER_PASS,
-        host: process.env.PROD_DB_HOST,
-        port: process.env.PROD_DB_PORT,
-        database: process.env.PROD_DB_DATABASE,
-        url: process.env.DATABASE_URL
+        ssl: false
       }
     }
   };
 
-  return configs[environment];
+  return configs[environment].db;
 };
 
 export default getDatabaseConfig;

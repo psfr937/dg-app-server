@@ -1,0 +1,38 @@
+define
+    questions sub entity,
+    plays elements_questions_parent;
+
+    elements sub entity,
+    plays elements_questions_child;
+    has pos_x
+    has pos_y
+    has name
+
+    pos_x sub attribute,
+    datatype float;
+
+    pos_y sub attribute,
+    datatype float;
+
+    name sub attribute,
+    datatype string;
+
+    one_elements_n_elementTypes sub relationship, #syntactic dependency labels
+    relates elements_taxonomy_parent,
+    relates elements_taxonomy_child;
+
+    elementTypes sub entity,
+    plays symbol;
+    plays impression_parent;
+
+    one_elements_n_objects sub relationship, #syntactic dependency labels
+    relates elements_taxonomy_parent,
+    relates elements_taxonomy_child;
+
+    is_instance_of_elementTypes
+
+
+
+
+
+

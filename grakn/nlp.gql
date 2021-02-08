@@ -1,0 +1,50 @@
+define
+    syn_dep sub relationship, #syntactic dependency labels
+    relates syn_parent,
+    relates syn_child;
+
+    model sub entity,
+    plays impression_child;
+
+    concept_form sub relationship,
+    relates cf_parent,
+    relates cf_child;
+
+    concept sub entity,
+    plays cf_parent;
+
+    word sub entity,
+    plays symbol;
+    plays impression_parent;
+
+    occurance sub relationship,
+    relates symbol,
+    relates usage;
+
+    coreference sub relationship,
+    relates coreference_parent,
+    relates coreference_child;
+
+    symbol sub role;
+    usage sub role;
+    syn_parent sub role;
+    syn_child sub role;
+    coreference_parent sub role;
+    coreference_child sub role;
+    impression_parent sub role;
+    impression_child sub role;
+    cf_parent sub role;
+    cf_child sub role;
+
+    token sub entity,
+    plays usage,
+    plays syn_parent,
+    plays syn_child,
+    plays coreference_parent,
+    plays coreference_child,
+    plays cf_child,
+    has syn_pos; #parts of speech
+
+    syn_pos sub attribute,
+    datatype string;
+
