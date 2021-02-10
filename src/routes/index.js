@@ -1,9 +1,9 @@
 
 import ping from './ping'
-import clients from "./clients";
+import users from "./users";
 
 export default app => {
-  clients(app)
+  users(app)
   ping(app)
 
 };
