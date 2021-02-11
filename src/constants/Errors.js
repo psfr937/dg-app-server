@@ -7,6 +7,22 @@ export default {
     title: 'Unknown Exception',
     detail: 'Something wrong happened.'
   },
+  [ErrorCodes.SERVER_EXCEPTION]: detail => {
+    return {
+      code: ErrorCodes.SERVER_EXCEPTION,
+      status: 500,
+      title: 'Unknown Exception',
+      detail
+    }
+  },
+  [ErrorCodes.PAYMENT_ERROR]: detail => {
+    return {
+      code: ErrorCodes.PAYMENT_ERROR,
+      status: 500,
+      title: 'Database Operation Failed',
+      detail
+    }
+  },
   [ErrorCodes.DB_OPERATION_FAIL]: detail => {
     return {
       code: ErrorCodes.DB_OPERATION_FAIL,
@@ -61,13 +77,6 @@ export default {
       title: 'Check Sms verify code',
       detail
     }
-  },
-  [ErrorCodes.KIT_ALREADY_USED]: {
-    code: ErrorCodes.KIT_ALREADY_USED,
-    status: 401,
-    title: 'Kit Already Used',
-    detail:
-      'The kit is already used by others.'
   },
   [ErrorCodes.NOT_FOUND]: {
     code: ErrorCodes.NOT_FOUND,

@@ -1,4 +1,5 @@
 import getDatabaseConfig from '../config/database';
+import logger from "./logger";
 
 const { Pool } = require('pg');
 const url = require('url')
@@ -34,23 +35,41 @@ class Agent {
 
 
   query(text, params){
+    console.log('Attempt to execute query', {text, params} )
     const start = Date.now();
     return new Promise((resolve, reject) => {
       this.pool.query(text, params, (err, res) => {
         const duration = Date.now() - start;
-        console.log('executed query', { text, duration, rows: res })
+        console.log('executed query', {
+          text, duration,
+        })
         if (err) {
-          console.log(err);
+          logger.error(err, '%o')
           reject(err);
         }
         else{
-          console.log('hello2');
           resolve(res);
         }
       });
     })
-
   }
+
+  async tx(callback){
+    const client = await this.pool.connect()
+    try {
+      await client.query('BEGIN')
+      try {
+        await callback(client)
+        client.query('COMMIT')
+      } catch(e) {
+        client.query('ROLLBACK')
+        throw e
+      }
+    } finally {
+      client.release()
+    }
+  }
+
 
   async transaction(queries){
     const client = await this.pool.connect()
@@ -59,12 +78,8 @@ class Agent {
       await client.query('BEGIN')
       for(let i = 0; i < queries.length; i++){
         const q = queries[i]
-        const { query, values} = q
-        console.log(query)
-        console.log(values)
+        const { query, values } = q
         const result = await client.query(query, values)
-        console.log('finishing shit')
-        console.log(result)
         results.push(result)
       }
       await client.query('COMMIT')
@@ -77,6 +92,8 @@ class Agent {
     }
     return results
   }
+
+
 
   getClient(callback){
     this.pool.connect((err, client, done) => {

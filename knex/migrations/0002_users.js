@@ -2,20 +2,19 @@
 exports.up = function(knex) {
   return knex.schema.createTable('users', function(table) {
     table.increments();
+    table.string('facebook_agent_id');
     table.string('avatar_url');
     table.integer('age');
-    table.text('name')
-    table.string('phone').unique()
-    table.string('email')
-    table.string('hkid')
-    table.string('referrer')
+    table.string('email');
     table.string('password')
-    table.text('address')
-    table.integer('role_id').references('id').inTable('roles')
+    table.string('family_name')
+    table.string('middle_name')
+    table.string('given_name')
+    table.string('display_name')
     table.specificType('gender', 'character')
-    table.boolean('verified').defaultTo(false)
+    table.string('verify_email_nonce')
+    table.string('reset_email_nonce')
     table.timestamp('last_login_time')
-    table.timestamp('registered_at')
     table.timestamp('created_at').defaultTo(knex.fn.now());
     table.timestamp('updated_at').defaultTo(knex.fn.now());
   })

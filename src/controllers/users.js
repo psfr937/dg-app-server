@@ -110,126 +110,154 @@ export default {
     })
   },
 
-  emailRegister: (req, res, next) => {
+  emailRegister: asyncRoute(async (req, res, next) => {
     console.log("email register");
+    console.log(req.body)
     let userReturned = {};
-    p.query('SELECT * FROM users where email = $1', [req.body.email])
-      .then(results => {
-        if (results.rowCount > 0) {
-          throw Errors.USER_EXISTED;
-        } else {
-          return Promise.all([hashPassword(req.body.password),randomValueHex(6)]);
-        }
-      }).then( results =>
-      p.transaction((conn, resolve, reject) => {
-        conn.query(`INSERT INTO users (display_name, email, password, verify_email_nonce) 
-             VALUES ($1, $2, $3, $4) RETURNING id, display_name, email, verify_email_nonce`,
-          [req.body.name, req.body.email, results[0], results[1]])
-          .then(insertResult => {
-            console.log(insertResult);
-            const { display_name, email, verify_email_nonce } = insertResult.rows[0];
-            userReturned = {display_name, email, verify_email_nonce};
-
-            const lastId = insertResult.rows[0].id;
-            const session_id = uuidv4();
-            const refresh_token = genRefreshToken({session_id});
-
-            resolve(Promise.all([
-              conn.query(
-                `INSERT INTO sessions (user_id, session_id, refresh_token ,login_time, created_at )
-                   VALUES ($1, $2, $3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
-                   RETURNING user_id, session_id`,
-                [lastId, session_id, refresh_token]),
-              conn.query(
-                `INSERT INTO emails (address, is_verified) VALUES ($1, $2)`,
-                [email, false])
-
-            ]));
-          }).catch( err => {
-          reject(err);
-        })
-      })
-    ).then( results => {
-      const { user_id, session_id } = results[0].rows[0];
-      const access_token = genAccessToken({ user_id, session_id });
-      userReturned = { user_id, session_id, access_token, ...userReturned };
-      req.user = userReturned;
-      if (!nodemailer) {
-        const data = {
-          token: access_token,
-          info: {
-            user_id,
-            session_id,
-            display_name: req.body.name,
-            avatar_url: null }
-        };
-        return res.status(200).json({status: 200, ...data, isUnused: true });
+    let emailResults = null;
+    try {
+      emailResults = await q('SELECT * FROM users where email = $1', [req.body.email])
+      if (emailResults.rowCount > 0) {
+        res.pushError(Errors.USER_EXISTED);
+        return res.errors()
       }
-      return next();
-    }).catch( err => {
-      console.log('omg');
-      console.log(err);
-      res.pushError(err);
-      res.errors();
-    })
-  },
+    } catch (err) {
+      res.pushError(Errors.SERVER_EXCEPTION(err));
+      return res.errors()
+    }
 
-  emailLogin: (req, res) => {
-    console.log("email login");
-    let userInfo;
-    p.query('SELECT * FROM users where email = $1', [req.body.email])
-      .then(result => {
-        if (result.rowCount === 0) {
-          console("no user found");
-          throw Errors.USER_UNAUTHORIZED;
-        }
-        else if(result.rows[0].password === hashPassword(req.body.password)) {
-          userInfo = result.rows[0];
-          const userId = userInfo.id
-          const session_id = uuidv4();
-          const refresh_token = genRefreshToken({session_id});
-          return Promise.all([
-            p.query(
-              `UPDATE users SET last_login_time=CURRENT_TIMESTAMP WHERE id=$1
-              RETURNING last_login_time`,
-              [userId]
-            ),
-            p.query(
-              `INSERT INTO sessions (user_id, session_id, refresh_token, login_time, created_at ) 
-              VALUES ($1, $2, $3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) 
-              RETURNING user_id, session_id`,
-              [userId, session_id, refresh_token])
-          ]);
-        }
-        else{
-          console.log("wrong password");
-          throw Errors.USER_UNAUTHORIZED;
-        }
-      }).then(results => {
-      const { user_id, session_id } = results[1].rows[0];
-      console.log('user_id and session_id')
-      console.log(user_id)
-      console.log(session_id)
-      const access_token = genAccessToken({ user_id, session_id });
-      console.log('case 2');
+    let credentials = []
+    try {
+      credentials = await Promise.all([hashPassword(req.body.password), randomValueHex(6)]);
+      console.log(credentials)
+    }catch(err){
+        res.pushError(Errors.DB_OPERATION_FAIL(err));
+        return res.errors()
+    }
 
+    let insertSessionResult = null
+    let insertEmailResult = null
+    try {
+      await p.tx(async client => {
+        const insertResult = await client.query(`INSERT INTO users (display_name, email, password, verify_email_nonce) 
+         VALUES ($1, $2, $3, $4) RETURNING id, display_name, email, verify_email_nonce`,
+          [req.body.name, req.body.email, credentials[0], credentials[1]])
+
+        const {display_name, email, verify_email_nonce} = insertResult.rows[0];
+        userReturned = {display_name, email, verify_email_nonce};
+
+        const lastId = insertResult.rows[0].id;
+        const session_id = uuidv4();
+        let refresh_token = null
+        try {
+          refresh_token = await genRefreshToken({session_id});
+        } catch (err) {
+          throw err
+        }
+        console.log(refresh_token)
+
+        insertSessionResult = await client.query(
+            `INSERT INTO sessions (user_id, session_id, refresh_token ,login_time, created_at )
+               VALUES ($1, $2, $3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+               RETURNING user_id, session_id`,
+          [lastId, session_id, refresh_token])
+
+        insertEmailResult = await client.query(
+            `INSERT INTO emails (address, is_verified) VALUES ($1, $2)`,
+          [email, false])
+      })
+    }
+    catch(err){
+      console.log(err)
+      res.pushError([Errors.DB_OPERATION_FAIL(err)])
+      return res.errors()
+    }
+
+    const {user_id, session_id} = insertSessionResult.rows[0];
+    const access_token = genAccessToken({user_id, session_id});
+    userReturned = {user_id, session_id, access_token, ...userReturned};
+    req.user = userReturned;
+    if (!nodemailer) {
       const data = {
         token: access_token,
         info: {
           user_id,
           session_id,
-          display_name: userInfo.display_name,
-          avatar_url: userInfo.avatar_url,
-          rank: userInfo.rank
+          display_name: req.body.name,
+          avatar_url: null
         }
+      };
+      return res.status(200).json({status: 200, ...data, isUnused: true});
+    }
+    return next();
+
+  }),
+
+  emailLogin: asyncRoute(async(req, res) => {
+    console.log("email login");
+    let userInfo;
+    let existed = null
+    try {
+      existed = await q('SELECT * FROM users where email = $1', [req.body.email])
+    }
+    catch(err){
+      res.pushError([Errors.DB_OPERATION_FAIL(err)])
+      return res.errors()
+    }
+    const userNotFound = existed.rowCount === 0
+    const wrongPassword = !userNotFound && (existed.rows[0].password !== hashPassword(req.body.password))
+
+    if(userNotFound || wrongPassword){
+      res.pushError(Errors.USER_UNAUTHORIZED)
+      return res.errors()
+    }
+
+    userInfo = existed.rows[0];
+    const userId = userInfo.id;
+    const sessionId = uuidv4();
+    let refreshToken = null;
+    let accessToken = null;
+
+    try {
+      refreshToken = await genRefreshToken({sessionId})
+      accessToken = await genAccessToken({ userId, sessionId })
+    }
+    catch(err){
+      res.pushError([Errors.SERVER_EXCEPTION(err)])
+      return res.errors()
+    }
+
+    try {
+      await p.tx(async client => {
+        await client.query(
+          `UPDATE users SET last_login_time=CURRENT_TIMESTAMP WHERE id=$1`,
+          [userId]
+        )
+        await client.query(
+            `INSERT INTO sessions (user_id, session_id, refresh_token, login_time, created_at ) 
+          VALUES ($1, $2, $3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)`,
+            [userId, sessionId, refreshToken]
+          )
+        }
+      )
+    }
+    catch(loggingError){
+      res.pushError(Errors.DB_OPERATION_FAIL)
+      return res.errors()
+    }
+
+    const data = {
+      token: accessToken,
+      info: {
+        user_id: userId,
+        session_id: sessionId,
+        display_name: userInfo.display_name,
+        avatar_url: userInfo.avatar_url,
+        rank: userInfo.rank
       }
-      res.status(200).json({status: 200, isAuth: true, ...data})
-    }).catch(err => {
-      console.log(err)
-      res.pushError(err)
-      res.errors()
-    })
-  },
+    }
+    return res.status(200).json({status: 200, isAuth: true, ...data})
+  }),
 
   verifyEmail: (req, res) => {
     const { user } = req;

@@ -1,5 +1,6 @@
 import jsonwebtoken from 'jsonwebtoken';
 import { jwt } from '../config/index';
+import Errors from "../constants/Errors";
 
 module.exports = {
   jwtExtractor: req => (req.query.env === "native" || ( req.headers.platform && req.headers.platform === 'native')) ?
@@ -12,15 +13,31 @@ module.exports = {
           : null
       ),
 
-  genAccessToken: data =>
-  jsonwebtoken.sign(JSON.parse(JSON.stringify(data)), jwt.accessToken.secret, {
-    expiresIn: jwt.accessToken.expiresIn
-  }),
+  genAccessToken: async data => {
+    try{
+      const dataString = await JSON.stringify(data)
+      const parsedData = await JSON.parse(dataString)
+      return await jsonwebtoken.sign(parsedData, jwt.accessToken.secret, {
+        expiresIn: jwt.accessToken.expiresIn
+      })
+    }
+    catch(err){
+      throw err
+    }
+  },
 
-  genRefreshToken: data =>
-  jsonwebtoken.sign(JSON.parse(JSON.stringify(data)), jwt.refreshToken.secret, {
-    expiresIn: jwt.refreshToken.expiresIn
-  }),
+  genRefreshToken: async data => {
+    try {
+      const dataString = await JSON.stringify(data)
+      const parsedData = await JSON.parse(dataString)
+      return await jsonwebtoken.sign(parsedData, jwt.refreshToken.secret, {
+          expiresIn: jwt.refreshToken.expiresIn
+        })
+    }
+    catch(err){
+      throw err
+    }
+  },
 
   genVerifyEmailToken: (id, verifyEmailNonce) => {
     const user = {

@@ -1,5 +1,6 @@
 
 import  p from './agents';
+import logger from "./logger";
 
 const knexLib = require('knex');
 const knexnest = require('knexnest');
@@ -15,13 +16,12 @@ const qNonEmpty = async (sql, params, loglevel = 'info', errMetaData) => {
   return await p.query(sql, params, loglevel)
     .then(res => {
       if (res.rows.length === 0) {
-       // console.log(errMetaData);
         throw new Error('No rows found');
       }
       return res;
     })
     .catch(err => {
-      console.log(err)
+      logger.error(err, '%o')
       throw err;
     })
 };
@@ -33,6 +33,7 @@ const q = async (sql, params, loglevel = 'info') => {
       return res;
     })
     .catch(err => {
+      logger.error(err, '%o')
       throw err;
     })
 };

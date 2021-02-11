@@ -10,5 +10,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return //knex.schema.dropTable('element_attributes')
+  return knex.schema.dropTable('element_attributes')
 };

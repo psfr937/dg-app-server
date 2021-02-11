@@ -1,0 +1,192 @@
+2021-02-12 00:45:25 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:45:25 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:45:42 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:49:33 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:49:33 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:49:53 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:53:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:53:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:53:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:53:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:53:42 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:53:42 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:53:42 error: (src/controllers/payments.js:56) email is not defined
+2021-02-12 00:54:34 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:54:34 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:54:34 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:54:34 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:54:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:54:49 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:54:50 error: (src/utils/q.js:24) No rows found
+2021-02-12 00:54:50 error: (src/controllers/payments.js:56) No rows found
+2021-02-12 00:57:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:57:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:57:29 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:57:29 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:57:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:57:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:57:46 error: (src/utils/q.js:24) No rows found
+2021-02-12 00:57:46 error: (src/controllers/payments.js:56) No rows found
+2021-02-12 00:58:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:58:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:58:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:58:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:58:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:58:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:58:46 info: (src/controllers/payments.js:13)
+2021-02-12 00:58:47 error: (src/utils/q.js:24) No rows found
+2021-02-12 00:58:47 error: (src/controllers/payments.js:57) No rows found
+2021-02-12 00:59:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:59:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:59:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:59:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:59:59 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 00:59:59 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 00:59:59 info: (src/controllers/payments.js:14)
+2021-02-12 01:00:00 error: (src/utils/q.js:24) No rows found
+2021-02-12 01:00:00 error: (src/controllers/payments.js:58) No rows found
+2021-02-12 01:01:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:01:38 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:01:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:01:38 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:01:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:01:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:01:50 info: (src/controllers/payments.js:13)
+2021-02-12 01:01:53 error: (src/controllers/payments.js:57) The payment method supplied (pm_1IJiY5CRRNHI4u4ILE2NolI2) belongs to the Customer cus_IvZhiKJuwX7UT1. Please include the Customer in the `customer` parameter on the SetupIntent.
+2021-02-12 01:10:24 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:10:24 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:10:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:10:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:10:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:10:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:10:50 info: (src/controllers/payments.js:13)
+2021-02-12 01:10:52 error: (src/controllers/payments.js:37) customer is not defined
+2021-02-12 01:12:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:12:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:12:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:12:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:12:21 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:12:21 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:12:21 info: (src/controllers/payments.js:13)
+2021-02-12 01:12:23 error: (src/controllers/payments.js:75) Received unknown parameter: customer
+2021-02-12 01:13:32 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:13:32 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:13:33 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:13:33 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:13:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:13:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:13:41 info: (src/controllers/payments.js:13)
+2021-02-12 01:13:44 error: (src/controllers/payments.js:74) The payment method supplied (pm_1IJijZCRRNHI4u4IdlyOkuPL) belongs to the Customer cus_IvZtOCPzdvzzEn. Please include the Customer in the `customer` parameter on the SetupIntent.
+2021-02-12 01:21:40 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:21:40 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:21:40 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:21:40 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:21:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:21:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:21:50 info: (src/controllers/payments.js:13)
+2021-02-12 01:21:53 error: (src/controllers/payments.js:126) Stripe: Argument "id" must be a string, but got: undefined (on API request to `POST /customers/{id}`)
+2021-02-12 01:27:27 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:27:27 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:27:27 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:27:27 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:27:37 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:27:37 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:27:37 info: (src/controllers/payments.js:13)
+2021-02-12 01:27:41 info: (src/controllers/payments.js:114) {"planId":"price_1IJOPZCRRNHI4u4Ibcv0Ot1o","token":"pm_1IJix3CRRNHI4u4IJHdDJzJy","customerStripeId":"cus_Iva7YnPqCYQK5H","paymentMethodStripeId":"pm_1IJix3CRRNHI4u4IJHdDJzJy","paymentMethodDbId":2}
+2021-02-12 01:27:41 error: (src/controllers/payments.js:182) Cannot read property '0' of undefined
+2021-02-12 01:27:41 error: (src/controllers/payments.js:211) object is not defined
+2021-02-12 01:31:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:31:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:31:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:31:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:31:22 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:31:22 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:31:22 info: (src/controllers/payments.js:13)
+2021-02-12 01:31:25 info: (src/controllers/payments.js:114) {"planId":"price_1IJOPZCRRNHI4u4Ibcv0Ot1o","token":"pm_1IJj0fCRRNHI4u4IYplwqYIp","customerStripeId":"cus_IvaBzhf29FWdtS","paymentMethodStripeId":"pm_1IJj0fCRRNHI4u4IYplwqYIp","paymentMethodDbId":3}
+2021-02-12 01:31:25 error: (src/controllers/payments.js:132) duplicate key value violates unique constraint "default_pm_user_id_unique"
+2021-02-12 01:34:29 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:34:29 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:34:29 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:34:29 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:34:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 01:34:38 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 01:34:38 info: (src/controllers/payments.js:13)
+2021-02-12 01:34:41 info: (src/controllers/payments.js:114) {"planId":"price_1IJOPZCRRNHI4u4Ibcv0Ot1o","token":"pm_1IJj3qCRRNHI4u4IByZr41KS","customerStripeId":"cus_IvaEmeajR4ceoz","paymentMethodStripeId":"pm_1IJj3qCRRNHI4u4IByZr41KS","paymentMethodDbId":4}
+2021-02-12 01:34:43 error: (src/controllers/payments.js:185) Missing required param: items.
+2021-02-12 01:34:43 error: (src/controllers/payments.js:209) object is not defined
+2021-02-12 02:55:02 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 02:55:03 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 02:55:03 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 02:55:03 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 02:55:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 02:55:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 02:55:18 info: (src/controllers/payments.js:13)
+2021-02-12 02:55:21 info: (src/controllers/payments.js:114) {"planId":2,"token":"pm_1IJkJtCRRNHI4u4IvygF8Cdu","customerStripeId":"cus_IvbWUKNdP1B4cB","paymentMethodStripeId":"pm_1IJkJtCRRNHI4u4IvygF8Cdu","paymentMethodDbId":5}
+2021-02-12 02:55:22 error: (src/controllers/payments.js:185) Missing required param: items.
+2021-02-12 02:55:22 error: (src/controllers/payments.js:209) object is not defined
+2021-02-12 02:55:34 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 02:55:34 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 02:55:34 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 02:55:34 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 02:57:26 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 02:57:26 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 02:57:26 info: (src/controllers/payments.js:13)
+2021-02-12 02:57:29 info: (src/controllers/payments.js:114) {"planId":2,"token":"pm_1IJkLxCRRNHI4u4IL4EdXA4k","customerStripeId":"cus_IvbZiy6tIbErIz","paymentMethodStripeId":"pm_1IJkLxCRRNHI4u4IL4EdXA4k","paymentMethodDbId":6}
+2021-02-12 02:57:29 error: (src/controllers/payments.js:193) syntax error at or near "RETURNING"
+2021-02-12 03:10:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:10:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:10:19 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:10:19 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:10:32 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:10:32 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:10:32 info: (src/controllers/payments.js:13)
+2021-02-12 03:10:35 info: (src/controllers/payments.js:114) {"planId":2,"token":"pm_1IJkYeCRRNHI4u4ISdGZVnZt","customerStripeId":"cus_IvbmrZzJgZUukH","paymentMethodStripeId":"pm_1IJkYeCRRNHI4u4ISdGZVnZt","paymentMethodDbId":7}
+2021-02-12 03:10:36 error: (src/controllers/payments.js:193) could not determine data type of parameter $1
+2021-02-12 03:11:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:11:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:11:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:11:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:11:59 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:11:59 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:11:59 info: (src/controllers/payments.js:13)
+2021-02-12 03:12:02 info: (src/controllers/payments.js:114) {"planId":2,"token":"pm_1IJka2CRRNHI4u4ITO3HZCvW","customerStripeId":"cus_IvbnEHoxdfqDl7","paymentMethodStripeId":"pm_1IJka2CRRNHI4u4ITO3HZCvW","paymentMethodDbId":8}
+2021-02-12 03:12:03 error: (src/controllers/payments.js:193) Missing required param: items.
+2021-02-12 03:14:27 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:14:27 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:14:27 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:14:27 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:14:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:14:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:14:36 info: (src/controllers/payments.js:13)
+2021-02-12 03:14:39 info: (src/controllers/payments.js:114) {"planId":2,"token":"pm_1IJkcaCRRNHI4u4ITro7erwM","customerStripeId":"cus_Ivbq68EXj0TkP3","paymentMethodStripeId":"pm_1IJkcaCRRNHI4u4ITro7erwM","paymentMethodDbId":9}
+2021-02-12 03:14:40 info: (src/controllers/payments.js:184)
+2021-02-12 03:14:40 error: (src/controllers/payments.js:193) Missing required param: items.
+2021-02-12 03:15:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:15:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:15:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:15:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:16:00 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:16:00 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:16:00 info: (src/controllers/payments.js:13)
+2021-02-12 03:16:03 info: (src/controllers/payments.js:114) {"planId":2,"token":"pm_1IJkdvCRRNHI4u4IvvD17nAg","customerStripeId":"cus_IvbrjA9yu15Yep","paymentMethodStripeId":"pm_1IJkdvCRRNHI4u4IvvD17nAg","paymentMethodDbId":10}
+2021-02-12 03:16:04 info: (src/controllers/payments.js:184) price_1IJOPZCRRNHI4u4Ibcv0Ot1o
+2021-02-12 03:16:06 error: (src/controllers/payments.js:217) object is not defined
+2021-02-12 03:18:00 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:18:00 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:18:00 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:18:00 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:18:10 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:18:10 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:18:10 info: (src/controllers/payments.js:13)
+2021-02-12 03:18:13 info: (src/controllers/payments.js:114) {"planId":2,"token":"pm_1IJkg1CRRNHI4u4IajoZ0iLw","customerStripeId":"cus_Ivbt5ScxKr368P","paymentMethodStripeId":"pm_1IJkg1CRRNHI4u4IajoZ0iLw","paymentMethodDbId":11}
+2021-02-12 03:18:14 info: (src/controllers/payments.js:184) price_1IJOPZCRRNHI4u4Ibcv0Ot1o
+2021-02-12 03:18:17 error: (src/controllers/payments.js:217) Cannot use 'in' operator to search for 'id' in 1
+2021-02-12 03:18:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:18:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:18:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:18:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:19:03 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-12 03:19:03 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-12 03:19:03 info: (src/controllers/payments.js:13)
+2021-02-12 03:19:06 info: (src/controllers/payments.js:114) {"planId":2,"token":"pm_1IJkgsCRRNHI4u4I9cpnYshG","customerStripeId":"cus_IvbubpZ0jwtUBI","paymentMethodStripeId":"pm_1IJkgsCRRNHI4u4I9cpnYshG","paymentMethodDbId":12}
+2021-02-12 03:19:06 info: (src/controllers/payments.js:184) price_1IJOPZCRRNHI4u4Ibcv0Ot1o

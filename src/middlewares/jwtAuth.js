@@ -1,8 +1,9 @@
 import jsonwebtoken from 'jsonwebtoken';
 import p from '../utils/agents'
-import {jwt, backdoor} from '../config/index'
+import { jwt, stripe } from '../config'
 import { jwtExtractor, genAccessToken } from '../utils/tokenHelper'
 import Errors from '../constants/Errors';
+import logger from '../utils/logger'
 
 export const socketIORefreshAccessToken = (socket, next) => {
   p.query(`SELECT refresh_token FROM sessions WHERE session_id = $1`,
@@ -86,22 +87,22 @@ export const refreshAccessToken  = (req, res, next) => {
 
 
 export const jwtAuth = (req, res, next) => {
-
-  jwtBackDoor(req, res, next)
-
+  const extractedJWT = jwtExtractor(req)
+  console.log(extractedJWT)
+  console.log(jwt.accessToken.secret)
   jsonwebtoken.verify(
-    jwtExtractor(req),
+    extractedJWT,
     jwt.accessToken.secret,
     {
       ignoreExpiration: true
     },
     (err, decoded) => {
-      console.log(err);
+
       if (err) {
+        logger.error(err, '%o')
         if (res.locals.authType === "optional") {
           return next()
         } else {
-
           res.pushError(err);
           res.pushError(Errors.USER_UNAUTHORIZED);
           res.errors();
@@ -111,15 +112,13 @@ export const jwtAuth = (req, res, next) => {
         return refreshAccessToken(res, req, next);
       } else {
         res.locals.decoded = decoded;
-        console.log('decoded')
-        console.log(decoded)
+        logger.info('decoded', '%o')
 
         p.query(
-          `SELECT *, clients.id as client_id, staffs.id as staff_id FROM users
-            LEFT JOIN clients ON users.id = clients.user_id
-            LEFT JOIN staffs ON users.id = staffs.user_id WHERE users.id = $1`, [decoded.user_id]
+            `SELECT * FROM users WHERE id = $1`, [decoded.userId]
         ).then(results => {
-          if (results.rows.rowCount === 0){
+          if (results.rowCount === 0){
+            logger.info('user not found', '%o')
             res.pushError(Errors.USER_UNAUTHORIZED);
             return res.errors();
           }
@@ -127,34 +126,17 @@ export const jwtAuth = (req, res, next) => {
             const user = results.rows[0];
             delete user.password
             req.user = user;
+            logger.info('user found', '%o')
             return next();
           }
         }).catch(queryErr => {
+          console.log(queryErr)
           res.pushError(queryErr);
-          //       console.log(queryErr);
           res.errors();
         });
       }
     }
   )
-}
-
-export const jwtBackDoor = (req, res, next ) => {
-
-  if (backdoor) {
-    p.query(
-      "SELECT * FROM users WHERE id= 36", []
-    ).then(results => {
-      if (results.rows.rowCount === 0) {
-        res.pushError(Errors.USER_UNAUTHORIZED);
-        return res.errors();
-      } else {
-        const user = results.rows[0];
-        req.user = user;
-        return next();
-      }
-    })
-  }
 }
 
 export const jwtAuthOptional = (req, res, next) => {
