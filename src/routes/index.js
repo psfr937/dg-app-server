@@ -9,5 +9,4 @@ export default app => {
   ping(app)
   plans(app)
   payments(app)
-
 };

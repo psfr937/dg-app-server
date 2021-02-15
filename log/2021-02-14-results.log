@@ -1,0 +1,49 @@
+2021-02-14 00:07:14 error: jwt must be provided
+2021-02-14 00:07:14 error: jwt must be provided
+2021-02-14 20:28:48 error: jwt must be provided
+2021-02-14 20:28:48 error: jwt must be provided
+2021-02-14 20:47:06 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 20:47:07 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 21:03:33 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 21:03:33 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 21:03:33 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 21:03:33 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 21:56:58 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 21:56:58 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 21:56:58 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 21:56:58 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:04:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:04:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:06:52 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:06:52 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:06:53 error: (src/controllers/payments.js:164) Error code is: undefined
+2021-02-14 22:08:12 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:08:12 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:08:12 error: (src/controllers/payments.js:164) Error code is: {}
+2021-02-14 22:11:43 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:11:43 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:11:43 error: (src/controllers/payments.js:164) {}
+2021-02-14 22:13:44 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:13:44 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:13:44 error: (src/controllers/payments.js:161) {}
+2021-02-14 22:14:42 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:14:42 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:14:42 error: (src/controllers/payments.js:161) {}
+2021-02-14 22:15:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:15:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:22:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:22:38 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:23:07 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:23:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:23:53 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:23:53 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:24:37 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:24:37 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:28:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:28:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:29:12 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:29:12 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 22:30:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 22:30:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-14 23:39:03 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-14 23:39:03 info: (src/middlewares/jwtAuth.js:129) user found

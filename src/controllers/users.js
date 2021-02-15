@@ -9,6 +9,8 @@ import { jwt, nodemailer } from '../config/index';
 import {  genAccessToken, genRefreshToken } from '../utils/tokenHelper'
 
 import p from '../utils/agents';
+import stripe from "../utils/stripe";
+import logger from "../utils/logger";
 
 const { v4: uuidv4 } = require('uuid');
 
@@ -146,7 +148,7 @@ export default {
         const {display_name, email, verify_email_nonce} = insertResult.rows[0];
         userReturned = {display_name, email, verify_email_nonce};
 
-        const lastId = insertResult.rows[0].id;
+        const userId = insertResult.rows[0].id;
         const session_id = uuidv4();
         let refresh_token = null
         try {
@@ -160,7 +162,7 @@ export default {
             `INSERT INTO sessions (user_id, session_id, refresh_token ,login_time, created_at )
                VALUES ($1, $2, $3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
                RETURNING user_id, session_id`,
-          [lastId, session_id, refresh_token])
+          [userId, session_id, refresh_token])
 
         insertEmailResult = await client.query(
             `INSERT INTO emails (address, is_verified) VALUES ($1, $2)`,

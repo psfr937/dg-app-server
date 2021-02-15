@@ -1,6 +1,4 @@
-import {qNonEmpty} from "../../utils/q";
 import Errors from "../../constants/Errors";
-import agent from '../../utils/agents'
 
 const getUpdateParams = (updateList, fieldNameArray, key = '') => {
   const firstFieldNameStringArray = fieldNameArray.map(i =>
@@ -56,6 +54,7 @@ const getInsertParams = (createList, fieldNameArray, key = '') => {
 }
 
 export default async (
+  client,
   tableName,
   operationList
 ) => {
@@ -74,7 +73,7 @@ export default async (
 
 
         try {
-          return await qNonEmpty(
+          return await client.query(
             `INSERT INTO ${tableName} (${insertFieldNameArray.map(c => c.name).join(',')}) 
         VALUES ${insertPlaceHoldersString} RETURNING id`,
             insertParamsArray
@@ -108,7 +107,7 @@ export default async (
                     ) as c(${updateFieldNameArray.map(c => c.name).join(',')})
                where c.id = t.id RETURNING t.id`
         try {
-          const  result = await qNonEmpty(
+          const  result = await client.query(
             `update ${tableName} as t
                set ${firstFieldNameString}
                from (values ${updatePlaceHoldersString}

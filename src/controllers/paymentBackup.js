@@ -7,43 +7,6 @@ import logger from "../utils/logger";
 
 
 export default {
-  createCheckoutSession: asyncRoute( async(req, res) => {
-
-    const { quantity, locale } = req.body;
-
-    // The list of supported payment method types. We fetch this from the
-    // environment variables in this sample. In practice, users often hard code a
-    // list of strings for the payment method types they plan to support.
-    const pmTypes = (process.env.PAYMENT_METHOD_TYPES || 'card').split(',').map((m) => m.trim());
-
-    // Create new Checkout Session for the order
-    // Other optional params include:
-    // [billing_address_collection] - to display billing address details on the page
-    // [customer] - if you have an existing Stripe Customer ID
-    // [customer_email] - lets you prefill the email input in the Checkout page
-    // For full details see https://stripe.com/docs/api/checkout/sessions/create
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: pmTypes,
-      mode: 'payment',
-      locale: locale,
-      billing_address_collection: 'required',
-      line_items: [
-        {
-          price: 'price_1IKOmNCRRNHI4u4IX2MAFoz2',
-          quantity: quantity
-        },
-      ],
-      // ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
-      success_url: `http://localhost:3000/success.html?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `http://localhost:3000/canceled.html`,
-    });
-
-    res.send({
-      sessionId: session.id,
-    });
-  }),
-
-
   createCustomer: asyncRoute(async(req, res, next) => {
     const {user} = req;
     logger.info(user, '%o');
@@ -82,7 +45,7 @@ export default {
 
       try {
         await qNonEmpty(
-            `UPDATE users SET stripe_id = $1 WHERE id = $2 RETURNING id`,
+          `UPDATE users SET stripe_id = $1 WHERE id = $2 RETURNING id`,
           [customer.id, userId]
         )
         req.user = {...req.user, stripe_id: customer.id}
@@ -101,7 +64,6 @@ export default {
       result: 'Customer account creation success'
     })
   }),
-
 
   fetchPaymentMethods: asyncRoute( async(req, res, next) => {
     const {user} = req;
@@ -145,58 +107,6 @@ export default {
     })
   }),
 
-  createPaymentIntent: asyncRoute(async(req, res, next) => {
-
-    const { user } = req;
-    let paymentIntent;
-    try {
-      paymentIntent = await stripe.paymentIntents.create({
-        amount: 1099,
-        currency: 'hkd',
-        customer: user.stripe_id
-      });
-
-    } catch (err) {
-      // Error code will be authentication_required if authentication is needed
-      logger.error(JSON.stringify(err), '%o');
-     // const paymentIntentRetrieved = await stripe.paymentIntents.retrieve(err.raw.payment_intent.id);
-     // console.info(`PI retrieved:  ${paymentIntentRetrieved.id}`, '%o');
-      res.pushError([Errors.SERVER_EXCEPTION(err)]);
-      return res.errors();
-    }
-
-    return res.status(200).json({
-      status: 200,
-      result: paymentIntent.client_secret
-    })
-  }),
-
-  createNextPaymentIntent: asyncRoute(async(res, req, next) => {
-
-    const { user } = req;
-    try {
-
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount: 1099,
-        currency: 'hkd',
-        customer: user.stripe_id,
-        payment_method: '{{PAYMENT_METHOD_ID}}',
-        error_on_requires_action: true,
-        confirm: true,
-      });
-
-      return res.status(200).json({
-        status: 200,
-        result: paymentIntent.client_secret
-      })
-    } catch (err) {
-      // Error code will be authentication_required if authentication is needed
-      console.log('Error code is: ', err.code);
-      const paymentIntentRetrieved = await stripe.paymentIntents.retrieve(err.raw.payment_intent.id);
-      console.log('PI retrieved: ', paymentIntentRetrieved.id);
-    }
-  }),
-
 
   addPaymentMethod: asyncRoute( async(req, res, next) => {
     const {user} = req;
@@ -221,9 +131,23 @@ export default {
       return res.errors()
     }
 
+
+    try {
+      await stripe.setupIntents.confirm(
+        setupIntent.id,
+        {
+          payment_method: paymentMethod.id
+        }
+      );
+    }catch(err){
+      logger.error(err, '%o');
+      res.pushError([Errors.PAYMENT_ERROR(err)]);
+      return res.errors()
+    }
+
     try {
       const insertPm = await qNonEmpty(
-          `INSERT INTO pms (stripe_id) VALUES ($1) RETURNING id`,
+        `INSERT INTO pms (stripe_id) VALUES ($1) RETURNING id`,
         [paymentMethod.id]
       );
 
@@ -257,7 +181,7 @@ export default {
     try {
       await p.tx(async client => {
         await client.query(
-            `INSERT INTO default_pm (user_id, default_pm_id ) VALUES ($1, $2)
+          `INSERT INTO default_pm (user_id, default_pm_id ) VALUES ($1, $2)
             ON CONFLICT (user_id) DO UPDATE
             SET default_pm_id = $2;
           `,
@@ -285,7 +209,7 @@ export default {
       status: 200,
     })
   }),
-  
+
   pay: asyncRoute(async(req,res) => {
     const {
       paymentMethodStripeId,
@@ -389,7 +313,7 @@ export default {
         const planStripeId = plan.rows[0].stripe_id;
 
         insertSubscription = await client.query(
-            `INSERT INTO subscriptions (user_id, pm_id, plan_id) 
+          `INSERT INTO subscriptions (user_id, pm_id, plan_id) 
           VALUES ($1, $2, $3) RETURNING id`,
           [
             req.user.id,
@@ -417,12 +341,12 @@ export default {
 
     try{
       if(typeof subscription === 'object' && 'id' in subscription
-      && typeof insertSubscription === 'object' && 'rows' in insertSubscription
-      && Array.isArray(insertSubscription.rows) && insertSubscription.rows.length > 0 &&
+        && typeof insertSubscription === 'object' && 'rows' in insertSubscription
+        && Array.isArray(insertSubscription.rows) && insertSubscription.rows.length > 0 &&
         'id' in insertSubscription.rows[0]
       ) {
         await q(
-            `UPDATE subscriptions SET stripe_id = $1 WHERE id = $2`,
+          `UPDATE subscriptions SET stripe_id = $1 WHERE id = $2`,
           [
             subscription.id,
             insertSubscription.rows[0].id
