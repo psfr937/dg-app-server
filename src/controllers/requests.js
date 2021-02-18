@@ -39,7 +39,7 @@ export default {
 
         );
 
-        await stripe.
+
 
         await buildTxQuery(
           tableName,

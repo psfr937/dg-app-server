@@ -4,6 +4,7 @@ import bodyParser from '../middlewares/bodyParser';
 import { jwtAuth } from '../middlewares/jwtAuth';
 import mailController from '../controllers/mail';
 import { form, recaptcha, verifyUserNonce } from '../middlewares/validate';
+import createCustomerController from "../controllers/billing/checkStripeCustomer";
 
 export default app => {
   // user

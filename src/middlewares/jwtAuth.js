@@ -139,6 +139,8 @@ export const jwtAuth = (req, res, next) => {
   )
 }
 
+
+
 export const jwtAuthOptional = (req, res, next) => {
   res.locals.authType = "optional";
   return jwtAuth(req, res, next);
