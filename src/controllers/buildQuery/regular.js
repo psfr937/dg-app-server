@@ -2,7 +2,7 @@ import {qNonEmpty} from "../../utils/q";
 import Errors from "../../constants/Errors";
 import agent from '../../utils/agents'
 
-const getUpdateParams = (updateList, fieldNameArray, key = '') => {
+export const getUpdateParams = (updateList, fieldNameArray, key = '') => {
   const firstFieldNameStringArray = fieldNameArray.map(i =>
     `${i.name}=c.${i.name}`)
   const firstFieldNameString = firstFieldNameStringArray.join(', ')
@@ -17,7 +17,7 @@ const getUpdateParams = (updateList, fieldNameArray, key = '') => {
   }
 }
 
-const getInsertParams = (createList, fieldNameArray, key = '') => {
+export const getInsertParams = (createList, fieldNameArray, key = '') => {
   let  placeHoldersString = ''
   let placeHoldersStringArray = []
   const paramsArray = []

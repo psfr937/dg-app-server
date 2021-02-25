@@ -1,0 +1,79 @@
+2021-02-24 01:54:05 info: (src/controllers/cart.js:9) [2]
+2021-02-24 01:54:26 info: (src/controllers/cart.js:9) [2]
+2021-02-24 01:54:26 error: jwt must be provided
+2021-02-24 01:55:28 info: (src/controllers/cart.js:9) [1]
+2021-02-24 01:55:28 error: jwt must be provided
+2021-02-24 01:55:49 info: (src/controllers/cart.js:9) [1]
+2021-02-24 01:55:49 error: jwt must be provided
+2021-02-24 02:09:50 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:09:50 error: jwt must be provided
+2021-02-24 02:16:29 error: jwt must be provided
+2021-02-24 02:16:30 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:16:31 error: jwt must be provided
+2021-02-24 02:19:44 error: jwt must be provided
+2021-02-24 02:19:47 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:19:47 error: jwt must be provided
+2021-02-24 02:21:51 error: jwt must be provided
+2021-02-24 02:21:59 error: jwt must be provided
+2021-02-24 02:22:06 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:22:07 error: jwt must be provided
+2021-02-24 02:22:38 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:22:38 error: jwt must be provided
+2021-02-24 02:23:44 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:23:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 02:23:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 02:23:45 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 02:23:45 error: (src/controllers/billing/setupPayment.js:19) customer is not defined
+2021-02-24 02:24:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 02:24:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 02:24:09 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 02:24:09 error: (src/controllers/billing/setupPayment.js:19) customer is not defined
+2021-02-24 02:25:01 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:25:02 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 02:25:02 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 02:25:02 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 02:25:02 error: (src/controllers/billing/setupPayment.js:19) customer is not defined
+2021-02-24 02:25:25 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:25:25 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 02:25:25 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 02:25:25 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 02:27:04 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:27:04 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 02:27:04 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 02:27:04 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 02:29:29 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:29:29 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 02:29:29 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 02:29:29 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 02:30:34 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:30:34 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 02:30:34 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 02:30:34 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 02:31:39 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:31:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 02:31:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 02:31:39 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 02:32:24 info: (src/controllers/cart.js:9) [1]
+2021-02-24 02:32:24 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 02:32:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 02:32:24 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 09:35:36 info: (src/controllers/cart.js:9) [1]
+2021-02-24 09:35:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 09:35:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 09:35:36 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 09:36:11 info: (src/controllers/cart.js:9) [1]
+2021-02-24 09:36:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 09:36:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 09:36:11 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 09:38:43 info: (src/controllers/cart.js:9) [1]
+2021-02-24 09:38:43 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 09:38:43 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 09:38:43 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 09:39:32 info: (src/controllers/cart.js:9) [1]
+2021-02-24 09:39:32 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 09:39:32 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 09:39:32 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-24 09:44:14 info: (src/controllers/cart.js:9) [1]
+2021-02-24 09:44:14 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-24 09:44:14 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-24 09:44:14 info: (src/controllers/billing/checkStripeCustomer.js:9)

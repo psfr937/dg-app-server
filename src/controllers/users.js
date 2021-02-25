@@ -99,8 +99,9 @@ export default {
         info: {
           user_id,
           session_id,
-          display_name: req.body.name,
-          avatar_url: null }
+        },
+        display_name: req.body.name,
+        avatar_url: null
       };
       return res.status(200).json({status: 200, ...data, isUnused: true });
 
@@ -185,9 +186,9 @@ export default {
         info: {
           user_id,
           session_id,
-          display_name: req.body.name,
-          avatar_url: null
-        }
+        },
+        display_name: req.body.name,
+        avatar_url: null
       };
       return res.status(200).json({status: 200, ...data, isUnused: true});
     }
@@ -253,10 +254,10 @@ export default {
       info: {
         user_id: userId,
         session_id: sessionId,
-        display_name: userInfo.display_name,
-        avatar_url: userInfo.avatar_url,
-        rank: userInfo.rank
-      }
+      },
+      display_name: userInfo.display_name,
+      avatar_url: userInfo.avatar_url,
+      rank: userInfo.rank
     }
     return res.status(200).json({status: 200, isAuth: true, ...data})
   }),

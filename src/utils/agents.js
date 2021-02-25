@@ -59,10 +59,10 @@ class Agent {
     try {
       await client.query('BEGIN')
       try {
-        await callback(client)
+        await callback(client);
         client.query('COMMIT')
       } catch(e) {
-        client.query('ROLLBACK')
+        client.query('ROLLBACK');
         throw e
       }
     } finally {

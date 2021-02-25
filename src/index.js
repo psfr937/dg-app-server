@@ -12,7 +12,7 @@
 import chalk from 'chalk';
 import app from './app'
 const path = require('path')
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
 //const server 	= require('./socket/index')(app)
 
 if (port) {

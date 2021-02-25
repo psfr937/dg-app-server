@@ -1,0 +1,28 @@
+2021-02-22 18:25:12 error: (src/utils/q.js:24) No rows found
+2021-02-22 18:25:24 error: (src/utils/q.js:24) No rows found
+2021-02-22 18:25:54 error: (src/utils/q.js:24) No rows found
+2021-02-22 18:25:57 error: (src/utils/q.js:24) No rows found
+2021-02-22 18:27:37 error: (src/utils/q.js:24) No rows found
+2021-02-22 18:28:16 error: (src/utils/q.js:24) No rows found
+2021-02-22 18:28:48 info: (src/controllers/cart.js:9)
+2021-02-22 18:28:48 error: (src/utils/q.js:24) No rows found
+2021-02-22 18:29:30 info: (src/controllers/cart.js:9)
+2021-02-22 18:29:30 error: (src/utils/q.js:24) No rows found
+2021-02-22 18:29:40 info: (src/controllers/cart.js:9)
+2021-02-22 18:29:40 error: (src/utils/q.js:24) No rows found
+2021-02-22 18:31:22 info: (src/controllers/cart.js:9) {"@@redux-saga/IO":true,"combinator":false,"type":"SELECT","payload":{"args":[]}}
+2021-02-22 18:31:22 error: (src/utils/agents.js:47) malformed array literal: "{"@@redux-saga/IO":true,"combinator":false,"type":"SELECT","payload":{"args":[]}}"
+2021-02-22 18:31:22 error: (src/utils/q.js:24) malformed array literal: "{"@@redux-saga/IO":true,"combinator":false,"type":"SELECT","payload":{"args":[]}}"
+2021-02-22 18:33:17 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:34:39 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:36:12 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:38:51 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:39:31 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:43:01 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:44:11 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:45:22 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:45:53 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:46:00 info: (src/controllers/cart.js:9) [1]
+2021-02-22 18:46:03 info: (src/controllers/cart.js:9) [1]
+2021-02-22 20:07:29 info: (src/controllers/cart.js:9) [1]
+2021-02-22 20:08:02 info: (src/controllers/cart.js:9) [2]

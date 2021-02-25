@@ -1,7 +1,6 @@
 import stripe from '../../utils/stripe'
 import Errors from "../../constants/Errors";
 import asyncRoute from "../../utils/asyncRoute";
-import { q, qNonEmpty } from '../../utils/q'
 import p from "../../utils/agents";
 import logger from "../../utils/logger";
 
@@ -9,11 +8,11 @@ import logger from "../../utils/logger";
 export default {
   createSetupIntent: asyncRoute( async(req, res, next) => {
 
-    let setupIntent
+    let setupIntent;
     try {
       setupIntent = await stripe.setupIntents.create({
         payment_method_types: ['card'],
-        customer: customer.id
+        customer: req.user.stripe_id
       });
     } catch(err){
       logger.error(err, '%o');

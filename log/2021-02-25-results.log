@@ -1,0 +1,40 @@
+2021-02-25 16:08:42 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:08:52 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:09:48 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:15:15 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:26:17 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:27:49 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:35:40 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:45:32 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:50:03 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:55:59 error: jwt must be provided
+2021-02-25 16:56:00 info: (src/controllers/cart.js:9) [1]
+2021-02-25 16:56:00 error: jwt must be provided
+2021-02-25 17:24:05 error: jwt must be provided
+2021-02-25 17:25:27 error: jwt must be provided
+2021-02-25 17:25:32 error: jwt must be provided
+2021-02-25 17:28:10 error: jwt must be provided
+2021-02-25 17:29:26 error: jwt must be provided
+2021-02-25 17:29:47 error: jwt must be provided
+2021-02-25 17:33:52 info: (src/controllers/cart.js:9) [1]
+2021-02-25 17:33:52 error: jwt must be provided
+2021-02-25 17:35:58 error: jwt must be provided
+2021-02-25 17:36:20 info: (src/controllers/cart.js:9) [1]
+2021-02-25 17:36:20 error: jwt must be provided
+2021-02-25 17:36:42 error: jwt must be provided
+2021-02-25 17:37:09 error: jwt must be provided
+2021-02-25 17:38:03 error: jwt must be provided
+2021-02-25 17:39:12 error: jwt must be provided
+2021-02-25 17:41:53 error: jwt must be provided
+2021-02-25 17:58:57 info: (src/controllers/cart.js:9) [1]
+2021-02-25 17:58:57 error: jwt must be provided
+2021-02-25 18:00:30 info: (src/controllers/cart.js:9) [1]
+2021-02-25 18:00:30 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-25 18:00:30 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-25 18:00:30 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-25 20:38:22 info: (src/controllers/cart.js:9) [1]
+2021-02-25 20:38:22 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-25 20:38:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-02-25 20:38:24 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-02-25 21:12:52 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-02-25 21:12:52 info: (src/middlewares/jwtAuth.js:129) user found

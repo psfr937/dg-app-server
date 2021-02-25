@@ -1,79 +1,218 @@
-import asyncRoute from "../utils/asyncRoute";
-
-const fetch = require('node-fetch');
-
-
-
-
-export const fetchToken = async () => {
-
-  const url = 'https://stag-hk-api.gogox.com/oauth/token';
-
+import logger from "../utils/logger";
+import Errors from "../constants/Errors";
+import axios from 'axios'
+const fetchToken = async () => {
   const options = {
     method: 'POST',
-    headers: {Accept: 'application/json', 'Content-Type': 'application/json'}
+    url: 'https://stag-hk-api.gogox.com/oauth/token',
+    headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
+    data:{
+      grant_type: 'client_credentials',
+      client_id: '864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642',
+      client_secret: '3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be'
+    }
   };
 
   try{
-    const res = await fetch(url, options)
-    return await res.json()
+    return await axios(options);
 
   } catch(err){
+    if (err.response) {
+      logger.error(err.response, '%o');
+      console.log(err.response.status);
+    }
     throw err
   }
-}
+};
 
 
-export const getQuotation = async(vehicle_type, schedule_at, from, to) => {
+export const getTransportQuotation = async (vehicle_type, schedule_at, from, to) => {
 
-  const fetch = require('node-fetch');
+  let token;
+  try{
+    const tokenResult = await fetchToken();
+    token = tokenResult.access_token
+  }catch(err){
+    throw err
+  }
 
-  const url = 'https://stag-hk-api.gogox.com/transport/orders';
+
 
   const options = {
     method: 'POST',
-    headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
-    body: JSON.stringify({
+    url: 'https://stag-hk-api.gogox.com/transport/quotations',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    },
+    data: {
+      payment_method: 'monthly_settlement',
       vehicle_type: vehicle_type,
-      schedule_at: schedule_at,
-      location: {
-        lat: from.lat,
-        lng: from.lng
+      pickup: {
+        schedule_at: schedule_at,
+        location: {
+          lat: from.lat,
+          lng: from.lng
+        }
       },
       destinations: {
-        lat: from.lat,
-        lng: from.lng
+        location: {
+          lat: to.lat,
+          lng: to.lng
+        }
       }
-    })
+    }
   };
 
-  try{
-    const res = await fetch(url, options)
-    return await res.json()
-
-  } catch(err){
+  try {
+    return await axios(options)
+  } catch (err) {
     throw err
   }
-}
+};
 
-export const placeOrder = async () => {
-  const url = 'https://stag-hk-api.gogox.com/transport/orders';
+// {
+//   "access_token":"72f180d31689738c5593bfa8dde321ed6b85bad4f528603246fb12b70ba92aa9"
+//   "token_type":"Bearer"
+//   "expires_in":7200
+//   "created_at":1614249382
+// }
+
+export const placeTransportOrder = async (vehicle_type, schedule_at, from, to) => {
+
+  let token;
+  try{
+    const tokenResult = await fetchToken();
+    token = tokenResult.access_token
+  }catch(err){
+    throw err
+  }
+
+
 
   const options = {
     method: 'POST',
-    headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
-    body: JSON.stringify({
-      payment_method: 'monthly_settlement'
-    })
+    url: 'https://stag-hk-api.gogox.com/transport/orders',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    },
+    data: {
+      payment_method: 'monthly_settlement',
+      vehicle_type: vehicle_type,
+      pickup: {
+        schedule_at: schedule_at,
+        location: {
+          lat: from.lat,
+          lng: from.lng
+        }
+      },
+      destinations: {
+        location: {
+          lat: to.lat,
+          lng: to.lng
+        }
+      }
+    }
   };
 
-  fetch(url, options)
-    .then(res => res.json())
-    .then(json => console.log(json))
-    .catch(err => console.error('error:' + err));
-}
+  try {
+    return await axios(options)
+
+  } catch (err) {
+    throw err
+  }
+};
 
 
+
+export const getDeliveryQuotation = async (delivery_type, schedule_at, from, to) => {
+
+  let token;
+  try {
+    let tokenResult = await fetchToken();
+    token = tokenResult.access_token;
+  }
+  catch(err){
+    logger.error(JSON.stringify(err), '%o');
+    throw err
+  }
+
+  const options = {
+    method: 'POST',
+    url: 'https://stag-hk-api.gogox.com/delivery/quotations',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    },
+    data: {
+      package: {weight: 1, height: 60, length: 60, width: 60},
+      pickup: { location: from, schedule_at: schedule_at },
+      destinations: [{
+        location: to
+      }],
+      delivery_type: delivery_type
+    }
+  };
+
+  try {
+    return await axios(options);
+  } catch (err) {
+    logger.error(JSON.stringify(err), '%o');
+    throw err
+  }
+};
+
+
+
+export const placeDeliveryOrder = async (vehicle_type, schedule_at, from, to) => {
+
+  let token;
+  try {
+    let tokenResult = await fetchToken();
+    token = tokenResult.access_token;
+  }
+  catch(err){
+    throw err
+  }
+
+  const options = {
+    method: 'POST',
+    url: 'https://stag-hk-api.gogox.com/delivery/orders',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    },
+    data: {
+      payment_method: 'monthly_settlement',
+      vehicle_type: vehicle_type,
+      pickup: {
+        schedule_at: schedule_at,
+        location: {
+          lat: from.lat,
+          lng: from.lng
+        }
+      },
+      destinations: {
+        location: {
+          lat: to.lat,
+          lng: to.lng
+        }
+      }
+    }
+  };
+
+  try {
+    return await axios(options);
+
+  } catch (err) {
+    throw err
+  }
+};
 
 
 

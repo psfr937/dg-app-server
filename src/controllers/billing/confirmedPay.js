@@ -13,14 +13,7 @@ export default {
     const {user} = req;
     try {
 
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount: 1099,
-        currency: 'hkd',
-        customer: user.stripe_id,
-        payment_method: '{{PAYMENT_METHOD_ID}}',
-        error_on_requires_action: true,
-        confirm: true,
-      });
+      const paymentIntent = await confirmedPaymentIntent();
 
       return res.status(200).json({
         status: 200,
@@ -34,3 +27,14 @@ export default {
     }
   })
 }
+
+export const confirmedPaymentIntent = async (price = 10.99, customerId, paymentMethodId) => {
+  return await stripe.paymentIntents.create({
+    amount: price * 100,
+    currency: 'hkd',
+    customer: customerId,
+    payment_method: paymentMethodId,
+    error_on_requires_action: true,
+    confirm: true,
+  });
+};

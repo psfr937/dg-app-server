@@ -74,5 +74,8 @@ module.exports = {
     html: '<pre>no html content<pre>',
   },
   fcmServerKey: process.env.FCM_SERVER_KEY,
-  recaptcha: process.env.RECAPTCHA_KEY
+  recaptcha: process.env.RECAPTCHA_KEY,
+  googleMapApiKey: process.env.GOOGLE_MAP_API_KEY,
+  gogoxAppId: process.env.GOGOX_APP_ID_TEST,
+  gogoxSecretKey: process.env.GOGOX_SECRET_KEY_TEST
 };

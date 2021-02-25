@@ -1,4 +1,4 @@
-import buildQuery from "./buildQuery/regular";
+
 import logger from '../utils/logger'
 import asyncRoute from "../utils/asyncRoute";
 import {q, qNonEmpty} from "../utils/q";
@@ -8,11 +8,26 @@ import p from "../utils/agents";
 export default {
   list: asyncRoute(async (req, res) => {
     try {
+      console.log(req);
       const inventories = (await qNonEmpty(
           `SELECT *
            FROM inventories`)
-      ).rows
+      ).rows;
+      logger.info(JSON.stringify(inventories), '%o');
+      console.log(inventories);
       return res.json({status: 200, data: inventories})
+    } catch (err) {
+      return res.errors([Errors.DB_OPERATION_FAIL(err)])
+    }
+  }),
+
+  get: asyncRoute(async (req, res) => {
+    try {
+      const inventory = (await qNonEmpty(
+          `SELECT *
+           FROM inventories WHERE id = $1`, [req.params.id])
+      ).rows[0];
+      return res.json({status: 200, data: inventory})
     } catch (err) {
       return res.errors([Errors.DB_OPERATION_FAIL(err)])
     }
@@ -23,9 +38,9 @@ export default {
 
     logger.info(body, '%o')
 
-    let createList =  JSON.parse(body.createList)
-    let updateList = JSON.parse(body.updateList)
-    let deleteList = JSON.parse(body.deleteList)
+    let createList =  JSON.parse(body.createList);
+    let updateList = JSON.parse(body.updateList);
+    let deleteList = JSON.parse(body.deleteList);
 
     logger.info(createList)
 
@@ -89,7 +104,7 @@ export default {
             fieldName: fieldNameArray.insert,
             mode: 'INSERT'
           }]
-        )
+        );
 
 
         await buildTxQuery(

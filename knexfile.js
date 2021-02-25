@@ -25,9 +25,10 @@ module.exports = {
     },
   },
 
-  staging: {
+  test: {
     client: 'pg',
-    connection: process.env.DATABASE_URL,
+    connection: process.env.DEV_DATABASE_URL,
+    ssl: false,
     migrations: {
       directory: __dirname + '/knex/migrations',
     },

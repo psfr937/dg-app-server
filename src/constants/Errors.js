@@ -7,6 +7,22 @@ export default {
     title: 'Unknown Exception',
     detail: 'Something wrong happened.'
   },
+  [ErrorCodes.GOGOVAN_API_ERROR]: detail => {
+    return {
+      code: ErrorCodes.UNKNOWN_EXCEPTION,
+      status: 500,
+      title: 'Unknown Exception',
+      detail
+    }
+  },
+  [ErrorCodes.GOOGLE_MAP_ERROR]: detail => {
+    return {
+      code: ErrorCodes.UNKNOWN_EXCEPTION,
+      status: 500,
+      title: 'Unknown Exception',
+      detail
+    }
+  },
   [ErrorCodes.SERVER_EXCEPTION]: detail => {
     return {
       code: ErrorCodes.SERVER_EXCEPTION,
