@@ -27,7 +27,10 @@ function Footer() {
     <Grid style={style.footer}>
       <Grid.Cell style={style.content}>
         <p style={style.p}>
-          This email was created with React.
+          Unsubscribe
+        </p>
+        <p style={style.p}>
+          <a style={style.a} href="https://github.com/sentisis/react-emails">Unsubscribe</a>
         </p>
         <p style={style.p}>
           The template and source code is freely available&nbsp;

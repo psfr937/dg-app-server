@@ -1,0 +1,92 @@
+{"status":200,
+  "result":{
+    "address":{
+    "lat":22.2812739,
+    "lng":114.1480773,
+    "formatted":"56 Conduit Rd, Mid-Levels, Hong Kong",
+    },
+    "quotation":{"provider":"gogox",
+      "result":{
+        "delivery_type":"same_day_night",
+        "destinations":[{
+          "estimated_dropoff_at":1614520800,
+          "location":{"lat":22.2812739,"lng":114.1480773},
+        }
+        ],
+          "estimated_total_price":{"currency":"HKD","amount":11000},
+        "estimated_price_breakdown":[{
+          "key":"base_charge",
+          "amount":11000}
+        ],
+  "package":{
+    "weight":1,
+    "height":60,
+    "length":60,
+    "width":60,
+  },
+      },
+    }}}
+
+{
+"delivery_type":"same_day_night"
+"uuid":"918e27a9-8a8f-41a4-a903-ca7575082bcf"
+"payment_method":"prepaid_wallet"
+"courier":{
+}
+"status":"pending"
+"price":{
+"amount":7500
+"currency":"HKD"
+}
+"price_breakdown":[
+{
+"key":"base_charge"
+"amount":7500
+}
+]
+"merchant_order_number":"1"
+"note_to_courier":"haha"
+"image_url":NULL
+"package":{
+"content":"clothes"
+"weight":1
+"height":60
+"length":60
+"width":60
+}
+"pickup":{
+"status":"not_picked_up"
+"schedule_at":1614492371
+"street_address":"Blessings Garden Phase 2, 56 Conduit Road, Mid-levels, HK Island"
+"floor_or_unit_number":"8D"
+"location":{
+"lat":22.2781559
+"lng":114.1799249
+}
+"contact":{
+"name":"Pang Siu Fai Raymond"
+"phone_number":"64927718"
+}
+}
+"destinations":[
+{
+"status":"not_delivered"
+"estimated_dropoff_at":1614520800
+"street_address":"8D, Blessings Garden"
+"floor_or_unit_number":"56 Conduit Road"
+"location":{
+"lat":22.2988284
+"lng":114.1666318
+}
+"contact":{
+"name":"Raymond Pang"
+"phone_number":"+85264927718"
+}
+"signature_image_url":NULL
+}
+]
+"tracking_id":"QMoXJg"
+"tracking_url":"https://stag-track.gogox.com/QMoXJg"
+"pickup_code":"264640"
+"pickup_qr_code_image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAAA0klEQVR4nO1UQQrEIAyMVdg3FQIKfV..."
+}

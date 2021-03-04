@@ -4,21 +4,20 @@ import bodyParser from '../middlewares/bodyParser';
 import { jwtAuth } from '../middlewares/jwtAuth';
 import mailController from '../controllers/mail';
 import { form, recaptcha, verifyUserNonce } from '../middlewares/validate';
-import createCustomerController from "../controllers/billing/checkStripeCustomer";
 
 export default app => {
   // user
-  app.get('/api/users', userController.list);
+  app.get('/users', userController.list);
 
   app.post(
-    '/api/users',
+    '/users',
     bodyParser.json,
     userController.emailRegister,
-    mailController.sendVerification
+    mailController.activateAccountMail
   );
 
   app.post(
-    '/api/users/email/verify',
+    '/users/email/verify',
     bodyParser.json,
     bodyParser.jwt('verifyEmailToken', jwt.verifyEmail.secret),
     verifyUserNonce('verify_email_nonce'),
@@ -26,22 +25,19 @@ export default app => {
   );
 
   app.post(
-    '/api/users/email/request-verify',
+    '/users/email/request-verify',
     bodyParser.json,
-    // validate.form('user/VerifyEmailForm'),
-    recaptcha,
-    userController.emailSetNonce('verifyEmail')
+    mailController.activateAccountMail
   );
-  app.post('/api/users/emaillogin', bodyParser.json, userController.emailLogin);
+  app.post('/users/login/email', bodyParser.json, userController.emailLogin);
   app.post(
-    '/api/users/password/request-reset',
+    '/users/password/request-reset',
     bodyParser.json,
-    // validate.form('user/ForgetPasswordForm'),
     recaptcha,
-    userController.emailSetNonce('resetPassword')
+    mailController.resetPasswordMail
   );
   app.put(
-    '/api/users/password',
+    '/users/password',
     bodyParser.json,
     bodyParser.jwt('resetPasswordToken', jwt.resetPassword.secret),
     // validate.verifyUserNonce('resetPassword'),
@@ -50,7 +46,7 @@ export default app => {
   );
   // jwt required for the following:
 
-  app.get('/api/users/logout', jwtAuth, userController.logout);
+  app.get('/users/logout', jwtAuth, userController.logout);
 
-  app.get('/api/users/me', jwtAuth, userController.readSelf);
+  app.get('/users/me', jwtAuth, userController.readSelf);
 };

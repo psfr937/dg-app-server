@@ -3,7 +3,7 @@ import bodyParser from "../middlewares/bodyParser";
 import address from "../controllers/address"
 
 export default app => {
-  app.get('/api/addresses',
+  app.get('/addresses',
     jwtAuth,
     bodyParser.json,
     address.list

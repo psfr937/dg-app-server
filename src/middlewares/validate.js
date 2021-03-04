@@ -2,9 +2,8 @@ import axios from 'axios';
 import Errors from '../constants/Errors';
 import configs from '../config';
 import { validation, validateErrorObject } from '../utils/validateError';
-import p from '../utils/agents';
-import { q } from '../utils/q'
-
+import { q, qNonEmpty } from '../utils/q'
+import asyncRoute from "../utils/asyncRoute";
 
 export const form = (formPath, onlyFields = []) => (req, res, next) => {
     let errors = validation(formPath)({
@@ -56,19 +55,18 @@ export const rankPermission = right => async(req,res, next) => {
   return next()
   }
 
-export const verifyUserNonce = nonceKey => async (req, res, next) => {
-    const { _id, nonce } = req.decodedPayload;
-    console.log(_id);
+export const verifyUserNonce = nonceKey => asyncRoute(async (req, res, next) => {
+    const { id, nonce } = req.decodedPayload;
+    console.log(id);
     console.log(nonce);
-    const user = await p.query('SELECT * FROM users WHERE id = $1', [_id]);
+    const user = (await qNonEmpty('SELECT * FROM users WHERE id = $1', [id])
+    ).rows[0];
     if (nonce !== user[nonceKey]) {
       return res.errors([Errors.TOKEN_REUSED]);
     }
-    user[nonceKey] = -1;
-    console.log('hiki haki');
     req.user = user;
     return next();
-  }
+  });
 
 export const recaptcha = (req, res, next) => {
     if (process.env.NODE_ENV === 'test' || !configs.recaptcha) {

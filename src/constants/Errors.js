@@ -1,6 +1,12 @@
 import ErrorCodes from './ErrorCodes';
 
 export default {
+  [ErrorCodes.BAD_REQUEST]: {
+    code: ErrorCodes.BAD_REQUEST,
+    status: 500,
+    title: 'Bad Request',
+    detail: 'Invalid Parameter'
+  },
   [ErrorCodes.UNKNOWN_EXCEPTION]: {
     code: ErrorCodes.UNKNOWN_EXCEPTION,
     status: 500,

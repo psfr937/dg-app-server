@@ -3,25 +3,38 @@ import { jwtAuth } from '../middlewares/jwtAuth';
 import setupPaymentController from"../controllers/billing/setupPayment"
 import checkStripeCustomer from "../controllers/billing/checkStripeCustomer";
 import subscribeController from "../controllers/billing/subscribe";
-import transaction from '../controllers/transaction'
+import mail from "../controllers/mail"
+import {
+  buyPostDelivery, buy,
+  confirmedPayAndRecord, savePaymentMethod, sellPostDelivery,
+  transactionDeliveryOrder
+} from "../controllers/transaction";
 export default app => {
 
 
-  app.post('/api/transaction/buy',
+  app.post('/transaction/buy',
     bodyParser.json,
     jwtAuth,
     checkStripeCustomer,
-    transaction.buy
+    savePaymentMethod,
+    buy,
+    transactionDeliveryOrder,
+    buyPostDelivery,
+    confirmedPayAndRecord,
+    mail.sendBuyReceipt
   );
 
-  app.post('/api/transaction/sell',
+  app.post('/transaction/sell',
     bodyParser.json,
     jwtAuth,
     checkStripeCustomer,
-    transaction.sell
+    savePaymentMethod,
+    transactionDeliveryOrder,
+    sellPostDelivery,
+    confirmedPayAndRecord
   );
 
-  app.post('/api/transaction/add-payment-method',
+  app.post('/transaction/add-payment-method',
     bodyParser.json,
     jwtAuth,
     checkStripeCustomer,
@@ -29,14 +42,14 @@ export default app => {
   );
 
 
-  app.post('/api/transaction/set-default-method',
+  app.post('/transaction/set-default-method',
     bodyParser.json,
     jwtAuth,
     checkStripeCustomer,
     setupPaymentController.setDefaultPaymentMethod
   );
 
-  app.post('/api/transaction/subscribe',
+  app.post('/transaction/subscribe',
     bodyParser.json,
     jwtAuth,
     checkStripeCustomer,

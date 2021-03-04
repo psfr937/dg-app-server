@@ -9,7 +9,6 @@ import logger from "../../utils/logger";
 export default {
 
   confirmedPaymentIntent: asyncRoute(async (res, req, next) => {
-
     const {user} = req;
     try {
 
@@ -28,9 +27,9 @@ export default {
   })
 }
 
-export const confirmedPaymentIntent = async (price = 10.99, customerId, paymentMethodId) => {
+export const confirmedPaymentIntent = async (price = 1099, customerId, paymentMethodId) => {
   return await stripe.paymentIntents.create({
-    amount: price * 100,
+    amount: price,
     currency: 'hkd',
     customer: customerId,
     payment_method: paymentMethodId,

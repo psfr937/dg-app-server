@@ -4,11 +4,11 @@ import { genAccessToken, genRefreshToken } from '../utils/tokenHelper'
 import { passportStrategy, jwt } from '../config/index';
 import p from '../utils/agents';
 const { v4: uuidv4 } = require('uuid');
-
+import asyncRoute from "../utils/asyncRoute";
 
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-export default (req, res, next) => {
+export default asyncRoute(async(req, res, next) => {
 
   const findUser = (schemaProfileKey, id, cb) => {
     console.log('find user')
@@ -19,11 +19,9 @@ export default (req, res, next) => {
       return cb(null, userFound);
     })
     .catch( err => {
- //     console.log(err);
       return cb(err);
     });
   };
-
 
   const mapProfile = (platform, profile) => {
     let user;
@@ -34,10 +32,7 @@ export default (req, res, next) => {
           email: profile._json.email,
           gender: profile._json.gender,
           age: profile._json.age,
-          display_name: profile._json.name,
-          given_name: profile._json.first_name,
-          middle_name: profile._json.middle_mame,
-          family_name: profile._json.last_name,
+          name: profile._json.name,
           avatar_url: profile._json.picture.data.url,
         };
         break;
@@ -47,9 +42,7 @@ export default (req, res, next) => {
           email: profile._json.email,
           gender: profile._json.gender,
           age: profile._json.age,
-          display_name: profile._json.displayName,
-          given_name: profile._json.name.givenName,
-          family_name: profile._json.familyName,
+          name: profile._json.displayName,
           avatar_url: profile._json.image.url,
         };
         break;
@@ -71,44 +64,38 @@ export default (req, res, next) => {
     };
   };
 
-  const loginOrCreate = (platform, userFound, profile, done) => {
+  const loginOrCreate = async (platform, userFound, profile, done) => {
 
     if (userFound.length === 0){
       console.log('user not found');
       const params = mapProfile(platform, profile);
+      try{
+        let session_id; let refresh_token;
+        await p.tx(async client => {
+          const insertResult = await client.query(params.query)
 
-      p.transaction(conn =>
-        p.query(params.query)
-          .then(insertResult => {
-            const lastId = insertResult.rows[0].id;
-            const lastIdStr = `${lastId}`;
-            const pad = (`U00000000`).slice(0, -lastIdStr.length);
-            const session_id = uuidv4();
-            const refresh_token = genRefreshToken({ session_id });
-            const user_id = `${pad}${lastIdStr}`;
-            return Promise.all([
-              p.query(
-              "UPDATE users SET user_id = $1 WHERE id = $2 RETURNING user_id",
-              [user_id, lastId]),
-              p.query(
-                `INSERT INTO sessions (user_id, session_id, refresh_token ,login_time, created_at ) 
-                VALUES ($1, $2, $3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) 
-                RETURNING session_id, refresh_token`,
-                [user_id, session_id, refresh_token])
-              ]);
-          })
-      ).then(values => {
+          const userId = insertResult.rows[0].id;
+          session_id = uuidv4();
+          refresh_token = genRefreshToken({session_id});
+          const values = client.query(
+              `INSERT INTO sessions (user_id, session_id, refresh_token, login_time, created_at)
+               VALUES ($1, $2, $3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+               RETURNING session_id, refresh_token`,
+            [userId, session_id, refresh_token])
+        });
+
         const [results, results2] = values;
         const { user_id } = results.rows[0];
-        const { session_id, refresh_token } = results2.rows[0];
+        session_id = results2.rows[0].session_id;
+        refresh_token = results2.rows[0].refresh_token;
         const access_token = genAccessToken({ user_id, session_id });
         const info = { user_id, session_id, avatarUrl: params.user.avatar_url };
         const data = {token: access_token, info};
         done(null, data )
-      }).catch(err => {
+      }catch(err){
         res.pushError(err);
         res.error();
-      });
+      }
     }
     else {
       console.log('user found');
@@ -116,27 +103,30 @@ export default (req, res, next) => {
       const { user_id } = user;
       const session_id = uuidv4();
       const refresh_token = genRefreshToken({ session_id });
-      Promise.all([
-        p.query(
-        `UPDATE users SET last_login_time=CURRENT_TIMESTAMP WHERE user_id=$1
-        RETURNING last_login_time`,
-        [user_id]
-      ),
-        p.query(
-          `INSERT INTO sessions (user_id, session_id, refresh_token, login_time, created_at ) 
-          VALUES ($1, $2, $3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)`,
-          [user_id, session_id, refresh_token ])
-      ])
-      .then(() => {
-        const access_token = genAccessToken( { user_id, session_id } );
+      try {
+        await Promise.all([
+          p.query(
+              `UPDATE users
+               SET last_login_time=CURRENT_TIMESTAMP
+               WHERE id = $1
+               RETURNING last_login_time`,
+            [user_id]
+          ),
+          p.query(
+              `INSERT INTO sessions (user_id, session_id, refresh_token, login_time, created_at)
+               VALUES ($1, $2, $3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)`,
+            [user_id, session_id, refresh_token])
+        ]);
+
+        const access_token = genAccessToken({user_id, session_id});
         console.log('case 2');
-        const info = { user_id, session_id, avatarUrl: userFound[0].avatar_url };
+        const info = {user_id, session_id, avatarUrl: userFound[0].avatar_url};
         const data = {token: access_token, info};
         done(null, data);
-      })
-        .catch(_err => {
-          console.log(_err);
-        });
+
+      }catch(err) {
+        console.log(err);
+      }
     }
   };
 
@@ -181,4 +171,4 @@ export default (req, res, next) => {
   passport.initialize()(req, res, next);
 
 
-};
+});

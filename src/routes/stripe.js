@@ -5,14 +5,14 @@ import setupPaymentController from"../controllers/billing/setupPayment"
 import checkStripeCustomer from "../controllers/billing/checkStripeCustomer";
 
 export default app => {
-  app.post('/api/stripe/create-payment-intent',
+  app.post('/stripe/create-payment-intent',
     bodyParser.json,
     jwtAuth,
     checkStripeCustomer,
     paymentController.createPaymentIntent
   );
 
-  app.post('/api/stripe/create-setup-intent',
+  app.post('/stripe/create-setup-intent',
     jwtAuth,
     checkStripeCustomer,
     setupPaymentController.createSetupIntent

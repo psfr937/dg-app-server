@@ -1,0 +1,847 @@
+2021-03-03 01:08:20 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:12:20 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:13:12 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:14:32 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:17:42 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:19:48 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:19:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:19:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:19:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:19:48 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:19:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:19:48 info: (src/controllers/address.js:9)
+2021-03-03 01:30:45 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:30:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:30:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:30:45 info: (src/controllers/address.js:9)
+2021-03-03 01:30:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:30:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:30:45 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:31:04 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:31:04 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:31:05 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:31:05 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:31:05 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:31:05 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:31:05 info: (src/controllers/address.js:9)
+2021-03-03 01:34:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:34:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:34:39 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 01:34:39 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 01:34:40 error: (src/controllers/delivery.js:21)
+2021-03-03 01:34:40 error: (src/controllers/delivery.js:140) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:34:40 error: (src/controllers/quotation.js:165) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:34:42 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:34:42 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:34:42 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:34:42 info: (src/controllers/address.js:9)
+2021-03-03 01:34:42 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:34:42 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:34:42 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:35:20 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:35:20 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:35:20 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:35:20 info: (src/controllers/address.js:9)
+2021-03-03 01:35:26 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:35:26 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:35:26 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:35:26 info: (src/controllers/address.js:9)
+2021-03-03 01:38:10 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:38:10 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:38:10 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:38:10 info: (src/controllers/address.js:9)
+2021-03-03 01:38:51 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:38:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:38:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:38:51 info: (src/controllers/address.js:9)
+2021-03-03 01:38:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:38:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:38:51 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:39:20 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:39:20 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:39:20 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:39:20 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:39:20 info: (src/controllers/address.js:9)
+2021-03-03 01:39:20 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:39:20 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:43:23 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:43:23 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:43:23 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:43:23 info: (src/controllers/address.js:9)
+2021-03-03 01:43:23 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:43:23 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:43:23 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 01:43:23 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 01:43:23 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:43:23 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:43:23 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:43:23 error: (src/controllers/delivery.js:21)
+2021-03-03 01:43:23 error: (src/controllers/delivery.js:140) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:43:23 error: (src/controllers/quotation.js:165) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:43:58 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:43:58 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:43:58 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:43:58 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:43:58 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:43:58 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:43:58 info: (src/controllers/address.js:9)
+2021-03-03 01:43:58 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:43:58 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:43:58 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 01:43:58 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 01:43:59 error: (src/controllers/delivery.js:21)
+2021-03-03 01:43:59 error: (src/controllers/delivery.js:140) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:43:59 error: (src/controllers/quotation.js:165) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:46:10 info: (src/controllers/cart.js:9) [1]
+2021-03-03 01:46:10 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:46:10 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:46:10 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:46:10 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:46:10 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:46:10 info: (src/controllers/address.js:9)
+2021-03-03 01:46:10 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:46:10 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:46:10 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 01:46:10 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 01:46:10 error: (src/controllers/delivery.js:21)
+2021-03-03 01:46:10 error: (src/controllers/delivery.js:140) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:46:10 error: (src/controllers/quotation.js:165) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:53:21 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:53:21 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:53:21 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 01:53:21 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 01:53:21 error: (src/controllers/delivery.js:21)
+2021-03-03 01:53:21 error: (src/controllers/delivery.js:140) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:53:21 error: (src/controllers/quotation.js:165) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:58:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:58:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:58:08 info: (src/controllers/address.js:9)
+2021-03-03 01:58:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:58:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:58:08 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 01:58:08 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 01:58:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 01:58:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 01:58:08 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 01:58:08 error: (src/utils/q.js:24) No rows found
+2021-03-03 01:58:08 error: (src/controllers/delivery.js:21)
+2021-03-03 01:58:08 error: (src/controllers/delivery.js:140) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:58:08 error: (src/controllers/quotation.js:165) {"message":"Request failed with status code 503","name":"Error","stack":"Error: Request failed with status code 503\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/oauth/token","method":"post","data":"{\"grant_type\":\"client_credentials\",\"client_id\":\"864cb2157543b72bd15f8d98ce434ffdd93a1b7e8630a83204edb871d14a7642\",\"client_secret\":\"3bd2830f93452bbc2a2d71c78c3a67bbfffc05892b09132814171207786e79be\"}","headers":{"Accept":"application/json","Content-Type":"application/json","User-Agent":"axios/0.21.1","Content-Length":197},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 01:58:39 info: (src/controllers/inventories.js:16) [{"id":3,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":4,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":5,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":6,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":7,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":8,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":9,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":10,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":11,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":12,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":13,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":49,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":50,"name":"skirt","brand":null,"gender":null,"size":null,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":2,"name":"skirt","brand":null,"gender":null,"size":41,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false},{"id":1,"name":"skirt","brand":null,"gender":null,"size":42,"description":"Good skirt","created_at":"2021-02-18T09:42:53.923Z","updated_at":"2021-02-18T09:42:53.923Z","seller_id":null,"picture_url":"https://i.imgur.com/4eair9X.jpeg","price":10000,"sold":false}]
+2021-03-03 21:11:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:11:39 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:11:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:11:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:11:39 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:11:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:11:39 info: (src/controllers/address.js:9)
+2021-03-03 21:11:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:11:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:11:39 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:11:39 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:12:19 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:12:19 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:12:19 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:12:19 error: (src/controllers/transaction.js:42) Bad request
+2021-03-03 21:18:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:18:31 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:18:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:18:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:18:31 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:18:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:18:31 info: (src/controllers/address.js:9)
+2021-03-03 21:18:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:18:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:18:31 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:18:31 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:18:58 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:18:58 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:18:58 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:18:58 error: (src/controllers/transaction.js:56) Bad request
+2021-03-03 21:19:51 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:19:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:19:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:19:51 info: (src/controllers/address.js:9)
+2021-03-03 21:19:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:19:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:19:51 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:19:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:19:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:19:51 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:19:51 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:20:15 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:20:15 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:20:15 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:20:15 error: (src/controllers/transaction.js:56) Bad request
+2021-03-03 21:40:11 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:40:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:40:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:40:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:40:11 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:40:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:40:11 info: (src/controllers/address.js:9)
+2021-03-03 21:40:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:40:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:40:11 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:40:11 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:40:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:40:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:40:45 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:40:46 error: (src/controllers/transaction.js:45) {"type":"StripeInvalidRequestError","raw":{"code":"resource_missing","doc_url":"https://stripe.com/docs/error-codes/resource-missing","message":"No such PaymentMethod: 'pm_1EUn5uJnRDDqOaR76WUUTh7A'","param":"payment_method","type":"invalid_request_error","headers":{"server":"nginx","date":"Wed, 03 Mar 2021 13:40:46 GMT","content-type":"application/json","content-length":"262","connection":"keep-alive","access-control-allow-credentials":"true","access-control-allow-methods":"GET, POST, HEAD, OPTIONS, DELETE","access-control-allow-origin":"*","access-control-expose-headers":"Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required","access-control-max-age":"300","cache-control":"no-cache, no-store","request-id":"req_KnYwrR6WVMhrIk","stripe-version":"2020-08-27","x-stripe-c-cost":"12","strict-transport-security":"max-age=31556926; includeSubDomains; preload"},"statusCode":404,"requestId":"req_KnYwrR6WVMhrIk"},"rawType":"invalid_request_error","code":"resource_missing","doc_url":"https://stripe.com/docs/error-codes/resource-missing","param":"payment_method","headers":{"server":"nginx","date":"Wed, 03 Mar 2021 13:40:46 GMT","content-type":"application/json","content-length":"262","connection":"keep-alive","access-control-allow-credentials":"true","access-control-allow-methods":"GET, POST, HEAD, OPTIONS, DELETE","access-control-allow-origin":"*","access-control-expose-headers":"Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required","access-control-max-age":"300","cache-control":"no-cache, no-store","request-id":"req_KnYwrR6WVMhrIk","stripe-version":"2020-08-27","x-stripe-c-cost":"12","strict-transport-security":"max-age=31556926; includeSubDomains; preload"},"requestId":"req_KnYwrR6WVMhrIk","statusCode":404}
+2021-03-03 21:44:17 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:44:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:44:17 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:44:17 info: (src/controllers/address.js:9)
+2021-03-03 21:44:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:44:17 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:44:17 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:44:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:44:17 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:44:17 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:44:17 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:44:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:44:35 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:44:35 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:44:35 error: (src/controllers/transaction.js:45) {"length":107,"name":"error","severity":"ERROR","code":"22P02","file":"numutils.c","line":"259","routine":"pg_strtoint32"}
+2021-03-03 21:45:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:45:48 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:45:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:45:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:45:48 info: (src/controllers/address.js:9)
+2021-03-03 21:45:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:45:48 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:45:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:45:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:45:48 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:45:48 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:46:04 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:46:04 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:46:04 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:46:04 error: (src/controllers/transaction.js:46) {"length":107,"name":"error","severity":"ERROR","code":"22P02","file":"numutils.c","line":"259","routine":"pg_strtoint32"}
+2021-03-03 21:53:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:53:18 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:53:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:53:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:53:18 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:53:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:53:18 info: (src/controllers/address.js:9)
+2021-03-03 21:53:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:53:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:53:18 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:53:18 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:53:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:53:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:53:41 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:53:41 error: (src/controllers/transaction.js:45) {"length":148,"name":"error","severity":"ERROR","code":"42P10","file":"plancat.c","line":"822","routine":"infer_arbiter_indexes"}
+2021-03-03 21:56:44 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:56:44 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:56:44 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:56:44 info: (src/controllers/address.js:9)
+2021-03-03 21:56:44 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:56:44 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:56:44 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:56:44 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:56:44 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:56:44 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:56:44 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:57:01 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:57:01 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:57:01 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:57:01 error: (src/controllers/transaction.js:45) {"length":148,"name":"error","severity":"ERROR","code":"42P10","file":"plancat.c","line":"822","routine":"infer_arbiter_indexes"}
+2021-03-03 21:57:26 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:57:26 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:57:26 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:57:26 info: (src/controllers/address.js:9)
+2021-03-03 21:57:26 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:57:26 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:57:26 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:57:26 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:57:26 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:57:26 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:57:26 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:57:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:57:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:57:41 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:57:42 error: (src/controllers/transaction.js:45) {"length":148,"name":"error","severity":"ERROR","code":"42P10","file":"plancat.c","line":"822","routine":"infer_arbiter_indexes"}
+2021-03-03 21:58:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:58:35 info: (src/controllers/cart.js:9) [1]
+2021-03-03 21:58:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:58:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:58:36 info: (src/controllers/address.js:9)
+2021-03-03 21:58:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:58:36 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:58:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:58:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:58:36 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 21:58:36 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 21:58:54 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 21:58:54 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 21:58:54 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 21:58:55 error: (src/controllers/transaction.js:45) {"length":221,"name":"error","severity":"ERROR","code":"23505","detail":"Key (user_id)=(19) already exists.","schema":"public","table":"default_pm","constraint":"default_pm_user_id_unique","file":"nbtinsert.c","line":"570","routine":"_bt_check_unique"}
+2021-03-03 22:00:57 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:00:57 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:00:57 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:00:57 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:00:57 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:00:57 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:00:57 info: (src/controllers/address.js:9)
+2021-03-03 22:00:58 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:00:58 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:00:58 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:00:58 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:01:12 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:01:12 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:01:12 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:01:40 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:01:40 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:01:40 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:01:40 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:01:40 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:01:40 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:01:40 info: (src/controllers/address.js:9)
+2021-03-03 22:01:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:01:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:01:41 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:01:41 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:01:55 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:01:55 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:01:55 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:04:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:04:49 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:04:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:04:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:04:50 info: (src/controllers/address.js:9)
+2021-03-03 22:04:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:04:50 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:04:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:04:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:04:50 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:04:50 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:05:10 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:05:10 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:05:10 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:06:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:06:28 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:06:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:06:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:06:28 info: (src/controllers/address.js:9)
+2021-03-03 22:06:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:06:28 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:06:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:06:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:06:28 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:06:28 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:06:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:06:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:06:46 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:06:46 error: (src/controllers/transaction.js:147) {"length":91,"name":"error","severity":"ERROR","code":"42601","position":"78","file":"scan.l","line":"1141","routine":"scanner_yyerror"}
+2021-03-03 22:12:05 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:12:05 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:12:05 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:12:05 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:12:05 info: (src/controllers/address.js:9)
+2021-03-03 22:12:05 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:12:05 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:12:05 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:12:05 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:12:05 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:12:05 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:12:19 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:12:19 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:12:19 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:12:19 info: (src/controllers/transaction.js:39)
+2021-03-03 22:12:19 error: (src/controllers/transaction.js:157) {"length":91,"name":"error","severity":"ERROR","code":"42601","position":"78","file":"scan.l","line":"1141","routine":"scanner_yyerror"}
+2021-03-03 22:13:15 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:13:15 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:13:15 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:13:15 info: (src/controllers/address.js:9)
+2021-03-03 22:13:16 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:13:16 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:13:16 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:13:16 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:13:16 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:13:16 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:13:16 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:13:30 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:13:30 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:13:30 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:13:31 info: (src/controllers/transaction.js:39)
+2021-03-03 22:13:31 error: (src/controllers/transaction.js:157) {"length":91,"name":"error","severity":"ERROR","code":"42601","position":"78","file":"scan.l","line":"1141","routine":"scanner_yyerror"}
+2021-03-03 22:24:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:24:18 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:24:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:24:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:24:18 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:24:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:24:18 info: (src/controllers/address.js:9)
+2021-03-03 22:24:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:24:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:24:18 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:24:18 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:24:32 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:24:32 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:24:32 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:24:32 info: (src/controllers/transaction.js:39)
+2021-03-03 22:24:32 error: (src/utils/q.js:24) No rows found
+2021-03-03 22:24:32 error: (src/controllers/transaction.js:84) {}
+2021-03-03 22:31:44 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:31:44 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:31:44 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:31:44 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:31:44 info: (src/controllers/address.js:9)
+2021-03-03 22:31:44 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:31:44 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:31:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:31:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:31:45 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:31:45 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:32:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:32:38 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:32:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:32:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:32:39 info: (src/controllers/address.js:9)
+2021-03-03 22:32:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:32:39 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:32:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:32:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:32:39 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:32:39 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:32:53 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:32:53 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:32:53 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:32:53 info: (src/controllers/transaction.js:39)
+2021-03-03 22:32:54 error: (src/controllers/transaction.js:180) {"type":"StripeInvalidRequestError","raw":{"code":"parameter_invalid_integer","doc_url":"https://stripe.com/docs/error-codes/parameter-invalid-integer","message":"Invalid integer: NaN","param":"amount","type":"invalid_request_error","headers":{"server":"nginx","date":"Wed, 03 Mar 2021 14:32:54 GMT","content-type":"application/json","content-length":"240","connection":"keep-alive","access-control-allow-credentials":"true","access-control-allow-methods":"GET, POST, HEAD, OPTIONS, DELETE","access-control-allow-origin":"*","access-control-expose-headers":"Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required","access-control-max-age":"300","cache-control":"no-cache, no-store","request-id":"req_68fLqPWaVaBbcW","stripe-version":"2020-08-27","x-stripe-c-cost":"0","strict-transport-security":"max-age=31556926; includeSubDomains; preload"},"statusCode":400,"requestId":"req_68fLqPWaVaBbcW"},"rawType":"invalid_request_error","code":"parameter_invalid_integer","doc_url":"https://stripe.com/docs/error-codes/parameter-invalid-integer","param":"amount","headers":{"server":"nginx","date":"Wed, 03 Mar 2021 14:32:54 GMT","content-type":"application/json","content-length":"240","connection":"keep-alive","access-control-allow-credentials":"true","access-control-allow-methods":"GET, POST, HEAD, OPTIONS, DELETE","access-control-allow-origin":"*","access-control-expose-headers":"Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required","access-control-max-age":"300","cache-control":"no-cache, no-store","request-id":"req_68fLqPWaVaBbcW","stripe-version":"2020-08-27","x-stripe-c-cost":"0","strict-transport-security":"max-age=31556926; includeSubDomains; preload"},"requestId":"req_68fLqPWaVaBbcW","statusCode":400}
+2021-03-03 22:35:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:35:28 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:35:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:35:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:35:28 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:35:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:35:28 info: (src/controllers/address.js:9)
+2021-03-03 22:35:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:35:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:35:28 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:35:28 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:35:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:35:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:35:39 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:35:39 info: (src/controllers/transaction.js:39)
+2021-03-03 22:35:40 error: (src/controllers/transaction.js:185) {"type":"StripeInvalidRequestError","raw":{"code":"parameter_invalid_integer","doc_url":"https://stripe.com/docs/error-codes/parameter-invalid-integer","message":"Invalid integer: NaN","param":"amount","type":"invalid_request_error","headers":{"server":"nginx","date":"Wed, 03 Mar 2021 14:35:39 GMT","content-type":"application/json","content-length":"240","connection":"keep-alive","access-control-allow-credentials":"true","access-control-allow-methods":"GET, POST, HEAD, OPTIONS, DELETE","access-control-allow-origin":"*","access-control-expose-headers":"Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required","access-control-max-age":"300","cache-control":"no-cache, no-store","request-id":"req_puXrSfDefzqgEz","stripe-version":"2020-08-27","x-stripe-c-cost":"0","strict-transport-security":"max-age=31556926; includeSubDomains; preload"},"statusCode":400,"requestId":"req_puXrSfDefzqgEz"},"rawType":"invalid_request_error","code":"parameter_invalid_integer","doc_url":"https://stripe.com/docs/error-codes/parameter-invalid-integer","param":"amount","headers":{"server":"nginx","date":"Wed, 03 Mar 2021 14:35:39 GMT","content-type":"application/json","content-length":"240","connection":"keep-alive","access-control-allow-credentials":"true","access-control-allow-methods":"GET, POST, HEAD, OPTIONS, DELETE","access-control-allow-origin":"*","access-control-expose-headers":"Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required","access-control-max-age":"300","cache-control":"no-cache, no-store","request-id":"req_puXrSfDefzqgEz","stripe-version":"2020-08-27","x-stripe-c-cost":"0","strict-transport-security":"max-age=31556926; includeSubDomains; preload"},"requestId":"req_puXrSfDefzqgEz","statusCode":400}
+2021-03-03 22:38:21 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:38:21 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:38:21 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:38:21 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:38:21 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:38:21 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:38:21 info: (src/controllers/address.js:9)
+2021-03-03 22:38:22 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:38:22 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:38:22 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:38:22 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:38:34 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:38:34 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:38:34 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:38:35 info: (src/controllers/transaction.js:39)
+2021-03-03 22:38:35 error: (src/utils/agents.js:47) column "inventories.id" must appear in the GROUP BY clause or be used in an aggregate function
+2021-03-03 22:38:35 error: (src/utils/q.js:24) column "inventories.id" must appear in the GROUP BY clause or be used in an aggregate function
+2021-03-03 22:38:35 error: (src/controllers/transaction.js:129) {"length":176,"name":"error","severity":"ERROR","code":"42803","position":"8","file":"parse_agg.c","line":"1409","routine":"check_ungrouped_columns_walker"}
+2021-03-03 22:41:00 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:41:00 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:41:00 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:41:00 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:41:00 info: (src/controllers/address.js:9)
+2021-03-03 22:41:00 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:41:00 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:41:00 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:41:00 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:41:00 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:41:00 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:41:12 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:41:12 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:41:12 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:41:12 info: (src/controllers/transaction.js:39)
+2021-03-03 22:41:13 error: (src/controllers/transaction.js:185) {"type":"StripeInvalidRequestError","raw":{"code":"parameter_invalid_integer","doc_url":"https://stripe.com/docs/error-codes/parameter-invalid-integer","message":"Invalid integer: NaN","param":"amount","type":"invalid_request_error","headers":{"server":"nginx","date":"Wed, 03 Mar 2021 14:41:13 GMT","content-type":"application/json","content-length":"240","connection":"keep-alive","access-control-allow-credentials":"true","access-control-allow-methods":"GET, POST, HEAD, OPTIONS, DELETE","access-control-allow-origin":"*","access-control-expose-headers":"Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required","access-control-max-age":"300","cache-control":"no-cache, no-store","request-id":"req_wfRkskVIX4kgbH","stripe-version":"2020-08-27","x-stripe-c-cost":"0","strict-transport-security":"max-age=31556926; includeSubDomains; preload"},"statusCode":400,"requestId":"req_wfRkskVIX4kgbH"},"rawType":"invalid_request_error","code":"parameter_invalid_integer","doc_url":"https://stripe.com/docs/error-codes/parameter-invalid-integer","param":"amount","headers":{"server":"nginx","date":"Wed, 03 Mar 2021 14:41:13 GMT","content-type":"application/json","content-length":"240","connection":"keep-alive","access-control-allow-credentials":"true","access-control-allow-methods":"GET, POST, HEAD, OPTIONS, DELETE","access-control-allow-origin":"*","access-control-expose-headers":"Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required","access-control-max-age":"300","cache-control":"no-cache, no-store","request-id":"req_wfRkskVIX4kgbH","stripe-version":"2020-08-27","x-stripe-c-cost":"0","strict-transport-security":"max-age=31556926; includeSubDomains; preload"},"requestId":"req_wfRkskVIX4kgbH","statusCode":400}
+2021-03-03 22:44:26 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:44:27 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:44:27 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:44:27 info: (src/controllers/address.js:9)
+2021-03-03 22:44:27 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:44:27 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:44:27 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:44:27 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:44:27 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:44:27 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:44:27 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:44:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:44:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:44:36 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:44:37 info: (src/controllers/transaction.js:39)
+2021-03-03 22:44:38 info: (src/controllers/delivery.js:185)
+2021-03-03 22:44:38 error: (src/controllers/transaction.js:112) {"message":"Request failed with status code 401","name":"Error","stack":"Error: Request failed with status code 401\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/delivery/orders","method":"post","data":"{\"package\":{\"content\":\"clothes\",\"weight\":1,\"height\":60,\"length\":60,\"width\":60},\"pickup\":{\"location\":{\"lat\":22.390877,\"lng\":114.18689},\"contact\":{},\"street_address\":null,\"schedule_at\":1614924000,\"floor_or_unit_number\":null},\"destinations\":[{\"location\":{\"lat\":22,\"lng\":20},\"contact\":{},\"street_address\":null,\"floor_or_unit_number\":null}],\"delivery_type\":\"same_day_night\",\"payment_method\":\"prepaid_wallet\",\"merchant_order_number\":\"1\",\"note_to_courier\":\"haha\"}","headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer undefined","User-Agent":"axios/0.21.1","Content-Length":456},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 22:57:55 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:57:55 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:57:55 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:57:55 info: (src/controllers/address.js:9)
+2021-03-03 22:57:55 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:57:55 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:57:55 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:57:56 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:57:56 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:57:56 info: (src/controllers/quotation.js:19) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:57:56 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:59:00 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:59:00 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:59:00 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:59:00 info: (src/controllers/address.js:9)
+2021-03-03 22:59:01 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:59:01 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:59:01 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:59:01 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:59:01 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:59:01 info: (src/controllers/quotation.js:19) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:59:01 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 22:59:49 info: (src/controllers/cart.js:9) [1]
+2021-03-03 22:59:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:59:49 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:59:49 info: (src/controllers/address.js:9)
+2021-03-03 22:59:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:59:49 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:59:49 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 22:59:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 22:59:49 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 22:59:49 info: (src/controllers/quotation.js:19) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 22:59:49 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:01:09 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:01:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:01:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:01:09 info: (src/controllers/address.js:9)
+2021-03-03 23:01:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:01:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:01:09 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:01:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:01:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:01:09 info: (src/controllers/quotation.js:19) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:01:09 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:04:16 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:04:16 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:04:16 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:04:16 info: (src/controllers/address.js:9)
+2021-03-03 23:04:16 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:04:16 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:04:16 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:04:16 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:04:16 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:04:16 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:04:16 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:04:16 info: (src/controllers/quotation.js:59) {"geocode":{"lat":22.2816223,"lng":114.147865},"id":3,"user_id":19,"line_one":"8D, Blessings Garden","line_two":"56 Conduit Road","city":"Mid-level, HK Island","province":"No state/province","zip":1,"country":"Hong Kong","lat":22.280682,"lng":114.1555,"formatted":"56 Conduit Rd, Mid-Levels, Hong Kong","recipient_phone":"64927718","recipient_name":"Raymond"}
+2021-03-03 23:08:02 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:08:02 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:08:02 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:08:02 info: (src/controllers/address.js:9)
+2021-03-03 23:08:02 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:08:02 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:08:02 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:08:02 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:08:02 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:08:02 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:08:02 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:08:02 info: (src/controllers/quotation.js:59) {"geocode":{"lat":22.2816223,"lng":114.147865},"id":3,"user_id":19,"line_one":"8D, Blessings Garden","line_two":"56 Conduit Road","city":"Mid-level, HK Island","province":"No state/province","zip":1,"country":"Hong Kong","lat":22.280682,"lng":114.1555,"formatted":"56 Conduit Rd, Mid-Levels, Hong Kong","recipient_phone":"64927718","recipient_name":"Raymond"}
+2021-03-03 23:12:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:12:41 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:12:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:12:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:12:41 info: (src/controllers/address.js:9)
+2021-03-03 23:12:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:12:41 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:12:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:12:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:12:41 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:12:41 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:13:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:13:39 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:13:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:13:39 info: (src/controllers/address.js:9)
+2021-03-03 23:13:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:13:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:13:39 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:13:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:13:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:13:39 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:13:39 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:14:03 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:14:03 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:14:03 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:14:03 info: (src/controllers/transaction.js:39)
+2021-03-03 23:14:04 info: (src/controllers/delivery.js:183)
+2021-03-03 23:14:04 error: (src/controllers/transaction.js:112) {"message":"Request failed with status code 401","name":"Error","stack":"Error: Request failed with status code 401\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/delivery/orders","method":"post","data":"{\"package\":{\"content\":\"clothes\",\"weight\":1,\"height\":60,\"length\":60,\"width\":60},\"pickup\":{\"location\":{\"lat\":22.390877,\"lng\":114.18689},\"contact\":{},\"street_address\":\"3C\",\"schedule_at\":1614924000,\"floor_or_unit_number\":\"New Town Plaza\"},\"destinations\":[{\"location\":{\"lat\":22,\"lng\":20},\"contact\":{},\"street_address\":\"56 Conduit Road\",\"floor_or_unit_number\":\"8D, Blessings Garden\"}],\"delivery_type\":\"same_day_night\",\"payment_method\":\"prepaid_wallet\",\"merchant_order_number\":\"1\",\"note_to_courier\":\"haha\"}","headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer undefined","User-Agent":"axios/0.21.1","Content-Length":499},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 23:15:11 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:15:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:15:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:15:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:15:11 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:15:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:15:11 info: (src/controllers/address.js:9)
+2021-03-03 23:15:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:15:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:15:11 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:15:11 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:15:24 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:15:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:15:24 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:15:24 info: (src/controllers/transaction.js:39)
+2021-03-03 23:15:26 info: (src/controllers/delivery.js:183) 3aa0a525827b5f2eb43379e077bfd5b5542f5da702afa0b8de85a92a28850445
+2021-03-03 23:15:27 error: (src/controllers/transaction.js:112) {"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/delivery/orders","method":"post","data":"{\"package\":{\"content\":\"clothes\",\"weight\":1,\"height\":60,\"length\":60,\"width\":60},\"pickup\":{\"location\":{\"lat\":22.390877,\"lng\":114.18689},\"contact\":{},\"street_address\":\"3C\",\"schedule_at\":1614924000,\"floor_or_unit_number\":\"New Town Plaza\"},\"destinations\":[{\"location\":{\"lat\":22,\"lng\":20},\"contact\":{},\"street_address\":\"56 Conduit Road\",\"floor_or_unit_number\":\"8D, Blessings Garden\"}],\"delivery_type\":\"same_day_night\",\"payment_method\":\"prepaid_wallet\",\"merchant_order_number\":\"1\",\"note_to_courier\":\"haha\"}","headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 3aa0a525827b5f2eb43379e077bfd5b5542f5da702afa0b8de85a92a28850445","User-Agent":"axios/0.21.1","Content-Length":499},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 23:18:07 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:18:07 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:18:07 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:18:07 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:18:07 info: (src/controllers/address.js:9)
+2021-03-03 23:18:07 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:18:07 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:18:07 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:18:07 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:18:07 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:18:07 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:18:20 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:18:20 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:18:20 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:18:20 info: (src/controllers/transaction.js:39)
+2021-03-03 23:18:21 info: (src/controllers/delivery.js:183) 4c02de05b0a22fabc55d2f3e930be2d1604001c8c95c8729b3fb93c5ff76ad2d
+2021-03-03 23:18:22 error: (src/controllers/transaction.js:112) {"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/delivery/orders","method":"post","data":"{\"package\":{\"content\":\"clothes\",\"weight\":1,\"height\":60,\"length\":60,\"width\":60},\"pickup\":{\"location\":{\"lat\":22.390877,\"lng\":114.18689},\"contact\":{},\"street_address\":\"3C\",\"schedule_at\":1614924000,\"floor_or_unit_number\":\"New Town Plaza\"},\"destinations\":[{\"location\":{\"lat\":22,\"lng\":20},\"contact\":{},\"street_address\":\"56 Conduit Road\",\"floor_or_unit_number\":\"8D, Blessings Garden\"}],\"delivery_type\":\"same_day_night\",\"payment_method\":\"prepaid_wallet\",\"merchant_order_number\":\"1\",\"note_to_courier\":\"haha\"}","headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 4c02de05b0a22fabc55d2f3e930be2d1604001c8c95c8729b3fb93c5ff76ad2d","User-Agent":"axios/0.21.1","Content-Length":499},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 23:21:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:21:46 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:21:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:21:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:21:46 info: (src/controllers/address.js:9)
+2021-03-03 23:21:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:21:47 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:21:47 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:21:47 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:21:47 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:21:47 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:22:03 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:22:03 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:22:03 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:22:04 info: (src/controllers/transaction.js:39)
+2021-03-03 23:22:05 info: (src/controllers/delivery.js:183) e8d8c126606a5bdbd02686e78ea48b8a02895db7564614b86ad81a0b38ab10e0
+2021-03-03 23:22:07 error: (src/controllers/transaction.js:112) {"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/delivery/orders","method":"post","data":"{\"package\":{\"content\":\"clothes\",\"weight\":1,\"height\":60,\"length\":60,\"width\":60},\"pickup\":{\"location\":{\"lat\":22.390877,\"lng\":114.18689},\"contact\":{\"name\":\"Victor\",\"phone_number\":\"68599337\"},\"street_address\":\"3C\",\"schedule_at\":1614924000,\"floor_or_unit_number\":\"New Town Plaza\"},\"destinations\":[{\"location\":{\"lat\":22,\"lng\":20},\"contact\":{\"name\":\"Raymond\",\"phone_number\":\"64927718\"},\"street_address\":\"56 Conduit Road\",\"floor_or_unit_number\":\"8D, Blessings Garden\"}],\"delivery_type\":\"same_day_night\",\"payment_method\":\"prepaid_wallet\",\"merchant_order_number\":\"1\",\"note_to_courier\":\"haha\"}","headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer e8d8c126606a5bdbd02686e78ea48b8a02895db7564614b86ad81a0b38ab10e0","User-Agent":"axios/0.21.1","Content-Length":582},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-03 23:28:12 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:28:12 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:28:12 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:28:12 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:28:12 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:28:12 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:28:12 info: (src/controllers/address.js:9)
+2021-03-03 23:28:13 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:28:13 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:28:13 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:28:13 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:28:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:28:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:28:36 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:28:36 info: (src/controllers/transaction.js:39)
+2021-03-03 23:28:37 info: (src/controllers/delivery.js:183) d4987330a438bed34b2b43cd7e898e3481657455cf8d874a9646e520dbd453c1
+2021-03-03 23:30:55 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:30:55 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:30:55 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:30:55 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:30:55 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:30:55 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:30:55 info: (src/controllers/address.js:9)
+2021-03-03 23:30:55 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:30:55 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:30:55 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:30:55 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:31:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:31:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:31:08 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:31:08 info: (src/controllers/transaction.js:39)
+2021-03-03 23:31:09 info: (src/controllers/delivery.js:183) b7d546f6a38a07f90e706683db96f83ece91a799a3437290e342d94395527338
+2021-03-03 23:31:14 error: (src/utils/agents.js:47) INSERT has more target columns than expressions
+2021-03-03 23:31:14 error: (src/utils/q.js:36) INSERT has more target columns than expressions
+2021-03-03 23:31:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:31:46 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:31:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:31:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:31:46 info: (src/controllers/address.js:9)
+2021-03-03 23:31:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:31:46 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:31:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:31:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:31:46 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:31:46 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:32:01 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:32:01 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:32:01 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:32:01 info: (src/controllers/transaction.js:39)
+2021-03-03 23:32:02 info: (src/controllers/delivery.js:183) 3b2bce4c457ba5805015a4a3dbf14e3c88df82d93bb9364910d3d8b51d33ea91
+2021-03-03 23:32:05 error: (src/utils/agents.js:47) INSERT has more target columns than expressions
+2021-03-03 23:32:05 error: (src/utils/q.js:36) INSERT has more target columns than expressions
+2021-03-03 23:32:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:32:35 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:32:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:32:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:32:36 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:32:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:32:36 info: (src/controllers/address.js:9)
+2021-03-03 23:32:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:32:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:32:36 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:32:36 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:32:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:32:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:32:46 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:32:46 info: (src/controllers/transaction.js:39)
+2021-03-03 23:32:47 info: (src/controllers/delivery.js:183) e5a574fd74cbb42d2adcbd1bfd676431c1e4b40dd754368e5b6f60d954665fc4
+2021-03-03 23:32:51 error: (src/utils/agents.js:47) invalid input syntax for type integer: "function next(err) {
+    // signal to exit route
+    if (err && err === 'route') {
+      return done();
+    }
+
+    // signal to exit router
+    if (err && err === 'router') {
+      return done(err)
+    }
+
+    var layer = stack[idx++];
+    if (!layer) {
+      return done(err);
+    }
+
+    if (layer.method && layer.method !== method) {
+      return next(err);
+    }
+
+    if (err) {
+      layer.handle_error(err, req, res, next);
+    } else {
+      layer.handle_request(req, res, next);
+    }
+  }"
+2021-03-03 23:32:51 error: (src/utils/q.js:36) invalid input syntax for type integer: "function next(err) {
+    // signal to exit route
+    if (err && err === 'route') {
+      return done();
+    }
+
+    // signal to exit router
+    if (err && err === 'router') {
+      return done(err)
+    }
+
+    var layer = stack[idx++];
+    if (!layer) {
+      return done(err);
+    }
+
+    if (layer.method && layer.method !== method) {
+      return next(err);
+    }
+
+    if (err) {
+      layer.handle_error(err, req, res, next);
+    } else {
+      layer.handle_request(req, res, next);
+    }
+  }"
+2021-03-03 23:34:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:34:41 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:34:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:34:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:34:41 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:34:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:34:41 info: (src/controllers/address.js:9)
+2021-03-03 23:34:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:34:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:34:41 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:34:41 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:34:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:34:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:34:51 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:34:52 info: (src/controllers/transaction.js:39)
+2021-03-03 23:34:52 info: (src/controllers/delivery.js:183) 55ad91717cd25a47c1f9521c8afee2bd87365c3bbb978319f195c59e46f891d4
+2021-03-03 23:34:56 error: (src/utils/agents.js:47) invalid input syntax for type integer: "function next(err) {
+    // signal to exit route
+    if (err && err === 'route') {
+      return done();
+    }
+
+    // signal to exit router
+    if (err && err === 'router') {
+      return done(err)
+    }
+
+    var layer = stack[idx++];
+    if (!layer) {
+      return done(err);
+    }
+
+    if (layer.method && layer.method !== method) {
+      return next(err);
+    }
+
+    if (err) {
+      layer.handle_error(err, req, res, next);
+    } else {
+      layer.handle_request(req, res, next);
+    }
+  }"
+2021-03-03 23:34:56 error: (src/utils/q.js:36) invalid input syntax for type integer: "function next(err) {
+    // signal to exit route
+    if (err && err === 'route') {
+      return done();
+    }
+
+    // signal to exit router
+    if (err && err === 'router') {
+      return done(err)
+    }
+
+    var layer = stack[idx++];
+    if (!layer) {
+      return done(err);
+    }
+
+    if (layer.method && layer.method !== method) {
+      return next(err);
+    }
+
+    if (err) {
+      layer.handle_error(err, req, res, next);
+    } else {
+      layer.handle_request(req, res, next);
+    }
+  }"
+2021-03-03 23:36:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:36:09 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:36:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:36:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:36:09 info: (src/controllers/address.js:9)
+2021-03-03 23:36:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:36:09 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:36:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:36:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:36:09 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:36:09 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:36:21 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:36:21 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:36:21 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:36:21 info: (src/controllers/transaction.js:39)
+2021-03-03 23:36:22 info: (src/controllers/delivery.js:183) 8d1eb087c20144d53eff79ea77464f82f11e8310d49a4e99715a49609f061a6e
+2021-03-03 23:36:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:36:51 info: (src/controllers/cart.js:9) [1]
+2021-03-03 23:36:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:36:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:36:51 info: (src/controllers/address.js:9)
+2021-03-03 23:36:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:36:51 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:36:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:36:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:36:51 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-03 23:36:51 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-03 23:37:02 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-03 23:37:02 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-03 23:37:02 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-03 23:37:03 info: (src/controllers/transaction.js:39)
+2021-03-03 23:37:03 info: (src/controllers/delivery.js:183) 45d55e8dc116287398359b06695de1d84837b95be6c0439d10a13dda48206fa7

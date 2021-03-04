@@ -133,12 +133,13 @@ export const getDeliveryQuotation = async (delivery_type, schedule_at, from, to)
   let token;
   try {
     let tokenResult = await fetchToken();
-    token = tokenResult.access_token;
+    token = tokenResult.data.access_token;
   }
   catch(err){
     logger.error(JSON.stringify(err), '%o');
     throw err
   }
+
 
   const options = {
     method: 'POST',
@@ -168,16 +169,21 @@ export const getDeliveryQuotation = async (delivery_type, schedule_at, from, to)
 
 
 
-export const placeDeliveryOrder = async (vehicle_type, schedule_at, from, to) => {
+export const placeDeliveryOrder = async (deliveryType, scheduleAt, from, to) => {
 
   let token;
   try {
     let tokenResult = await fetchToken();
-    token = tokenResult.access_token;
+    token = tokenResult.data.access_token;
   }
   catch(err){
     throw err
   }
+
+  logger.info(token, '%o');
+
+  console.log(from);
+  console.log(to);
 
   const options = {
     method: 'POST',
@@ -187,22 +193,40 @@ export const placeDeliveryOrder = async (vehicle_type, schedule_at, from, to) =>
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`
     },
-    data: {
-      payment_method: 'monthly_settlement',
-      vehicle_type: vehicle_type,
+    data:{
+      package: {
+        content: 'clothes',
+        weight: 1,
+        height: 60,
+        length: 60,
+        width: 60
+      },
       pickup: {
-        schedule_at: schedule_at,
         location: {
           lat: from.lat,
           lng: from.lng
-        }
-      },
-      destinations: {
-        location: {
-          lat: to.lat,
-          lng: to.lng
-        }
+        },
+        contact: {
+          name: from.recipientName,
+          phone_number: from.recipientPhone
+        },
+        street_address: from.lineTwo,
+        schedule_at: scheduleAt,
+        floor_or_unit_number: from.lineOne,
+      }, destinations: [ {
+        location: {lat: to.lat, lng: to.lng},
+        contact: {
+          name: to.recipientName,
+          phone_number: to.recipientPhone
+        },
+        street_address: to.lineTwo,
+        floor_or_unit_number: to.lineOne
       }
+      ],
+      delivery_type: deliveryType,
+      payment_method: 'prepaid_wallet',
+      merchant_order_number: '1',
+      note_to_courier: 'haha'
     }
   };
 

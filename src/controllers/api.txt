@@ -1,0 +1,29 @@
+{
+  "delivery_type":"same_day_night"
+  "destinations":[
+  {
+    "estimated_dropoff_at":1614520800
+    "location":{
+      "lat":22.2812739
+      "lng":114.1480773
+    }
+  }
+]
+  "estimated_total_price":{
+  "currency":"HKD"
+  "amount":11000
+}
+  "estimated_price_breakdown":[
+  {
+    "key":"base_charge"
+    "amount":11000
+  }
+]
+  "package":{
+  "weight":1
+  "height":60
+  "length":60
+  "width":60
+}
+}
+

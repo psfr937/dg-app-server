@@ -1,0 +1,402 @@
+login
+{
+  "email": "psfr937@gmail.com",
+  "password": "1111"
+}
+{
+  "status": 200,
+  "isAuth": true,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE5LCJzZXNzaW9uSWQiOiI5NjY3Yzc0Yi02Y2M3LTQyNWYtODI2NC1kNzI0NmFiODM1OTUiLCJpYXQiOjE2MTQ2ODgwNjYsImV4cCI6MTYxNDY4ODEyNn0.oyOfjpA6U-O93KVa4uJSHr0WoxnaHJRDuRobnRHThI4",
+  "info": {
+    "user_id": 19,
+    "session_id": "9667c74b-6cc7-425f-8264-d7246ab83595"
+  },
+  "display_name": null,
+  "avatar_url": null
+}
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE5LCJzZXNzaW9uSWQiOiI5NjY3Yzc0Yi02Y2M3LTQyNWYtODI2NC1kNzI0NmFiODM1OTUiLCJpYXQiOjE2MTQ2ODgwNjYsImV4cCI6MTYxNDY4ODEyNn0.oyOfjpA6U-O93KVa4uJSHr0WoxnaHJRDuRobnRHThI4
+
+
+quotation/buy
+{
+  "pickupTime": {
+    "year": 2021,
+    "month": 3,
+    "date": 4,
+    "hours": 5,
+    "minutes": 0
+  },
+  "cartItems": [
+    null
+  ],
+   "address": {
+    "lineOne": "56 Conduit Road",
+    "lineTwo": "8D",
+    "city": "Hong Kong",
+    "zip": 1,
+    "province": "Hong Kong",
+    "country": "Hong Kong",
+    "recipientName": "Raymond Pang",
+    "recipientPhone": "64927718"
+  }
+}
+
+
+Response body
+{
+  "status": 200,
+  "data": {
+    "address": {
+      "id": 23,
+      "lat": 22.2779404,
+      "lng": 114.1515992,
+      "formatted": "8D, Chater Hall, 1 Conduit Rd, Mid-Levels, Hong Kong"
+    },
+    "quotation": {
+      "provider": "gogox",
+      "currency": "HKD",
+      "amount": 11000,
+      "deliveryType": "same_day_night",
+      "package": {
+        "weight": 1,
+        "height": 60,
+        "length": 60,
+        "width": 60
+      }
+    }
+  }
+}
+
+
+---------------------
+
+{"cartItems":[1],"pickupTime":{"year":2021,"month":3,"date":5,"hours":6,"minutes":0},"address":{"id":3,"user_id":19,"line_one":"8D, Blessings Garden","line_two":"56 Conduit Road","city":"Mid-level, HK Island","province":"No state/province","zip":1,"country":"Hong Kong","lat":22.280682,"lng":114.1555,"formatted":"56 Conduit Rd, Mid-Levels, Hong Kong","recipient_phone":"64927718","recipient_name":"Raymond"}}
+
+
+{
+    "status": 200,
+    "data": {
+        "address": {
+            "id": 28,
+            "lat": 22.2816223,
+            "lng": 114.147865,
+            "formatted": "Mid-Levels, Hong Kong"
+        },
+        "quotation": {
+            "provider": "gogox",
+            "currency": "HKD",
+            "amount": 11000,
+            "deliveryType": "same_day_night",
+            "package": {
+                "weight": 1,
+                "height": 60,
+                "length": 60,
+                "width": 60
+            }
+        },
+        "quotationId": 41
+    }
+}
+
+
+-------------------
+transaction/buy
+{
+"cartItems":[1],
+"priceUpdateTimestamp":0,
+"paymentMethod":"pm_1IQwkzCRRNHI4u4IQq9Lkysn",
+"quotationId":41}
+
+
+{
+    "status": 200,
+    "data": {
+        "stripeResult": {
+            "id": "pi_1IQwl3CRRNHI4u4I6YqUGqFJ",
+            "object": "payment_intent",
+            "amount": 21000,
+            "amount_capturable": 0,
+            "amount_received": 21000,
+            "application": null,
+            "application_fee_amount": null,
+            "canceled_at": null,
+            "cancellation_reason": null,
+            "capture_method": "automatic",
+            "charges": {
+                "object": "list",
+                "data": [
+                    {
+                        "id": "ch_1IQwl4CRRNHI4u4I55kf2A6A",
+                        "object": "charge",
+                        "amount": 21000,
+                        "amount_captured": 21000,
+                        "amount_refunded": 0,
+                        "application": null,
+                        "application_fee": null,
+                        "application_fee_amount": null,
+                        "balance_transaction": "txn_1IQwl4CRRNHI4u4I3Y5w9Pji",
+                        "billing_details": {
+                            "address": {
+                                "city": null,
+                                "country": null,
+                                "line1": null,
+                                "line2": null,
+                                "postal_code": null,
+                                "state": null
+                            },
+                            "email": null,
+                            "name": null,
+                            "phone": null
+                        },
+                        "calculated_statement_descriptor": "DRESS GREEN",
+                        "captured": true,
+                        "created": 1614785826,
+                        "currency": "hkd",
+                        "customer": "cus_IvbubpZ0jwtUBI",
+                        "description": null,
+                        "destination": null,
+                        "dispute": null,
+                        "disputed": false,
+                        "failure_code": null,
+                        "failure_message": null,
+                        "fraud_details": {},
+                        "invoice": null,
+                        "livemode": false,
+                        "metadata": {},
+                        "on_behalf_of": null,
+                        "order": null,
+                        "outcome": {
+                            "network_status": "approved_by_network",
+                            "reason": null,
+                            "risk_level": "normal",
+                            "risk_score": 64,
+                            "seller_message": "Payment complete.",
+                            "type": "authorized"
+                        },
+                        "paid": true,
+                        "payment_intent": "pi_1IQwl3CRRNHI4u4I6YqUGqFJ",
+                        "payment_method": "pm_1IQwkzCRRNHI4u4IQq9Lkysn",
+                        "payment_method_details": {
+                            "card": {
+                                "brand": "visa",
+                                "checks": {
+                                    "address_line1_check": null,
+                                    "address_postal_code_check": null,
+                                    "cvc_check": "pass"
+                                },
+                                "country": "US",
+                                "exp_month": 11,
+                                "exp_year": 2023,
+                                "fingerprint": "0Fe7h4w5MJzsdvda",
+                                "funding": "credit",
+                                "installments": null,
+                                "last4": "4242",
+                                "network": "visa",
+                                "three_d_secure": null,
+                                "wallet": null
+                            },
+                            "type": "card"
+                        },
+                        "receipt_email": null,
+                        "receipt_number": null,
+                        "receipt_url": "https://pay.stripe.com/receipts/acct_1DN1lhCRRNHI4u4I/ch_1IQwl4CRRNHI4u4I55kf2A6A/rcpt_J32qRE6BGEz8eCdVQ85wLf7GGFYI3ih",
+                        "refunded": false,
+                        "refunds": {
+                            "object": "list",
+                            "data": [],
+                            "has_more": false,
+                            "total_count": 0,
+                            "url": "/v1/charges/ch_1IQwl4CRRNHI4u4I55kf2A6A/refunds"
+                        },
+                        "review": null,
+                        "shipping": null,
+                        "source": null,
+                        "source_transfer": null,
+                        "statement_descriptor": null,
+                        "statement_descriptor_suffix": null,
+                        "status": "succeeded",
+                        "transfer_data": null,
+                        "transfer_group": null
+                    }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/charges?payment_intent=pi_1IQwl3CRRNHI4u4I6YqUGqFJ"
+            },
+            "client_secret": "pi_1IQwl3CRRNHI4u4I6YqUGqFJ_secret_8qCgGXdBpQdLGiowBO2msRjvS",
+            "confirmation_method": "automatic",
+            "created": 1614785825,
+            "currency": "hkd",
+            "customer": "cus_IvbubpZ0jwtUBI",
+            "description": null,
+            "invoice": null,
+            "last_payment_error": null,
+            "livemode": false,
+            "metadata": {},
+            "next_action": null,
+            "on_behalf_of": null,
+            "payment_method": "pm_1IQwkzCRRNHI4u4IQq9Lkysn",
+            "payment_method_options": {
+                "card": {
+                    "installments": null,
+                    "network": null,
+                    "request_three_d_secure": "automatic"
+                }
+            },
+            "payment_method_types": [
+                "card"
+            ],
+            "receipt_email": null,
+            "review": null,
+            "setup_future_usage": null,
+            "shipping": null,
+            "source": null,
+            "statement_descriptor": null,
+            "statement_descriptor_suffix": null,
+            "status": "succeeded",
+            "transfer_data": null,
+            "transfer_group": null
+        },
+        "deliveryResult": {
+            "delivery_type": "same_day_night",
+            "uuid": "575f7cbf-dcbf-45dd-b760-f1306830683a",
+            "payment_method": "prepaid_wallet",
+            "courier": {},
+            "status": "pending",
+            "price": {
+                "amount": 11000,
+                "currency": "HKD"
+            },
+            "price_breakdown": [
+                {
+                    "key": "base_charge",
+                    "amount": 11000
+                }
+            ],
+            "merchant_order_number": "1",
+            "note_to_courier": "haha",
+            "image_url": null,
+            "package": {
+                "content": "clothes",
+                "weight": 1,
+                "height": 60,
+                "length": 60,
+                "width": 60
+            },
+            "pickup": {
+                "status": "not_picked_up",
+                "schedule_at": 1614924000,
+                "street_address": "3C",
+                "floor_or_unit_number": "New Town Plaza",
+                "location": {
+                    "lat": 22.390877,
+                    "lng": 114.18689
+                },
+                "contact": {
+                    "name": "Victor",
+                    "phone_number": "68599337"
+                }
+            },
+            "destinations": [
+                {
+                    "status": "not_delivered",
+                    "estimated_dropoff_at": 1614952800,
+                    "street_address": "56 Conduit Road",
+                    "floor_or_unit_number": "8D, Blessings Garden",
+                    "location": {
+                        "lat": 22.281622,
+                        "lng": 114.147865
+                    },
+                    "contact": {
+                        "name": "Raymond",
+                        "phone_number": "64927718"
+                    },
+                    "signature_image_url": null
+                }
+            ],
+            "tracking_id": "KJTDAQ",
+            "tracking_url": "https://stag-track.gogox.com/KJTDAQ",
+            "pickup_code": "668433",
+            "pickup_qr_code_image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAAA1klEQVR4nO1UQQoDIQyMVeibFrIo7KsKHoW+akHZgG8qKNa0p/bUzrE0l2EgQxLj5DRe40Sv8edUjHFSggKkt2NkZlHA+imOengAPI/U9lX+O/e3gOt9o37OCpC+GxNqFgVI78do/ASsfylOljX0IJBe2DauTewesfo9ltAdyaf579wmn31jrhnSc1mNmx8Qrj9fPtfrHhfMP2q85XIJVLH9qfFqmluMYP/qvy2RT9j+Nfy+HbmD+58hNpP4BPtvWeM8QQz7j5hECJtfjWePeQIZq//T/A5s1W/ioOnclgAAAABJRU5ErkJggg=="
+        }
+    }
+}
+
+
+----------
+confirm
+
+payment_method_data[type]: card
+payment_method_data[card][number]: 4242424242424242
+payment_method_data[card][cvc]: 208
+payment_method_data[card][exp_month]: 11
+payment_method_data[card][exp_year]: 23
+payment_method_data[guid]: b3ed42cd-df9a-4031-994b-398c998747ab39a305
+payment_method_data[muid]: 5e77dcd3-bd11-4d86-9aa6-def286d46386c7e795
+payment_method_data[sid]: 9e04e7cb-401f-4730-9f24-aa750aeb98138d5660
+payment_method_data[payment_user_agent]: stripe.js/599c21fd7; stripe-js-v3/599c21fd7
+payment_method_data[time_on_page]: 9573
+payment_method_data[referrer]: http://localhost:3000/
+expected_payment_method_type: card
+use_stripe_sdk: true
+webauthn_uvpa_available: false
+spc_eligible: false
+key: pk_test_F4EG4MqVhoWyuxSs8jIO2xIr
+client_secret: seti_1IQwkpCRRNHI4u4I0dhxMpTv_secret_J32qugsr8OYwWaoC9iU2JwWnd7IPPE1
+
+
+{
+    "id": "seti_1IQwkpCRRNHI4u4I0dhxMpTv",
+    "object": "setup_intent",
+    "cancellation_reason": null,
+    "client_secret": "seti_1IQwkpCRRNHI4u4I0dhxMpTv_secret_J32qugsr8OYwWaoC9iU2JwWnd7IPPE1",
+    "created": 1614785811,
+    "description": null,
+    "last_setup_error": null,
+    "livemode": false,
+    "next_action": null,
+    "payment_method": "pm_1IQwkzCRRNHI4u4IQq9Lkysn",
+    "payment_method_types": [
+        "card"
+    ],
+    "status": "succeeded",
+    "usage": "off_session"
+}
+
+-----------
+
+create-setup-intent
+
+{
+    "status": 200,
+    "result": {
+        "id": "seti_1IQwkpCRRNHI4u4I0dhxMpTv",
+        "object": "setup_intent",
+        "application": null,
+        "cancellation_reason": null,
+        "client_secret": "seti_1IQwkpCRRNHI4u4I0dhxMpTv_secret_J32qugsr8OYwWaoC9iU2JwWnd7IPPE1",
+        "created": 1614785811,
+        "customer": "cus_IvbubpZ0jwtUBI",
+        "description": null,
+        "last_setup_error": null,
+        "latest_attempt": null,
+        "livemode": false,
+        "mandate": null,
+        "metadata": {},
+        "next_action": null,
+        "on_behalf_of": null,
+        "payment_method": null,
+        "payment_method_options": {
+            "card": {
+                "request_three_d_secure": "automatic"
+            }
+        },
+        "payment_method_types": [
+            "card"
+        ],
+        "single_use_mandate": null,
+        "status": "requires_payment_method",
+        "usage": "off_session"
+    }
+}

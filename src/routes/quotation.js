@@ -1,11 +1,18 @@
 import { jwtAuth } from '../middlewares/jwtAuth';
 import bodyParser from "../middlewares/bodyParser";
-import quotation from "../controllers/quotation"
+import { saveAddress, getQuotation} from "../controllers/quotation"
 
 export default app => {
-  app.post('/api/delivery/get-quotation',
+  app.post('/quotation/buy',
     jwtAuth,
     bodyParser.json,
-    quotation.getQuotation
+    saveAddress,
+    getQuotation('buy')
+  );
+  app.post('/quotation/sell',
+    jwtAuth,
+    bodyParser.json,
+    saveAddress,
+    getQuotation('sell')
   );
 };

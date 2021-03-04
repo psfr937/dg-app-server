@@ -5,10 +5,10 @@ import Errors from "../constants/Errors";
 export default {
   list: asyncRoute(async (req, res) => {
     try {
-      const products = (await qNonEmpty(
+      const plts = (await q(
           `SELECT * FROM packListTypes`)
-      ).rows
-      return res.json({status: 200, data: products})
+      ).rows;
+      return res.json({status: 200, data: plts})
     } catch (err) {
       return res.errors([Errors.DB_OPERATION_FAIL(err)])
     }

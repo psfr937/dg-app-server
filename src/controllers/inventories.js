@@ -5,14 +5,50 @@ import {q, qNonEmpty} from "../utils/q";
 import Errors from "../constants/Errors";
 import buildTxQuery from './buildQuery/tx'
 import p from "../utils/agents";
+
 export default {
   list: asyncRoute(async (req, res) => {
+    const { filter } = req.body;
     try {
       console.log(req);
-      const inventories = (await qNonEmpty(
-          `SELECT *
-           FROM inventories`)
-      ).rows;
+      let query = `SELECT * FROM inventories i`;
+      let idx = 1; let whereClauses = []; let args = [];
+      const addWhereClauses = (clause, arg) => {
+        whereClauses.push(clause);
+        args.push(arg);
+        idx ++
+      };
+
+      const addCustomClauses = (clause, arg) => {
+        query += (clause);
+        args.push(arg);
+        idx++
+      };
+
+      if('tags' in filter && filter.tags.length > 0){
+          query += ` JOIN inventory_tag it ON i.id = it.inventory_id`;
+          addWhereClauses(`it.tag_id = ANY($${idx}::INT[])`, filter.tags);
+      }
+      if('minPrice' in filter){
+        addWhereClauses(`price > $${idx}`, filter.minPrice);
+      }
+      if('maxPrice' in filter){
+        addWhereClauses(`price < $${idx}`, filter.maxPrice);
+      }
+      if('clothingSize' in filter && filter.clothingSize.length > 0){
+        addWhereClauses(`clothing_size = ANY($${idx}::STRING[])`, filter.clothingSize);
+      }
+      if(whereClauses.length !== 0){
+        query += ` WHERE ${whereClauses.join(' AND ')}`;
+      }
+      let pageSize = 30;
+      query += ` LIMIT ${pageSize} `;
+      if('page' in filter){
+        query += addCustomClauses(` OFFSET (${idx}*${pageSize})`, filter.page);
+      }
+
+      const inventories = (await qNonEmpty(query, args)).rows;
+
       logger.info(JSON.stringify(inventories), '%o');
       console.log(inventories);
       return res.json({status: 200, data: inventories})
@@ -20,6 +56,7 @@ export default {
       return res.errors([Errors.DB_OPERATION_FAIL(err)])
     }
   }),
+
 
   get: asyncRoute(async (req, res) => {
     try {
@@ -71,7 +108,7 @@ export default {
       }
     });
 
-    const tableName = 'inventories'
+    const tableName = 'inventories';
 
     const fieldNameArray = {
       insert: [
@@ -93,7 +130,7 @@ export default {
         {name: 'id', type: 'INTEGER'},
         {name: 'removed', type: 'BOOLEAN'}
       ]
-    }
+    };
 
     try{
       await p.tx(async client => {

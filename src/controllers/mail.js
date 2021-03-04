@@ -1,48 +1,112 @@
 
-import VerifyEmailMail from '../components/Mail/VerifyEmailMail';
-import ResetPasswordMail from '../components/Mail/ResetPasswordMail';
-import { jwt }  from '../config'
 import { genVerifyEmailToken, genResetPasswordToken } from '../utils/tokenHelper';
-const createEmail = require('../utils/createMail');
+import asyncRoute from "../utils/asyncRoute";
+import tokenToURL from "../utils/tokenToURL";
+import {q, qNonEmpty} from '../utils/q'
+import emailTemplates from '../constants/EmailTemplate'
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+
+const buildMail = async (emailType, to, data) => {
+  const templateInfo = (await qNonEmpty(`SELECT * FROM email_templates WHERE key = $1`,
+    [emailType])).rows[0];
+
+  const { from_email, sendgrid_template_id } = templateInfo;
+
+  return {
+    from:{ from_email },
+    personalizations:[
+      { to: to, dynamic_template_data: data }
+    ],
+    template_id: sendgrid_template_id
+  };
+};
 
 export default {
 
-  sendVerification(req, res) {
+  activateAccountMail: async(req, res) => {
     const {user} = req;
-    const {access_token, display_name, user_id, session_id, verify_email_nonce} = user;
-    const token = genVerifyEmailToken(user_id, verify_email_nonce);
-    const info = { user_id, session_id, display_name };
+    const {access_token, name, user_id, session_id, email} = user;
 
-    const sgMail = require('@sendgrid/mail');
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    const nonce = Math.random();
+    await q(`UPDATE users SET verify_email_nonce = $1 where id = $2`, [
+      nonce, req.user.id]);
 
-    const component = (token) => VerifyEmailMail(token);
+    const token = genVerifyEmailToken(user_id, nonce);
+    const info = { user_id, session_id, name };
 
-    createEmail(component).then(html => {
-      const msg = {
-        to: 'psfr937@gmail.com',
-        from: 'psfr937@gmail.com',
-        subject: 'Sending with SendGrid is Fun',
-        text: 'and easy to do anywhere, even with Node.js',
-        html
-      };
+    const msg = buildMail(
+      emailTemplates.ACTIVATE_ACCOUNT,
+      [{email: email}],
+      { c2a_link: tokenToURL(token)}
+    );
 
-      console.log('passed');
+    try {
+      const result = await sgMail.send(msg);
 
-      return sgMail.send(msg);
-    }).then((result) => {
       res.status(200).json({
         status: 200,
         token: access_token,
         info,
         result
       });
-    }).catch(err=>{
+    }catch(err){
       console.log(err);
       res.status(400).json(err);
-    });
-
+    }
   },
 
+  resetPasswordMail: asyncRoute(async(req, res) =>  {
+    const {user} = req;
+    const {user_id, email} = user;
+    const nonce = Math.random();
+    
+    await q(`UPDATE users SET reset_password_nonce = $1 where id = $2`, [
+      nonce, req.user.id]);
 
+    const token = genResetPasswordToken(user_id, nonce);
+
+
+    const msg = buildMail(
+      emailTemplates.RESET_PASSWORD,
+      [{email: email}],
+      { c2a_link: tokenToURL(token)}
+    );
+
+    try {
+      const result = await sgMail.send(msg);
+
+      res.status(200).json({
+        status: 200,
+        result
+      });
+    }
+    catch(err){
+      console.log(err);
+      res.status(400).json(err);
+    }
+  }),
+
+  sendBuyReceipt: asyncRoute(async(req, res) =>  {
+    const msg = buildMail(
+      emailTemplates.BUY_RECEIPT,
+      [{email: req.user.email}],
+      req.emailData
+    );
+
+    try {
+      const result = await sgMail.send(msg);
+
+      res.status(200).json({
+        status: 200,
+        result
+      });
+    }
+    catch(err){
+      console.log(err);
+      res.status(400).json(err);
+    }
+  })
 };

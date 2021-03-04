@@ -9,7 +9,7 @@ export default {
       logger.info(JSON.stringify(req.body.data), '%o');
       const cid = (await q(
           `SELECT * FROM addresses 
-                    WHERE user_id = $1 )`,
+                    WHERE user_id = $1`,
           [req.user.id]
         )
       ).rows;

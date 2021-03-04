@@ -9,16 +9,18 @@ import cart from './cart'
 import quotation from './quotation'
 import addresses from './addresses'
 import transaction from "./transaction";
+import bagTypes from "./bagTypes";
 
 export default app => {
   users(app);
   ping(app);
   plans(app);
   stripe(app);
-  transaction(app)
+  transaction(app);
   packListTypes(app);
   inventories(app);
-  cart(app)
-  quotation(app)
-  addresses(app)
+  cart(app);
+  quotation(app);
+  addresses(app);
+  bagTypes(app);
 };

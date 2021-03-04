@@ -4,7 +4,7 @@ import tokenToURL from '../../utils/tokenToURL';
 
 const Email = require('./MailTemplate/Email').default;
 
-const VerifyEmailMail = ({ token }) => {
+export default function VerifyEmailMail({token}){
   const url = tokenToURL('/user/email/verify', token);
 
   const content =  (
@@ -22,9 +22,3 @@ const VerifyEmailMail = ({ token }) => {
 
   return Email(content);
 };
-
-VerifyEmailMail.propTypes = {
-  token: propTypes.string,
-};
-
-export default VerifyEmailMail;

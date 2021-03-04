@@ -1,17 +1,17 @@
 import jsonwebtoken from 'jsonwebtoken';
 import { jwt } from '../config/index';
-import Errors from "../constants/Errors";
 
 module.exports = {
-  jwtExtractor: req => (req.query.env === "native" || ( req.headers.platform && req.headers.platform === 'native')) ?
-      ((typeof req.headers.authorization !== 'undefined') ?
-          req.headers.authorization.match(/Bearer ([^#]+)/)[1]
-          : null
-      )
-      : ((typeof req.headers.cookie !== 'undefined') ?
-          req.headers.cookie.match(/token=([^#][^=;]+)/)[1]
-          : null
-      ),
+  jwtExtractor: req => {
+     if (typeof req.headers.authorization !== 'undefined') {
+       return req.headers.authorization.match(/Bearer ([^#]+)/)[1]
+     }else if(typeof req.headers.cookie !== 'undefined'){
+       return req.headers.cookie.match(/token=([^#][^=;]+)/)[1]
+     }
+     else{
+        return null
+     }
+  },
 
   genAccessToken: async data => {
     try{

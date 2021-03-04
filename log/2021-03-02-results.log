@@ -1,0 +1,65 @@
+2021-03-02 21:50:18 error: jwt must be provided
+2021-03-02 21:51:11 error: jwt must be provided
+2021-03-02 21:51:20 error: jwt must be provided
+2021-03-02 21:55:26 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 21:55:26 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 21:56:20 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 21:56:20 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 21:56:20 error: (src/utils/agents.js:47) column "addressid" does not exist
+2021-03-02 21:56:20 error: (src/utils/q.js:24) column "addressid" does not exist
+2021-03-02 21:56:20 error: (src/controllers/quotation.js:101) {"length":109,"name":"error","severity":"ERROR","code":"42703","position":"53","file":"parse_relation.c","line":"3359","routine":"errorMissingColumn"}
+2021-03-02 21:57:15 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 21:57:16 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 21:57:16 error: (src/utils/q.js:24) No rows found
+2021-03-02 21:57:16 error: (src/controllers/quotation.js:101) {}
+2021-03-02 21:57:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 21:57:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 21:57:51 info: (src/controllers/quotation.js:19) "56%20Conduit%20Road,%20Mid-levels%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong"
+2021-03-02 21:57:51 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=56%20Conduit%20Road,%20Mid-levels%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-02 21:57:52 error: (src/controllers/quotation.js:88) {}
+2021-03-02 21:58:26 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 21:58:26 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 21:58:26 info: (src/controllers/quotation.js:19) "56%20Conduit%20Road,%20Mid-levels%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong"
+2021-03-02 21:58:26 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=56%20Conduit%20Road,%20Mid-levels%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-02 21:58:27 info: (src/controllers/quotation.js:118)
+2021-03-02 21:58:29 error: (src/controllers/delivery.js:167) {"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/delivery/quotations","method":"post","data":"{\"package\":{\"weight\":1,\"height\":60,\"length\":60,\"width\":60},\"pickup\":{\"location\":{\"lat\":22.390877,\"lng\":114.18689},\"schedule_at\":null},\"destinations\":[{\"location\":{\"lat\":22.2812739,\"lng\":114.1480773}}],\"delivery_type\":\"same_day_night\"}","headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 1741219271169a45cfb74a7b6f3d54b800b440671a955c910412013557bbc376","User-Agent":"axios/0.21.1","Content-Length":234},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-02 21:58:29 error: (src/controllers/quotation.js:209) {"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/delivery/quotations","method":"post","data":"{\"package\":{\"weight\":1,\"height\":60,\"length\":60,\"width\":60},\"pickup\":{\"location\":{\"lat\":22.390877,\"lng\":114.18689},\"schedule_at\":null},\"destinations\":[{\"location\":{\"lat\":22.2812739,\"lng\":114.1480773}}],\"delivery_type\":\"same_day_night\"}","headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 1741219271169a45cfb74a7b6f3d54b800b440671a955c910412013557bbc376","User-Agent":"axios/0.21.1","Content-Length":234},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-02 22:02:56 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 22:02:56 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 22:02:56 info: (src/controllers/quotation.js:19) "56%20Conduit%20Road,%20Mid-levels%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong"
+2021-03-02 22:02:56 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=56%20Conduit%20Road,%20Mid-levels%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-02 22:02:56 info: (src/controllers/quotation.js:118)
+2021-03-02 22:02:57 error: (src/controllers/delivery.js:167) {"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/delivery/quotations","method":"post","data":"{\"package\":{\"weight\":1,\"height\":60,\"length\":60,\"width\":60},\"pickup\":{\"location\":{\"lat\":22.390877,\"lng\":114.18689},\"schedule_at\":null},\"destinations\":[{\"location\":{\"lat\":22.2812739,\"lng\":114.1480773}}],\"delivery_type\":\"same_day_night\"}","headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer adc52206e5c4b272788f1719c8ab550848f45ca51834f72c750cb7afe00d6f76","User-Agent":"axios/0.21.1","Content-Length":234},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-02 22:02:57 error: (src/controllers/quotation.js:169) {"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/psfr937/Development/main/dg-app-server/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (events.js:327:22)\n    at IncomingMessage.EventEmitter.emit (domain.js:467:12)\n    at endReadableNT (internal/streams/readable.js:1327:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","config":{"url":"https://stag-hk-api.gogox.com/delivery/quotations","method":"post","data":"{\"package\":{\"weight\":1,\"height\":60,\"length\":60,\"width\":60},\"pickup\":{\"location\":{\"lat\":22.390877,\"lng\":114.18689},\"schedule_at\":null},\"destinations\":[{\"location\":{\"lat\":22.2812739,\"lng\":114.1480773}}],\"delivery_type\":\"same_day_night\"}","headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer adc52206e5c4b272788f1719c8ab550848f45ca51834f72c750cb7afe00d6f76","User-Agent":"axios/0.21.1","Content-Length":234},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+2021-03-02 22:11:30 error: jwt must be provided
+2021-03-02 22:11:33 error: jwt must be provided
+2021-03-02 22:11:58 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 22:11:58 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 22:12:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 22:12:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 22:12:11 info: (src/controllers/quotation.js:19) "56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong"
+2021-03-02 22:12:11 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-02 22:12:14 error: (src/controllers/quotation.js:222) {}
+2021-03-02 22:14:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 22:14:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 22:14:18 info: (src/controllers/quotation.js:19) "56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong"
+2021-03-02 22:14:18 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-02 22:14:20 error: (src/controllers/quotation.js:222) {}
+2021-03-02 22:15:25 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 22:15:25 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 22:15:25 info: (src/controllers/quotation.js:19) "56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong"
+2021-03-02 22:15:25 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-02 22:15:27 error: (src/utils/agents.js:47) column "to_phone" is of type real but expression is of type text
+2021-03-02 22:15:27 error: (src/utils/q.js:36) column "to_phone" is of type real but expression is of type text
+2021-03-02 22:15:27 error: (src/controllers/quotation.js:222) {"length":191,"name":"error","severity":"ERROR","code":"42804","hint":"You will need to rewrite or cast the expression.","position":"402","file":"parse_target.c","line":"592","routine":"transformAssignedExpr"}
+2021-03-02 22:19:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 22:19:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 22:19:08 info: (src/controllers/quotation.js:19) "56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong"
+2021-03-02 22:19:08 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"
+2021-03-02 22:19:10 error: (src/utils/agents.js:47) column "schedule_at" is of type integer but expression is of type text
+2021-03-02 22:19:10 error: (src/utils/q.js:36) column "schedule_at" is of type integer but expression is of type text
+2021-03-02 22:19:10 error: (src/controllers/quotation.js:222) {"length":197,"name":"error","severity":"ERROR","code":"42804","hint":"You will need to rewrite or cast the expression.","position":"457","file":"parse_target.c","line":"592","routine":"transformAssignedExpr"}
+2021-03-02 22:20:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-02 22:20:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-02 22:20:31 info: (src/controllers/quotation.js:19) "56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong"
+2021-03-02 22:20:31 info: (src/controllers/quotation.js:34) "https://maps.googleapis.com/maps/api/geocode/json?address=56%20Conduit%20Road%208D%20Hong%20Kong%20Hong%20Kong%201%20Hong%20Kong&key=AIzaSyDC3tG5_jmGoRh1kUYC0bZdxsn5Nk1UyFY"

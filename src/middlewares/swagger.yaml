@@ -1,0 +1,295 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 0.1.9
+servers:
+  - url: http://localhost:5000
+    description: Development server
+  - url: http://staging-api.example.com
+    description: Optional server description, e.g. Internal staging server for testing
+paths:
+  /users/login/email:
+    post:
+      summary: Login with email
+      description: Optional extended description in CommonMark or HTML.
+      requestBody:
+        description: Optional description in *Markdown*
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /ping:
+    get:
+      summary: Ping the server.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /mail/test:
+    get:
+      summary: Ping the server.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /quotation/buy:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Get a quotation
+      description: Optional extended description in CommonMark or HTML.
+      requestBody:
+        description: Optional description in *Markdown*
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pickupTime:
+                  $ref: '#/components/schemas/Time'
+                cartItems:
+                  type: array
+                  items: integer
+                address:
+                  oneOf:
+                    - $ref: '#/components/schemas/Address'
+                    - type: integer
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /quotation/sell:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Get a quotation
+      description: Optional extended description in CommonMark or HTML.
+      requestBody:
+        description: Optional description in *Markdown*
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pickupTime:
+                  $ref: '#/components/schemas/Time'
+                packList:
+                  $ref: '#/components/schemas/PackList'
+                address:
+                  oneOf:
+                    - $ref: '#/components/schemas/Address'
+                    - type: integer
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /transaction/buy:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Buy items and checkout
+      description: Optional extended description in CommonMark or HTML.
+      requestBody:
+        description: Optional description in *Markdown*
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quotationId:
+                  type: integer
+                cartItems:
+                  type: array
+                  items:
+                    type: integer
+                priceUpdateTimestamp:
+                  type: integer
+                paymentMethod:
+                  oneOf:
+                    - $ref: '#/components/schemas/PaymentMethod'
+                    - type: integer
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /transaction/sell:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Sell items and checkout
+      description: Optional extended description in CommonMark or HTML.
+      requestBody:
+        description: Optional description in *Markdown*
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quotationId:
+                  type: integer
+                recycleUnused:
+                  type: boolean
+                mailLabel:
+                  type: boolean
+                packList:
+                  $ref: '#/components/schemas/PackList'
+                priceUpdateTimestamp:
+                  type: integer
+                paymentMethod:
+                  oneOf:
+                    - $ref: '#/components/schemas/PaymentMethod'
+                    - type: integer
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /inventories:
+    post:
+      summary: Sell items and checkout
+      description: Optional extended description in CommonMark or HTML.
+      requestBody:
+        description: Optional description in *Markdown*
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                filter:
+                  type: object
+                  properties:
+                    minPrice:
+                      type: integer
+                    maxPrice:
+                      type: integer
+                    tags:
+                      type: array
+                      items:
+                        type: integer
+                    clothingSize:
+                      type: array
+                      items:
+                        type: string
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+components:
+  schemas:
+    PaymentMethod:
+      type: object
+      properties:
+        stripeId:
+          type: string
+        lastFour:
+          type: string
+        expiry_year:
+          type: string
+        expiry_month:
+          type: string
+        funding:
+          type: string
+    Address:
+      type: object
+      properties:
+        lineOne:
+          type: string
+        lineTwo:
+          type: string
+        city:
+          type: string
+        zip:
+          type: number
+        province:
+          type: string
+        country:
+          type: string
+        recipientName:
+          type: string
+        recipientPhone:
+          type: string
+    PackList:
+      type: object
+      properties:
+        pltId:
+          type: integer
+        quantity:
+          type: integer
+    Time:
+      type: object
+      properties:
+        year:
+          type: integer
+        month:
+          type: integer
+        date:
+          type: integer
+        hours:
+          type: integer
+        minutes:
+          type: integer
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+
+
