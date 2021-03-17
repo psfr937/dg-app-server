@@ -34,7 +34,6 @@ const upload = multer({
     },
     transformer,
     key: function (req, file, cb) {
-      console.log(file.fieldname)
       const extension = file.originalname.split('.')[1];
       cb(null, `${Date.now().toString()}-${file.fieldname}.${extension}`)
     }
@@ -55,4 +54,4 @@ export const imageUpload = function (req, res, next) {
   })
 }
 
-module.exports = upload
+module.exports = upload;

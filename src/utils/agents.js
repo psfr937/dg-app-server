@@ -1,31 +1,29 @@
-import getDatabaseConfig from '../config/database';
 import logger from "./logger";
-
 const { Pool } = require('pg');
-const url = require('url')
+const url = require('url');
 
 
-let databaseConfig = {}
-
-
-
-if(typeof process.env.DATABASE_URL === 'string'){
-  const params = url.parse(process.env.DATABASE_URL)
-  const auth = params.auth.split(':');
-  databaseConfig = {
-    user: auth[0],
-    password: auth[1],
-    host: params.hostname,
-    port: params.port,
-    database: params.pathname.split('/')[1],
-    ssl: {
-      rejectUnauthorized: false
-    }
-  };
-}else{
-  databaseConfig = getDatabaseConfig(process.env.NODE_ENV)
+let params;
+let sslOption;
+if(typeof process.env.DATABASE_URL === 'string') {
+  params = url.parse(process.env.DATABASE_URL)
+  sslOption = {
+    rejectUnauthorized: false
+  }
 }
-
+else {
+  params = url.parse(process.env.DEV_DATABASE_URL)
+  sslOption = false
+}
+const auth = params.auth.split(':');
+const databaseConfig = {
+  user: auth[0],
+  password: auth[1],
+  host: params.hostname,
+  port: params.port,
+  database: params.pathname.split('/')[1],
+  ssl: sslOption
+};
 
 class Agent {
 

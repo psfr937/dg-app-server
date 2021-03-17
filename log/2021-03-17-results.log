@@ -403,3 +403,9 @@
 2021-03-17 15:23:31 info: (src/middlewares/jwtAuth.js:129) user found
 2021-03-17 15:23:31 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
 2021-03-17 15:23:31 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyACkIQPPh6rLBOL-Ci6rOrvEQ0QEaoHfLw"
+2021-03-17 15:45:13 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:45:13 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:55:24 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:55:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:55:30 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:55:30 info: (src/middlewares/jwtAuth.js:129) user found

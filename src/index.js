@@ -24,8 +24,7 @@ if (port) {
 
     if (err) console.error(chalk.red(`==> 😭  OMG!!! ${err}`));
 
-    console.info(chalk.green(`==> 🌎  Listening at ${port}`));
-
+    console.info(chalk.green(`==> 🌎  Listening at ${port}`))
   });
 } else {
   console.error(
