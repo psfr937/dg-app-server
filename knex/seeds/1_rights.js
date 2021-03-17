@@ -1,10 +1,14 @@
-const rights = require('../data/rights')
 
+const table = 'rights'
+const data = require(`../data/${table}`);
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('rights').del()
+  return knex(table).del()
     .then(function () {
       // Inserts seed entries
-      return knex('rights').insert(rights);
-    });
+      return knex(table).insert(data);
+    })
+    .then(function (){
+      return knex.raw(`ALTER SEQUENCE ${table}_id_seq RESTART WITH ${data.length + 1}`)
+    })
 };

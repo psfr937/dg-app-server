@@ -5,7 +5,8 @@ for(let i = 0 ; i < 50; i++){
     "brand": null,
     "price": 100,
     "description": "Good skirt",
-    "picture_url": "https://imgur.com/gallery/65y6AcW"
+    "picture_url": "https://imgur.com/gallery/65y6AcW",
+    "brand_id": 2
   })
 
 }

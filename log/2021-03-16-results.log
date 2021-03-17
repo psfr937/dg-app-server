@@ -1,0 +1,239 @@
+2021-03-16 08:42:20 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 08:42:20 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 08:42:24 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 08:42:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 08:42:26 info: (src/controllers/inventories.js:84) [{"id":1,"brand":"Carven","price":10000,"tags":[{"tag_id":1,"tag_name":"women"},{"tag_id":2,"tag_name":"Carven"},{"tag_id":3,"tag_name":"denim"},{"tag_id":4,"tag_name":"red"},{"tag_id":5,"tag_name":"yellow"},{"tag_id":6,"tag_name":"checked"},{"tag_id":8,"tag_name":"studded"},{"tag_id":14,"tag_name":"dress"},{"tag_id":16,"tag_name":"swimshirt"}],"sizes":[{"size_id":1,"size_name":"XXS","physique_id":1,"physique_name":"women","measurement_id":1,"measurement_name":"Top & Bottoms"},{"size_id":2,"size_name":"XS","physique_id":1,"physique_name":"women","measurement_id":1,"measurement_name":"Top & Bottoms"}],"text":[{"id":1,"name":"Skr","language":"zh-HK","description":"zheng ah"},{"id":2,"name":"Skirt","language":"en","description":"wow, so beautiful"}],"images":[{"id":1,"url":"https://marketing-image-production.s3.amazonaws.com/uploads/8dda1131320a6d978b515cc04ed479df259a458d5d45d58b6b381cae0bf9588113e80ef912f69e8c4cc1ef1a0297e8eefdb7b270064cc046b79a44e21b811802.png","order":1},{"id":2,"url":"https://i.imgur.com/4eair9X.jpeg","order":2}],"seller":{"id":null,"name":null,"email":null}},{"id":2,"brand":null,"price":10000,"tags":[{"tag_id":10,"tag_name":"blue"},{"tag_id":15,"tag_name":"skirt"}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":3,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":19,"name":"Raymond","email":"psfr937@gmail.com"}},{"id":4,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":5,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":6,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":7,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":8,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":9,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":10,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":11,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":12,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":13,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":49,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}},{"id":50,"brand":null,"price":10000,"tags":[{"tag_id":null,"tag_name":null}],"sizes":[{"size_id":null,"size_name":null,"physique_id":null,"physique_name":null,"measurement_id":null,"measurement_name":null}],"text":[{"id":null,"name":null,"language":null,"description":null}],"images":[{"id":null,"url":null,"order":null}],"seller":{"id":null,"name":null,"email":null}}]
+2021-03-16 08:42:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 08:42:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 12:26:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 12:26:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 12:26:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 12:26:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 12:27:06 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 12:27:06 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 12:27:12 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 12:27:12 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 12:27:24 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 12:27:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:24:25 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:24:25 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:24:30 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:24:30 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:24:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:24:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:25:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:25:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:27:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:27:38 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:28:01 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:28:01 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:29:26 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:29:26 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:29:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:29:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:30:05 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:30:05 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:30:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:30:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:31:52 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:31:52 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:32:16 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:32:16 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 15:33:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 15:33:35 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:15:37 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:15:37 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:18:12 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:18:12 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:20:43 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:20:43 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:24:14 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:24:14 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:26:03 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:26:03 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:30:07 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:30:07 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:31:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:31:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:32:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:32:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:39:32 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:39:32 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:40:56 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:40:56 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:50:40 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:50:40 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:50:56 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:50:56 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:52:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-16 16:52:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-16 16:54:58 error: jwt must be provided
+2021-03-16 16:57:03 error: jwt must be provided
+2021-03-16 17:01:27 error: jwt must be provided
+2021-03-16 17:07:54 error: jwt must be provided
+2021-03-16 17:08:09 error: jwt must be provided
+2021-03-16 17:09:29 error: jwt must be provided
+2021-03-16 17:14:30 error: jwt must be provided
+2021-03-16 17:14:34 error: jwt must be provided
+2021-03-16 17:15:07 error: jwt must be provided
+2021-03-16 17:17:42 error: jwt must be provided
+2021-03-16 17:19:49 error: jwt must be provided
+2021-03-16 17:21:32 error: (src/utils/agents.js:47) syntax error at end of input
+2021-03-16 17:21:32 error: (src/utils/q.js:37) syntax error at end of input
+2021-03-16 17:21:39 error: jwt must be provided
+2021-03-16 17:21:46 error: jwt must be provided
+2021-03-16 17:21:50 error: (src/utils/agents.js:47) syntax error at end of input
+2021-03-16 17:21:50 error: (src/utils/q.js:37) syntax error at end of input
+2021-03-16 17:21:53 error: jwt must be provided
+2021-03-16 17:22:41 error: (src/utils/agents.js:47) syntax error at end of input
+2021-03-16 17:22:41 error: (src/utils/q.js:37) syntax error at end of input
+2021-03-16 17:23:56 error: jwt must be provided
+2021-03-16 17:24:04 error: jwt must be provided
+2021-03-16 17:24:12 error: jwt must be provided
+2021-03-16 17:24:37 error: jwt must be provided
+2021-03-16 17:24:52 error: jwt must be provided
+2021-03-16 17:29:14 error: jwt must be provided
+2021-03-16 17:30:04 error: jwt must be provided
+2021-03-16 17:37:48 error: jwt must be provided
+2021-03-16 17:44:16 error: jwt must be provided
+2021-03-16 17:44:21 error: jwt must be provided
+2021-03-16 17:56:06 error: jwt must be provided
+2021-03-16 17:59:26 error: jwt must be provided
+2021-03-16 18:04:25 error: (src/utils/agents.js:47) syntax error at or near "SET"
+2021-03-16 18:04:25 error: (src/utils/q.js:37) syntax error at or near "SET"
+2021-03-16 18:05:14 error: (src/utils/agents.js:47) there is no unique or exclusion constraint matching the ON CONFLICT specification
+2021-03-16 18:05:14 error: (src/utils/q.js:37) there is no unique or exclusion constraint matching the ON CONFLICT specification
+2021-03-16 18:35:05 error: jwt must be provided
+2021-03-16 18:48:12 error: jwt must be provided
+2021-03-16 18:49:51 error: jwt must be provided
+2021-03-16 18:50:17 error: jwt must be provided
+2021-03-16 18:51:57 error: jwt must be provided
+2021-03-16 18:52:00 error: jwt must be provided
+2021-03-16 18:52:44 error: jwt must be provided
+2021-03-16 18:52:47 error: jwt must be provided
+2021-03-16 18:53:23 error: jwt must be provided
+2021-03-16 18:56:16 error: jwt must be provided
+2021-03-16 18:56:32 error: jwt must be provided
+2021-03-16 18:56:43 error: jwt must be provided
+2021-03-16 18:57:19 error: jwt must be provided
+2021-03-16 18:57:28 error: jwt must be provided
+2021-03-16 18:57:38 error: jwt must be provided
+2021-03-16 18:58:55 error: (src/utils/agents.js:47) syntax error at or near "SET"
+2021-03-16 18:58:55 error: (src/utils/q.js:37) syntax error at or near "SET"
+2021-03-16 18:59:46 error: jwt must be provided
+2021-03-16 18:59:58 error: jwt must be provided
+2021-03-16 19:17:13 error: jwt must be provided
+2021-03-16 19:21:58 error: (src/utils/agents.js:47) column t.brand does not exist
+2021-03-16 19:21:58 error: (src/utils/q.js:25) column t.brand does not exist
+2021-03-16 19:22:03 error: (src/utils/agents.js:47) column t.brand does not exist
+2021-03-16 19:22:03 error: (src/utils/q.js:25) column t.brand does not exist
+2021-03-16 19:22:38 error: (src/utils/agents.js:47) missing FROM-clause entry for table "it2"
+2021-03-16 19:22:38 error: (src/utils/q.js:25) missing FROM-clause entry for table "it2"
+2021-03-16 19:23:35 error: jwt must be provided
+2021-03-16 19:28:06 error: jwt must be provided
+2021-03-16 19:28:31 error: jwt must be provided
+2021-03-16 19:28:35 error: jwt must be provided
+2021-03-16 19:28:45 error: jwt must be provided
+2021-03-16 19:28:53 error: jwt must be provided
+2021-03-16 19:29:26 error: jwt must be provided
+2021-03-16 19:29:28 error: jwt must be provided
+2021-03-16 19:29:31 error: (src/utils/agents.js:47) column "seller_id" is of type integer but expression is of type boolean
+2021-03-16 19:29:31 error: (src/utils/q.js:37) column "seller_id" is of type integer but expression is of type boolean
+2021-03-16 19:29:33 error: jwt must be provided
+2021-03-16 19:29:37 error: (src/utils/agents.js:47) column "seller_id" is of type integer but expression is of type boolean
+2021-03-16 19:29:37 error: (src/utils/q.js:37) column "seller_id" is of type integer but expression is of type boolean
+2021-03-16 19:29:44 error: (src/utils/agents.js:47) column "seller_id" is of type integer but expression is of type boolean
+2021-03-16 19:29:44 error: (src/utils/q.js:37) column "seller_id" is of type integer but expression is of type boolean
+2021-03-16 19:31:34 error: jwt must be provided
+2021-03-16 19:31:37 error: jwt must be provided
+2021-03-16 19:31:50 error: (src/utils/agents.js:47) column "seller_id" is of type integer but expression is of type boolean
+2021-03-16 19:31:50 error: (src/utils/q.js:37) column "seller_id" is of type integer but expression is of type boolean
+2021-03-16 19:32:44 error: (src/utils/agents.js:47) insert or update on table "inventories" violates foreign key constraint "inventories_seller_id_foreign"
+2021-03-16 19:32:44 error: (src/utils/q.js:37) insert or update on table "inventories" violates foreign key constraint "inventories_seller_id_foreign"
+2021-03-16 19:44:39 error: jwt must be provided
+2021-03-16 19:52:30 error: jwt must be provided
+2021-03-16 19:54:04 error: jwt must be provided
+2021-03-16 19:55:14 error: jwt must be provided
+2021-03-16 19:57:13 error: jwt must be provided
+2021-03-16 19:58:09 error: jwt must be provided
+2021-03-16 19:58:13 error: jwt must be provided
+2021-03-16 19:58:40 error: jwt must be provided
+2021-03-16 19:59:31 error: jwt must be provided
+2021-03-16 19:59:31 error: (src/utils/agents.js:47) relation "images" does not exist
+2021-03-16 19:59:31 error: (src/utils/q.js:25) relation "images" does not exist
+2021-03-16 20:00:26 error: jwt must be provided
+2021-03-16 20:01:26 error: jwt must be provided
+2021-03-16 20:01:44 error: jwt must be provided
+2021-03-16 20:03:35 error: jwt must be provided
+2021-03-16 20:04:25 error: jwt must be provided
+2021-03-16 20:04:27 error: jwt must be provided
+2021-03-16 20:04:45 error: jwt must be provided
+2021-03-16 20:49:16 error: jwt must be provided
+2021-03-16 21:00:45 error: jwt must be provided
+2021-03-16 21:00:57 error: jwt must be provided
+2021-03-16 21:02:07 error: jwt must be provided
+2021-03-16 21:02:23 error: jwt must be provided
+2021-03-16 21:04:36 error: jwt must be provided
+2021-03-16 21:14:03 error: jwt must be provided
+2021-03-16 21:16:26 error: jwt must be provided
+2021-03-16 21:16:40 error: jwt must be provided
+2021-03-16 21:23:27 error: jwt must be provided
+2021-03-16 21:24:37 error: jwt must be provided
+2021-03-16 21:24:41 error: jwt must be provided
+2021-03-16 21:27:01 error: jwt must be provided
+2021-03-16 21:27:05 error: jwt must be provided
+2021-03-16 21:31:38 error: jwt must be provided
+2021-03-16 21:35:26 error: jwt must be provided
+2021-03-16 21:35:53 error: jwt must be provided
+2021-03-16 21:36:08 error: jwt must be provided
+2021-03-16 21:36:30 error: jwt must be provided
+2021-03-16 21:37:21 error: jwt must be provided
+2021-03-16 21:38:31 error: jwt must be provided
+2021-03-16 21:41:15 error: jwt must be provided
+2021-03-16 21:41:37 error: jwt must be provided
+2021-03-16 21:50:43 error: jwt must be provided
+2021-03-16 21:50:48 error: jwt must be provided
+2021-03-16 21:51:03 error: jwt must be provided
+2021-03-16 21:51:24 error: jwt must be provided
+2021-03-16 22:15:31 error: jwt must be provided
+2021-03-16 22:15:47 error: jwt must be provided
+2021-03-16 22:16:05 error: jwt must be provided
+2021-03-16 22:17:36 error: jwt must be provided
+2021-03-16 22:18:09 error: jwt must be provided
+2021-03-16 22:21:33 error: jwt must be provided
+2021-03-16 22:22:55 error: jwt must be provided
+2021-03-16 22:23:49 error: jwt must be provided
+2021-03-16 22:24:23 error: jwt must be provided
+2021-03-16 22:25:07 error: jwt must be provided
+2021-03-16 22:25:45 error: jwt must be provided
+2021-03-16 22:26:03 error: jwt must be provided
+2021-03-16 22:27:31 error: jwt must be provided
+2021-03-16 22:28:44 error: jwt must be provided
+2021-03-16 22:30:15 error: jwt must be provided
+2021-03-16 22:31:13 error: jwt must be provided
+2021-03-16 22:31:25 error: jwt must be provided
+2021-03-16 22:33:50 error: jwt must be provided
+2021-03-16 22:35:14 error: jwt must be provided
+2021-03-16 23:04:54 error: jwt must be provided
+2021-03-16 23:11:48 error: jwt must be provided
+2021-03-16 23:12:48 error: jwt must be provided
+2021-03-16 23:23:54 error: jwt must be provided
+2021-03-16 23:24:04 error: jwt must be provided
+2021-03-16 23:24:53 error: jwt must be provided
+2021-03-16 23:25:14 error: jwt must be provided
+2021-03-16 23:26:53 error: jwt must be provided
+2021-03-16 23:28:11 error: jwt must be provided
+2021-03-16 23:30:26 error: jwt must be provided
+2021-03-16 23:30:35 error: jwt must be provided
+2021-03-16 23:31:45 error: jwt must be provided
+2021-03-16 23:38:37 error: jwt must be provided
+2021-03-16 23:38:44 error: jwt must be provided
+2021-03-16 23:43:06 error: (src/utils/agents.js:47) syntax error at or near "ON"
+2021-03-16 23:43:06 error: (src/utils/q.js:37) syntax error at or near "ON"
+2021-03-16 23:44:42 error: jwt must be provided
+2021-03-16 23:47:05 error: jwt must be provided
+2021-03-16 23:47:09 error: jwt must be provided
+2021-03-16 23:49:26 error: jwt must be provided
+2021-03-16 23:49:50 error: jwt must be provided
+2021-03-16 23:52:06 error: jwt must be provided
+2021-03-16 23:52:16 error: jwt must be provided

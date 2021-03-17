@@ -34,10 +34,13 @@ const upload = multer({
     },
     transformer,
     key: function (req, file, cb) {
-      cb(null, Date.now().toString()+"-"+file.originalname)
+      console.log(file.fieldname)
+      const extension = file.originalname.split('.')[1];
+      cb(null, `${Date.now().toString()}-${file.fieldname}.${extension}`)
     }
   })
 });
+//originalname is in format "image_{inventory.id}_{order.id}"
 
 export const imageUpload = function (req, res, next) {
   upload.any()(req, res, function (err) {

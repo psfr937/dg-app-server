@@ -34,21 +34,26 @@ export default {
 
   list: asyncRoute(async (req, res) => {
     try {
-      const products = (await qNonEmpty(
-          `SELECT * FROM users`)
+      const users= (await qNonEmpty(
+          `SELECT id FROM users;`)
       ).rows
-      return res.json({status: 200, data: products})
+      return res.json({status: 200, data: users})
     } catch (err) {
       return res.errors([Errors.DB_OPERATION_FAIL(err)])
     }
   }),
 
-  readSelf: (req, res) => {
+  readSelf: asyncRoute(async(req, res) => {
+    const staff = (await q(
+        `SELECT * FROM staffs WHERE email = $1`, [req.user.email])
+    ).rows;
+    const isAdmin = staff.length > 0;
     console.log(req.user);
     res.json({
-      data: req.user
+      status: 200,
+      data: { ...req.user, admin: isAdmin }
     });
-  },
+  }),
 
   emailRegister: asyncRoute(async (req, res, next) => {
     let userReturned = {};

@@ -1,10 +1,14 @@
-const roles = require('../data/roles')
 
+const table = 'roles'
+const data = require(`../data/${table}`);
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('roles').del()
+  return knex(table).del()
     .then(function () {
       // Inserts seed entries
-      return knex('roles').insert(roles);
-    });
+      return knex(table).insert(data);
+    })
+    .then(function (){
+      return knex.raw(`ALTER SEQUENCE ${table}_id_seq RESTART WITH ${data.length + 1}`)
+    })
 };

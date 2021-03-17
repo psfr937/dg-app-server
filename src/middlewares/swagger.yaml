@@ -194,9 +194,9 @@ paths:
                 type: array
                 items:
                   type: string
-  /inventories:
+  /inventories/list:
     post:
-      summary: Sell items and checkout
+      summary: List Inventories
       description: Optional extended description in CommonMark or HTML.
       requestBody:
         description: Optional description in *Markdown*
@@ -222,6 +222,126 @@ paths:
                       type: array
                       items:
                         type: string
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /inventories/{id}:
+    get:
+      summary: List Inventories
+      description: Optional extended description in CommonMark or HTML.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the inventory to get
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /inventories/add:
+    post:
+      summary: Create an inventory
+      description: Optional extended description in CommonMark or HTML.
+      requestBody:
+        description: Optional description in *Markdown*
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties: # Request parts
+                sellerId:
+                  type: integer
+                sizes:
+                  type: array
+                  items:
+                    type: integer # sizeId
+                tags:
+                  type: array
+                  items:
+                    type: integer # tagId
+                nameZh:
+                  type: string
+                nameEn:
+                  type: string
+                imageOrders:
+                  type: array
+                    items:
+                      type: object
+                        url:
+                          type: string
+                        order:
+                          type: integer
+                profileImage:
+                  type: string
+                  format: base64
+            encoding: # The same level as schema
+              profileImage: # Property name (see above)
+                contentType: image/png, image/jpeg
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /algolia/insert-all:
+    get:
+      summary: Create an inventory
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /algolia/setting:
+    get:
+      summary: Create an inventory
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /algolia/clear:
+    get:
+      summary: Create an inventory
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /sizes:
+    get:
+      summary: Create an inventory
+      description: Optional extended description in CommonMark or HTML.
       responses:
         '200':    # status code
           description: A JSON array of user names

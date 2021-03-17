@@ -1,7 +1,7 @@
 exports.up = function(knex) {
   return knex.schema.createTable('pms', function(table) {
     table.increments();
-    table.string('stripe_id')
+    table.string('stripe_id').unique()
     table.integer('user_id').references('id').inTable('users');
     table.string('funding');
     table.string('fingerprint');

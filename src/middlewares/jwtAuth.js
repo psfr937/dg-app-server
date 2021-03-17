@@ -140,6 +140,67 @@ export const jwtAuth = (req, res, next) => {
 }
 
 
+export const adminJwtAuth = (req, res, next) => {
+  const extractedJWT = jwtExtractor(req)
+  console.log(extractedJWT)
+  console.log(jwt.accessToken.secret)
+  jsonwebtoken.verify(
+    extractedJWT,
+    jwt.accessToken.secret,
+    {
+      ignoreExpiration: true
+    },
+    (err, decoded) => {
+
+      if (err) {
+        logger.error(err, '%o')
+        if (res.locals.authType === "optional") {
+          return next()
+        } else {
+          res.pushError(err);
+          res.pushError(Errors.USER_UNAUTHORIZED);
+          res.errors();
+        }
+      } else if (decoded.expiredAt < Date.now()) {
+        res.locals.decoded = decoded;
+        return refreshAccessToken(res, req, next);
+      } else {
+        res.locals.decoded = decoded;
+        logger.info('decoded', '%o')
+
+        p.query(
+          `SELECT * FROM users u  
+            INNER JOIN staffs s ON s.email = u.email
+           WHERE u.id = $1`, [decoded.userId]
+        ).then(results => {
+          if (results.rowCount === 0){
+            logger.info('user not found', '%o');
+            res.pushError(Errors.USER_UNAUTHORIZED);
+            return res.errors();
+          }
+          const user = results.rows[0];
+          if( user.email_verified === false){
+            logger.info('user not verified', '%o');
+            res.pushError(Errors.USER_UNAUTHORIZED);
+            return res.errors();
+          }
+          else {
+            const user = results.rows[0];
+            delete user.password;
+            req.user = user;
+            logger.info('user found', '%o');
+            return next();
+          }
+        }).catch(queryErr => {
+          console.log(queryErr);
+          res.pushError(queryErr);
+          res.errors();
+        });
+      }
+    }
+  )
+};
+
 
 export const jwtAuthOptional = (req, res, next) => {
   res.locals.authType = "optional";

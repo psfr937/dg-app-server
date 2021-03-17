@@ -15,6 +15,7 @@ const qNonEmpty = async (sql, params, loglevel = 'info', errMetaData) => {
 
   return await p.query(sql, params, loglevel)
     .then(res => {
+      console.log(res)
       if (res.rows.length === 0) {
         throw new Error('No rows found');
       }
