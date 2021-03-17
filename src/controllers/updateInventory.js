@@ -37,6 +37,11 @@ import Errors from "../constants/Errors";
      }
  */
 
+const isChained = req => (
+  req.route.path === '/inventories/:id' ||
+  req.route.path === '/inventories/add'
+)
+
 export default {
   updateTags: asyncRoute(async (req, res, next) => {
     const {tags, inventoryId} = req.data;
@@ -73,9 +78,9 @@ export default {
                    AND tag_id = ANY ($2::INT[])`,
           [inventoryId, tags.remove]);
       }
-      // if (typeof next != "undefined") {
-      //   return next()
-      // }
+      if (typeof next != "undefined") {
+        return next()
+      }
       return res.json({status: 200, data: 'OK'})
     } catch (err) {
       console.log(err)
@@ -120,6 +125,7 @@ export default {
                    AND size_id = ANY ($2::INT[])`,
           [inventoryId, sizes.remove]);
       }
+      if (isChained(req)) return next();
 
       return res.json({status: 200, data: 'OK'})
     } catch (err) {
@@ -147,6 +153,7 @@ export default {
             description = excluded.description`,
           textParameters);
 
+      if(isChained(req)) return next();
 
       return res.json({status: 200, data: 'OK'})
     } catch (err) {
@@ -155,13 +162,15 @@ export default {
     }
   }),
 
-  updateInfo: asyncRoute(async (req, res, next) => {
+  updateInfo: asyncRoute(async (req, res, next = null) => {
     try {
       const { inventoryId, sellerId, brand, price } = req.data;
       q(`UPDATE inventories
          SET seller_id = $1, brand = $2, price = $3
          WHERE id = $4;`,
         [sellerId, brand, price, inventoryId]);
+
+      if (isChained(req)) return next();
 
       return res.json({status: 200, data: 'OK'})
     } catch (err) {
@@ -172,9 +181,22 @@ export default {
   extractInfo: (req, res, next) => {
     req.data =  JSON.parse(req.body.data);
     req.data.inventoryId = parseInt(req.params.id);
-    console.log(req.data)
+
     return next()
   },
+
+  extractAndInsertInfo: asyncRoute(async (req, res, next) => {
+    req.data =  JSON.parse(req.body.data);
+    try {
+      const { sellerId, brand, price } = req.data;
+      req.data.inventoryId = (await qNonEmpty(`INSERT INTO inventories (seller_id, brand, price) VALUES ($1, $2, $3) RETURNING id;`,
+        [sellerId, brand, price])).rows[0].id;
+
+      return next()
+    } catch (err) {
+      return res.errors([Errors.DB_OPERATION_FAIL(err)])
+    }
+  }),
 
   removeImages: asyncRoute( async(req, res, next) => {
     try{
@@ -189,6 +211,7 @@ export default {
                    AND item_order = ANY ($2::INT[])`,
           [inventoryId, removeList]);
       }
+      if (isChained(req)) return next();
 
       return res.json({status: 200, data: 'OK'})
     } catch (err) {
@@ -289,6 +312,8 @@ export default {
         url = excluded.url`,
           imgInvParameters);
       }
+
+      if (isChained(req)) return next();
 
       return res.json({status: 200, data: 'OK'})
     } catch (err) {

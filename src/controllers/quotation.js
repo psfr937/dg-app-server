@@ -121,7 +121,7 @@ export const saveAddress = asyncRoute(async (req, res, next) => {
     return next()
   });
 
-export const getQuotation = type => asyncRoute(async (req, res) => {
+export const getQuotation = type => asyncRoute(async (req, res, next) => {
 
     const { addressId, clientAddress, clientAddressFormatted} = req;
     let hqAddress;

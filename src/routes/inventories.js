@@ -2,10 +2,33 @@ import inventories from '../controllers/inventories';
 import upload from "../utils/s3/uploadFileToS3";
 import bodyParser from "../middlewares/bodyParser";
 import updateInv from "../controllers/updateInventory";
+import algolia from "../controllers/algolia";
 
 export default app => {
   app.post('/inventories/list', bodyParser.json, inventories.list);
   app.get('/inventories/:id', inventories.get);
+
+  app.post('/inventories/add',
+    upload.any(),
+    updateInv.extractAndInsertInfo,
+    updateInv.updateTexts,
+    updateInv.updateTags,
+    updateInv.updateSizes,
+    updateInv.changeOrAddImages,
+    algolia.upsert
+  );
+
+  app.post('/inventories/:id',
+    upload.any(),
+    updateInv.extractInfo,
+    updateInv.updateInfo,
+    updateInv.updateTexts,
+    updateInv.updateTags,
+    updateInv.updateSizes,
+    updateInv.removeImages,
+    updateInv.changeOrAddImages,
+    algolia.upsert
+  );
 
   app.post('/inventories/update-tags/:id',
     upload.any(),
@@ -24,6 +47,7 @@ export default app => {
     updateInv.extractInfo,
     updateInv.changeOrAddImages
   );
+
   app.post('/inventories/remove-images/:id',
     upload.any(),
     updateInv.extractInfo,

@@ -1,0 +1,405 @@
+2021-03-17 10:04:09 error: (src/utils/agents.js:47) invalid input syntax for type integer: "undefined"
+2021-03-17 10:04:09 error: (src/utils/q.js:25) invalid input syntax for type integer: "undefined"
+2021-03-17 10:04:12 error: (src/utils/agents.js:47) invalid input syntax for type integer: "undefined"
+2021-03-17 10:04:12 error: (src/utils/q.js:25) invalid input syntax for type integer: "undefined"
+2021-03-17 10:05:09 error: (src/utils/agents.js:47) invalid input syntax for type integer: "undefined"
+2021-03-17 10:05:09 error: (src/utils/q.js:25) invalid input syntax for type integer: "undefined"
+2021-03-17 11:04:07 error: (src/utils/agents.js:47) invalid input syntax for type integer: "NaN"
+2021-03-17 11:04:07 error: (src/utils/q.js:37) invalid input syntax for type integer: "NaN"
+2021-03-17 11:04:07 error: (src/utils/agents.js:47) invalid input syntax for type integer: "NaN"
+2021-03-17 11:04:07 error: (src/utils/q.js:37) invalid input syntax for type integer: "NaN"
+2021-03-17 11:06:32 error: (src/utils/agents.js:47) invalid input syntax for type integer: "NaN"
+2021-03-17 11:06:32 error: (src/utils/q.js:37) invalid input syntax for type integer: "NaN"
+2021-03-17 11:06:32 error: (src/utils/agents.js:47) invalid input syntax for type integer: "NaN"
+2021-03-17 11:06:32 error: (src/utils/q.js:37) invalid input syntax for type integer: "NaN"
+2021-03-17 11:28:28 error: (src/utils/agents.js:47) relation "images" does not exist
+2021-03-17 11:28:28 error: (src/utils/q.js:25) relation "images" does not exist
+2021-03-17 11:28:43 error: (src/utils/agents.js:47) relation "images" does not exist
+2021-03-17 11:28:43 error: (src/utils/q.js:25) relation "images" does not exist
+2021-03-17 11:28:59 error: (src/utils/agents.js:47) relation "images" does not exist
+2021-03-17 11:28:59 error: (src/utils/q.js:25) relation "images" does not exist
+2021-03-17 11:42:32 error: jwt must be provided
+2021-03-17 11:42:32 error: jwt must be provided
+2021-03-17 11:42:32 error: jwt must be provided
+2021-03-17 11:42:37 error: jwt must be provided
+2021-03-17 11:42:37 error: jwt must be provided
+2021-03-17 11:42:37 error: jwt must be provided
+2021-03-17 11:47:21 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:47:21 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:07 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:48:07 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:15 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:48:15 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:33 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:48:33 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:48:35 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:48:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:47 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:48:47 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:57 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:48:57 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:57 info: (src/controllers/address.js:9)
+2021-03-17 11:48:57 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:48:57 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:57 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-17 11:48:57 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:48:57 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:48:57 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-17 11:48:57 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyACkIQPPh6rLBOL-Ci6rOrvEQ0QEaoHfLw"
+2021-03-17 11:49:01 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:49:01 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:49:14 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:49:14 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:49:14 info: (src/controllers/address.js:9)
+2021-03-17 11:49:14 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:49:14 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:49:14 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-17 11:49:14 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:49:14 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:49:14 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-17 11:49:14 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyACkIQPPh6rLBOL-Ci6rOrvEQ0QEaoHfLw"
+2021-03-17 11:49:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:49:38 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:50:01 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:50:01 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:50:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:50:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:05 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:05 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:17 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:17 info: (src/controllers/address.js:9)
+2021-03-17 11:51:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:17 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:17 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-17 11:51:17 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyACkIQPPh6rLBOL-Ci6rOrvEQ0QEaoHfLw"
+2021-03-17 11:51:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:17 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:17 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-17 11:51:23 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:23 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:23 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-17 11:51:23 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyACkIQPPh6rLBOL-Ci6rOrvEQ0QEaoHfLw"
+2021-03-17 11:51:23 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:23 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:23 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-17 11:51:25 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:25 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:40 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:40 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:51:42 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:51:42 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:52:34 error: (src/utils/agents.js:47) relation "images" does not exist
+2021-03-17 11:52:34 error: (src/utils/q.js:37) relation "images" does not exist
+2021-03-17 11:52:34 error: (src/controllers/algolia.js:82) {"length":106,"name":"error","severity":"ERROR","code":"42P01","position":"966","file":"parse_relation.c","line":"1194","routine":"parserOpenTable"}
+2021-03-17 11:53:56 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:53:56 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:54:54 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:54:54 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:55:13 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:55:13 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:55:16 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:55:16 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:55:42 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:55:42 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:57:01 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:57:01 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:57:22 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:57:22 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 11:57:29 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 11:57:29 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:00:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:00:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:01:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:01:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:01:10 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:01:10 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:04:30 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:04:30 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:04:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:04:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:04:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:04:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:04:52 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:04:52 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:05:01 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:05:01 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:05:14 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:05:14 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:05:44 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:05:44 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:05:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:05:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:05:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:05:49 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:05:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:05:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:07:53 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:07:53 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:08:13 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:08:13 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:08:32 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:08:32 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:08:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:08:35 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:08:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:08:38 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:08:42 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:08:42 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:14:40 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:14:40 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:15:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:15:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:15:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:15:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:15:14 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:15:14 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:15:22 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:15:22 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:15:25 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:15:25 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:16:16 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:16:16 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:16:23 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:16:23 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:16:29 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:16:29 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:16:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:16:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:16:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:16:49 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:16:54 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:16:54 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:16:56 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:16:56 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:16:59 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:16:59 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:17:02 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:17:02 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:18:22 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:18:22 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:18:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:18:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:18:39 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:18:39 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:18:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:18:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:25:51 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:25:51 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:27:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:27:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:34:02 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:34:02 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:38:50 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:38:50 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:39:57 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:39:57 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:40:02 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:40:02 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:40:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:40:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:40:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:40:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:40:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:40:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:40:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:40:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:40:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:40:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:40:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:40:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:40:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:40:49 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:41:22 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:41:22 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:42:32 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:42:32 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:43:23 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:43:23 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:45:06 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:45:06 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:45:13 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:45:13 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:45:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:45:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:45:48 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:45:48 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:45:52 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:45:52 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:46:15 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:46:15 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:46:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:46:17 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:47:34 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:47:34 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:47:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:47:49 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:50:27 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:50:27 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:52:37 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:52:37 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:52:43 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:52:43 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:53:20 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:53:20 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 12:53:34 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 12:53:34 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:00:54 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:00:54 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:03:43 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:03:43 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:03:47 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:03:47 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:04:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:04:10 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:06:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:06:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:13:20 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:13:20 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:13:24 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:13:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:13:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:13:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:14:29 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:14:29 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:15:38 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:15:38 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:16:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:16:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:16:13 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:16:13 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:26:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:26:35 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:26:37 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:26:37 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:26:41 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:26:41 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:30:56 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:30:57 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:34:09 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:34:09 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:35:57 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:35:57 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:36:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:36:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:37:04 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:37:04 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 13:37:34 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 13:37:34 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:12:52 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:12:52 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:13:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:13:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:13:45 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:13:45 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:22:15 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:22:15 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:22:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:22:17 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:22:19 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:22:19 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:22:22 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:22:22 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:22:25 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:22:25 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:22:27 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:22:27 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:26:52 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:26:52 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:26:54 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:26:54 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:27:21 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:27:21 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:27:24 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:27:24 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:29:21 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:29:21 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:29:28 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:29:28 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:29:30 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:29:30 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:30:52 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:30:52 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:31:00 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:31:00 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:41:32 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:41:32 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:41:35 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:41:35 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:41:49 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:41:49 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:41:59 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:41:59 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:42:53 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:42:53 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:43:04 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:43:04 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:43:08 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:43:08 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:43:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:43:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:50:58 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:50:58 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:58:12 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:58:12 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:58:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:58:17 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:58:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:58:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 14:58:33 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 14:58:33 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:00:55 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:00:55 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:03:53 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:03:53 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:13:06 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:13:06 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:13:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:13:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:13:15 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:13:15 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:14:46 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:14:46 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:15:15 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:15:15 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:15:22 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:15:22 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:15:56 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:15:57 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:17:17 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:17:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:17:18 info: (src/controllers/address.js:9)
+2021-03-17 15:17:18 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:17:18 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:17:18 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-17 15:17:18 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyACkIQPPh6rLBOL-Ci6rOrvEQ0QEaoHfLw"
+2021-03-17 15:17:30 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:17:30 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:17:30 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-17 15:17:30 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyACkIQPPh6rLBOL-Ci6rOrvEQ0QEaoHfLw"
+2021-03-17 15:19:14 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:19:14 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:20:37 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:20:37 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:22:11 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:22:11 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:22:36 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:22:36 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:22:47 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:22:47 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:23:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:23:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:23:31 info: (src/controllers/address.js:9)
+2021-03-17 15:23:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:23:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:23:31 info: (src/controllers/billing/checkStripeCustomer.js:9)
+2021-03-17 15:23:31 info: (src/middlewares/jwtAuth.js:115) decoded
+2021-03-17 15:23:31 info: (src/middlewares/jwtAuth.js:129) user found
+2021-03-17 15:23:31 info: (src/controllers/quotation.js:18) "%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong"
+2021-03-17 15:23:31 info: (src/controllers/quotation.js:33) "https://maps.googleapis.com/maps/api/geocode/json?address=%20%20Mid-level,%20HK%20Island%20No%20state/province%201%20Hong%20Kong&key=AIzaSyACkIQPPh6rLBOL-Ci6rOrvEQ0QEaoHfLw"
