@@ -2,18 +2,15 @@ import logger from "./logger";
 const { Pool } = require('pg');
 const url = require('url');
 
-
-let params;
+let params = url.parse(process.env.DATABASE_URL);
 let sslOption;
-if(typeof process.env.DATABASE_URL === 'string') {
-  params = url.parse(process.env.DATABASE_URL)
+if(process.env.NODE_ENV === 'development') {
+  sslOption = false
+}
+else {
   sslOption = {
     rejectUnauthorized: false
   }
-}
-else {
-  params = url.parse(process.env.DEV_DATABASE_URL)
-  sslOption = false
 }
 const auth = params.auth.split(':');
 const databaseConfig = {

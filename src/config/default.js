@@ -1,8 +1,6 @@
 /* @flow */
 
 module.exports = {
-  listenTo: process.env.DEV_LISTEN_TO,
-  port: process.env.DEV_PORT,
   s3AccessId: process.env.S3_ACCESS_ID,
   s3AccessSecret: process.env.S3_ACCESS_SECRET,
   backdoor: process.env.DEV_BACKDOOR === 'true',
@@ -10,7 +8,7 @@ module.exports = {
     apiKey: process.env.NEXMO_API_KEY,
     apiSecret: process.env.NEXMO_API_SECRET
   },
-  stripe: process.env.STRIPE_TEST,
+  stripe: process.env.STRIPE_SECRET_KEY,
   redis: {
     host: 'localhost',
     port: 6379,
@@ -48,11 +46,11 @@ module.exports = {
       expiresIn: 60 * 60 * 24 * 180 // in seconds
     },
     verifyEmail: {
-      secret: 'df5s6sdHdjJdRg56',
+      secret:  process.env.JWT_VERIFY_EMAIL_SECRET,
       expiresIn: 60 * 60 // in seconds
     },
     resetPassword: {
-      secret: 'FsgWqLhX0Z6JvJfPYwPZ',
+      secret: process.env.JWT_RESET_PASSWORD_SECRET,
       expiresIn: 60 * 60 // in seconds
     }
   },
@@ -76,6 +74,6 @@ module.exports = {
   fcmServerKey: process.env.FCM_SERVER_KEY,
   recaptcha: process.env.RECAPTCHA_KEY,
   googleMapApiKey: process.env.GOOGLE_MAP_API_KEY,
-  gogoxAppId: process.env.GOGOX_APP_ID_TEST,
-  gogoxSecretKey: process.env.GOGOX_SECRET_KEY_TEST
+  gogoxAppId: process.env.GOGOX_APP_ID,
+  gogoxSecretKey: process.env.GOGOX_SECRET_KEY
 };

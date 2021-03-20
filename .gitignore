@@ -13,3 +13,8 @@ build
 # Docker
 Dockerfile
 docker-compose.yml
+
+#log
+
+log
+yarn-error.log
