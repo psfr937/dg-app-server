@@ -8,7 +8,7 @@ export default app => {
 
   app.use('*', cors({
     "origin": process.env.NODE_ENV === 'development' ?
-      "http://localhost:3000" : "https://dressgreen.net",
+      "http://localhost:3000" : "*",
     "credentials": true
   }));
 
