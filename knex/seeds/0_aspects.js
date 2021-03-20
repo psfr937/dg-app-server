@@ -1,5 +1,6 @@
 
-const table = 'permissions';
+const table = 'aspects';
+
 const data = require(`../data/${table}`);
 exports.seed = function(knex) {
   // Deletes ALL existing entries
