@@ -1,6 +1,5 @@
 module.exports = [
   {
-    "id":1,
     "avatar_url": null,
     "age": null,
     "name": "",
