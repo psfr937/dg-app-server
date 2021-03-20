@@ -7,7 +7,8 @@ var path = require('path');
 export default app => {
 
   app.use('*', cors({
-    "origin": "http://localhost:3000",
+    "origin": process.env.NODE_ENV === 'development' ?
+      "http://localhost:3000" : "https://dressgreen.net",
     "credentials": true
   }));
 
