@@ -6,6 +6,7 @@ import Errors from "../constants/Errors";
 export default {
 
   get: asyncRoute(async (req, res) => {
+    console.log(res.header()._headers)
     try {
       const inventory = (await qNonEmpty(
           `SELECT i.id, i.brand, i.price, COALESCE(json_agg(DISTINCT jsonb_build_object('id', t.id, 'name', t.name,
