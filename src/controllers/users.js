@@ -34,7 +34,7 @@ export default {
 
   list: asyncRoute(async (req, res) => {
     try {
-      const users= (await qNonEmpty(
+      const users= (await q(
           `SELECT id FROM users;`)
       ).rows
       return res.json({status: 200, data: users})
