@@ -8,7 +8,7 @@ export default app => {
 
   app.use('*', cors({
     "origin": process.env.NODE_ENV === 'development' ?
-      "http://localhost:3000" : ["https://dressgreen.net", "https://dressgreen.net/.netlify/functions/next_cms_name_p_pid"],
+      "http://localhost:3000" : "https://dressgreen.net",
     "credentials": true
   }));
 
