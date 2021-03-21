@@ -36,7 +36,7 @@ import Errors from "../constants/Errors";
         },
      }
  */
-quotations
+
 const isChained = req => (
   req.route.path === '/inventories/:id' ||
   req.route.path === '/inventories/add'
