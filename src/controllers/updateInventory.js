@@ -36,7 +36,7 @@ import Errors from "../constants/Errors";
         },
      }
  */
-
+quotations
 const isChained = req => (
   req.route.path === '/inventories/:id' ||
   req.route.path === '/inventories/add'
@@ -68,7 +68,8 @@ export default {
           arrayParameters: tagParameters
         } = makeQuery(tags.insert, inventoryId);
         console.log(tagParameters)
-        await q(`INSERT INTO inventory_tag (tag_id, inventory_id) VALUES ${tagPlaceHolders}`,
+        await q(`INSERT INTO inventory_tag (tag_id, inventory_id) 
+            VALUES ${tagPlaceHolders} ON CONFLICT (tag_id, inventory_id) DO NOTHING;`,
           tagParameters);
       }
       if(tags.remove.length > 0) {

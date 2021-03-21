@@ -5,7 +5,6 @@ import updateInv from "../controllers/updateInventory";
 import algolia from "../controllers/algolia";
 
 export default app => {
-  app.post('/inventories/list', bodyParser.json, inventories.list);
   app.get('/inventories/:id', inventories.get);
 
   app.post('/inventories/add',
