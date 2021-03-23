@@ -235,9 +235,6 @@ export const getQuotation = type => asyncRoute(async (req, res, next) => {
       return res.errors()
     }
 
-    if (typeof next != "undefined") {
-      return next()
-    }
     return res.status(200).json({
       status: 200,
       data: {
