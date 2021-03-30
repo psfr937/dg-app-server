@@ -6,19 +6,19 @@ export default {
   list: asyncRoute(async (req, res) => {
     try {
       const sizes = (await q(
-        `SELECT b.segment_id as id, b.segment as name, COALESCE(json_agg(DISTINCT jsonb_build_object('id', b.id, 'name', b.name, 'measurements', b.measurements)) FILTER (WHERE b.id IS NOT NULL), '[]') as physiques FROM (
-           SELECT a.segment_id, a.segment, a.physique_id as id, a.physique as name, COALESCE(json_agg(DISTINCT jsonb_build_object('id', a.id, 'name', a.name, 'sizes', a.sizes)) FILTER (WHERE a.id IS NOT NULL), '[]') as measurements FROM (
-             SELECT m.id, m.name,
-                    p.name as physique, p.id as physique_id,
-                    s2.name as segment, s2.id as segment_id,
-                    COALESCE(json_agg(DISTINCT jsonb_build_object('id', s.id, 'name', s.name)) FILTER (WHERE s.id IS NOT NULL), '[]') as sizes
-             FROM measurements m
-                      RIGHT JOIN sizes s on s.measurement_id = m.id
-                      RIGHT JOIN physiques p on m.physique_id = p.id
-                      RIGHT JOIN segments s2 on p.segment_id = s2.id
-             GROUP BY m.id, p.name, p.id, s2.name, s2.id) a
-           GROUP BY a.physique_id, a.physique, a.segment_id, a.segment) b
-         GROUP BY b.segment_id, b.segment;;`
+        `SELECT b.segment_id as id, b.segment_order as item_order, b.segment as name, COALESCE(json_agg(DISTINCT jsonb_build_object('id', b.physique_id, 'name', b.physique, 'measurements', b.measurements, 'order', b.physique_order)) FILTER (WHERE b.physique_id IS NOT NULL), '[]') as physiques FROM (
+SELECT a.segment_id, a.segment, a.segment_order, a.physique_id, a.physique, a.physique_order, COALESCE(json_agg(DISTINCT jsonb_build_object('id', a.id, 'name', a.name, 'sizes', a.sizes, 'order', a.measurement_order)) FILTER (WHERE a.id IS NOT NULL), '[]') as measurements FROM (
+   SELECT m.id, m.name, m.item_order as measurement_order,
+          p.name as physique, p.id as physique_id, p.item_order as physique_order,
+          s2.name as segment, s2.id as segment_id, s2.item_order as segment_order,
+          COALESCE(json_agg(DISTINCT jsonb_build_object('id', s.id, 'name', s.name, 'order', s.item_order)) FILTER (WHERE s.id IS NOT NULL), '[]') as sizes
+   FROM sizes s
+            RIGHT JOIN measurements m on s.measurement_id = m.id
+            RIGHT JOIN physiques p on m.physique_id = p.id
+            RIGHT JOIN segments s2 on p.segment_id = s2.id
+   GROUP BY m.id, p.id, s2.id ) a
+GROUP BY a.physique_id, a.physique, a.segment_id, a.segment,  a.segment_order, a.physique_order) b
+         GROUP BY b.segment_id, b.segment, b.segment_order;`
       )).rows;
       return res.json({status: 200, data: sizes})
     } catch (err) {
