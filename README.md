@@ -1,3 +1,6 @@
+
+![example workflow](https://github.com/psfr937/dg-app-server/actions/workflows/ci.yml/badge.svg)
+
 # node-js-getting-started
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
